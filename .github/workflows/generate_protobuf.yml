@@ -20,11 +20,11 @@ jobs:
       - name: Check out code into the Go module directory
         uses: actions/checkout@v2
         - run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add .
-          git commit -m "generated"
-          git push
+            git config user.name github-actions
+            git config user.email github-actions@github.com
+            git add .
+            git commit -m "generated"
+            git push
 
       - name: Setup protoc
         uses: arduino/setup-protoc@v1.1.2
