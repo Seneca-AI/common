@@ -29,20 +29,9 @@ jobs:
       - name: Protoco go
         run: protoc ./api/type/*.proto --go_out=../ -I=./api/type 
 
-      - name: stage generated code
+      - name: write generated code
         if: github.ref == 'refs/heads/main'
-        run: git add .
-
-      - name: commit generate code
-        if: github.ref == 'refs/heads/main'
-        run: git commit -m "update generated code"
-
-      - name: fetch from main
-        if: github.ref == 'refs/heads/main'
-        run: git fetch origin main
-
-      - name: push code to main
-        if: github.ref == 'refs/heads/main'
-        run: git push origin HEAD:main
-
-      
+        uses: EndBug/add-and-commit@v7
+        with:
+          add: 'proto_out'
+          message: 'auto generated commit to write proto_out'
