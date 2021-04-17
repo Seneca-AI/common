@@ -29,6 +29,12 @@ jobs:
       - name: Protoc go
         run: protoc ./api/type/*.proto --go_out=./proto_out/go/ -I=./api/type 
 
+      - name: Protoc python
+        # note the find and replace.  its a very hackey solution.
+        run: |
+          protoc ./api/type/*.proto --python_out=./proto_out/python -I=./api/type && \
+            find ./api/type/*_pb2.py -type f -exec sed -i".backup" "s/^import \(.*\) as/from . import \1 as/g" {} \;
+
       - name: write generated code
         if: github.ref == 'refs/heads/main'
         uses: EndBug/add-and-commit@v7
