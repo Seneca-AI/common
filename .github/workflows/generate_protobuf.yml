@@ -1,0 +1,54 @@
+name: generate-protobuf
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  generate-protobuf-ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Cache protobuf library
+      id: cache-protobuf
+      uses: actions/cache@v1
+      with:
+        path: protobuf
+        key: ${{ runner.os }}-protobuf
+    - name: Build protobuf library
+      if: steps.cache-protobuf.outputs.cache-hit != 'true'
+      run: |
+        git clone https://github.com/protocolbuffers/protobuf.git
+        cd protobuf
+        git submodule update --init --recursive
+        ./autogen.sh
+        ./autogen.sh
+        ./configure
+        make
+        make check           
+    - name: Install protobuf library
+      run: |
+        cd protobuf
+        sudo make install
+          sudo ldconfig  
+    - uses: actions/checkout@v2
+    - name: Generate go
+      run: protoc ./api/type/*.proto --go_out=./proto_out/go -I=./api/type
+    - name: Generate Python
+      run: protoc ./api/type/*.proto --python_out=./proto_out/python -I=./api/type
+    - name: stage generated code
+      if: github.ref == 'refs/heads/main'
+      run: git add .
+    - name: commit generate code
+      if: github.ref == 'refs/heads/main'
+      run: git commit -m ""
+    - name: fetch from main
+      if: github.ref == 'refs/heads/main'
+      run: git fetch origin main
+    - name: push code to main
+      if: github.ref == 'refs/heads/main'
+      run: git push origin HEAD:main
+      

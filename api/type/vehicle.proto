@@ -1,7 +1,5 @@
 syntax = "proto3";
 
-// import "common.proto";
-
 option go_package ="seneca/api/types";
 
 // key(uuid)
