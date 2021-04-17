@@ -1,33 +1,51 @@
 syntax = "proto3";
 
-import "common.proto";
-
 option go_package ="seneca/api/types";
 
-// key(user_id, id)
-message SubEvent {
-    string user_id = 1;
-    string id = 2;
-    // Tag tag = 3;
-    // TimePeriod time_period = 4;
-    repeated api.Location locations = 5;
-    int64 value = 6;
+message LaneChangesForVideo {
+    message LaneChangeForFrame {
+        int64 frame_index = 1;
+        // This will likely be deprecated as we learn to have a better way
+        // of measuring lane changes.
+        bool lane_change = 101;
+    }
+
+    int64 num_frames = 1;
+    // The length(lane_change_for_frame) must equal num_frames.
+    repeated LaneChangeForFrame lane_change_for_frame = 2;
 }
 
-// key(user_id, id)
-message Event {
-    string user_id = 1;
-    string id = 2;
-    // The time period when which this event took place.
-    // TimePeriod time_period = 3;
-
-    repeated SubEvent sub_events = 4;
+message LaneChangesForVideoRequest {
+    string request_id = 1;
+    string simple_storage_video_url = 2;
 }
 
-// key(user_id, id)
-message ProcessedTrip {
-    string user_id = 1;
-    string id = 2;
-    // TimePeriod time_period = 3;
-    repeated string event_ids = 4;
+message LaneChangesForVideoResponse {
+    // The request this response is for.
+    string request_id = 1;
+    LaneChangesForVideo lane_changes_for_video = 2;
+}
+
+message FollowingDistanceForVideo {
+    message FollowingDistanceForFrame {
+        int64 frame_index = 1;
+        // This will likely be deprecated as we learn to have a better way
+        // of measuring following distance.
+        bool is_too_close = 101;
+    }
+
+    int64 num_frames = 1;
+    // The length(lane_change_for_frame) must equal num_frames.
+    repeated FollowingDistanceForFrame following_distance_for_frame = 2;
+}
+
+message FollowingDistanceForVideoRequest {
+    string request_id = 1;
+    string simple_storage_video_url = 2;
+}
+
+message FollowingDistanceForVideoResponse {
+    // The request this response is for.
+    string request_id = 1;
+    FollowingDistanceForVideo lane_changes_for_video = 2;
 }
