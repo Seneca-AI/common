@@ -37,7 +37,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Generate go
       run: |
-      export GOPATH=$HOME/go && export PATH=$PATH:$GOPATH/bin && export protoc ./api/type/*.proto --go_out=./proto_out/go -I=./api/type
+        export GOPATH=$HOME/go && export PATH=$PATH:$GOPATH/bin && export protoc ./api/type/*.proto --go_out=./proto_out/go -I=./api/type
     - name: Generate Python
       run: protoc ./api/type/*.proto --python_out=./proto_out/python -I=./api/type
     - name: stage generated code
