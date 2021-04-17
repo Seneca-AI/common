@@ -26,8 +26,11 @@ jobs:
       - name: Install protoc-gen-go
         run: go get -u google.golang.org/protobuf/cmd/protoc-gen-go
 
-      - name: Protoco go
-        run: protoc ./api/type/*.proto --go_out=../ -I=./api/type 
+      - name: Protoc go
+        run: protoc ./api/type/*.proto --go_out=./proto_out/go/ -I=./api/type 
+
+      - name: Confirm generated files are there
+        run: ls ./proto_out/go/api/type
 
       - name: write generated code
         if: github.ref == 'refs/heads/main'
