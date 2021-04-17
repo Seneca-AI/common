@@ -21,6 +21,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           token: $ {{ secrets.ADMIN_TOKEN_LUCA }}
+          persist-credentials: true
 
       - name: Setup protoc
         uses: arduino/setup-protoc@v1.1.2
