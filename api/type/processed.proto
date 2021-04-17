@@ -2,13 +2,15 @@ syntax = "proto3";
 
 import "common.proto";
 
+option go_package ="seneca/api/types";
+
 // key(user_id, id)
 message SubEvent {
     string user_id = 1;
     string id = 2;
-    Tag tag = 3;
-    TimePeriod time_period = 4;
-    repeated Location locations = 5;
+    // Tag tag = 3;
+    // TimePeriod time_period = 4;
+    repeated api.Location locations = 5;
     int64 value = 6;
 }
 
@@ -17,7 +19,7 @@ message Event {
     string user_id = 1;
     string id = 2;
     // The time period when which this event took place.
-    TimePeriod time_period = 3;
+    // TimePeriod time_period = 3;
 
     repeated SubEvent sub_events = 4;
 }
@@ -26,6 +28,6 @@ message Event {
 message ProcessedTrip {
     string user_id = 1;
     string id = 2;
-    TimePeriod time_period = 3;
+    // TimePeriod time_period = 3;
     repeated string event_ids = 4;
 }
