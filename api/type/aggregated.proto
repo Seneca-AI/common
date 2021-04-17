@@ -2,7 +2,7 @@ syntax = "proto3";
 
 // import "common.proto";
 
-option go_package ="seneca/api/types";
+option go_package ="api/type";
 
 // key(user_id, id)
 message AggregatedTrip {
