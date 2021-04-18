@@ -20,7 +20,7 @@ jobs:
       - name: Check out code into the Go module directory
         uses: actions/checkout@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.ADMIN_TOKEN_LUCA }}
           persist-credentials: true
 
       - name: Setup protoc
