@@ -40,5 +40,5 @@ jobs:
         if: github.ref == 'refs/heads/main'
         uses: EndBug/add-and-commit@v7
         with:
-          add: 'proto_out' --force
+          add: 'proto_out --force'
           message: 'auto generated commit to write proto_out'
