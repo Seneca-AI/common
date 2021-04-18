@@ -37,7 +37,7 @@ jobs:
         
         # TODO(lucaloncar): figure out how to protoc python properly
       - name: Hack path with find and replace
-        run: find ./proto_out/python/api/type/*_pb2.py -type f -exec sed -i."backup" "s/^import \(.*\) as/from . import \1 as/g" {} \;
+        run: find ./proto_out/python/api/type/*_pb2.py -type f -exec sed -i '' "s/^import \(.*\) as/from . import \1 as/g" {} \;
 
       - name: Write generated code
         if: github.ref == 'refs/heads/main'
