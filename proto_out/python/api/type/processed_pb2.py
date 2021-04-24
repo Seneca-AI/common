@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\010api/type',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0fprocessed.proto\"\xb1\x01\n\x13LaneChangesForVideo\x12\x12\n\nnum_frames\x18\x01 \x01(\x03\x12\x46\n\x15lane_change_for_frame\x18\x02 \x03(\x0b\x32\'.LaneChangesForVideo.LaneChangeForFrame\x1a>\n\x12LaneChangeForFrame\x12\x13\n\x0b\x66rame_index\x18\x01 \x01(\x03\x12\x13\n\x0blane_change\x18\x65 \x01(\x08\"R\n\x1aLaneChangesForVideoRequest\x12\x12\n\nrequest_id\x18\x01 \x01(\t\x12 \n\x18simple_storage_video_url\x18\x02 \x01(\t\"g\n\x1bLaneChangesForVideoResponse\x12\x12\n\nrequest_id\x18\x01 \x01(\t\x12\x34\n\x16lane_changes_for_video\x18\x02 \x01(\x0b\x32\x14.LaneChangesForVideo\"\xd3\x01\n\x19\x46ollowingDistanceForVideo\x12\x12\n\nnum_frames\x18\x01 \x01(\x03\x12Z\n\x1c\x66ollowing_distance_for_frame\x18\x02 \x03(\x0b\x32\x34.FollowingDistanceForVideo.FollowingDistanceForFrame\x1a\x46\n\x19\x46ollowingDistanceForFrame\x12\x13\n\x0b\x66rame_index\x18\x01 \x01(\x03\x12\x14\n\x0cis_too_close\x18\x65 \x01(\x08\"X\n FollowingDistanceForVideoRequest\x12\x12\n\nrequest_id\x18\x01 \x01(\t\x12 \n\x18simple_storage_video_url\x18\x02 \x01(\t\"s\n!FollowingDistanceForVideoResponse\x12\x12\n\nrequest_id\x18\x01 \x01(\t\x12:\n\x16lane_changes_for_video\x18\x02 \x01(\x0b\x32\x1a.FollowingDistanceForVideoB\nZ\x08\x61pi/typeb\x06proto3'
+  serialized_pb=b'\n\x0fprocessed.proto\"\xb1\x01\n\x13LaneChangesForVideo\x12\x12\n\nnum_frames\x18\x01 \x01(\x03\x12\x46\n\x15lane_change_for_frame\x18\x02 \x03(\x0b\x32\'.LaneChangesForVideo.LaneChangeForFrame\x1a>\n\x12LaneChangeForFrame\x12\x13\n\x0b\x66rame_index\x18\x01 \x01(\x03\x12\x13\n\x0blane_change\x18\x65 \x01(\x08\"R\n\x1aLaneChangesForVideoRequest\x12\x12\n\nrequest_id\x18\x01 \x01(\t\x12 \n\x18simple_storage_video_url\x18\x02 \x01(\t\"g\n\x1bLaneChangesForVideoResponse\x12\x12\n\nrequest_id\x18\x01 \x01(\t\x12\x34\n\x16lane_changes_for_video\x18\x02 \x01(\x0b\x32\x14.LaneChangesForVideo\"\xd3\x01\n\x19\x46ollowingDistanceForVideo\x12\x12\n\nnum_frames\x18\x01 \x01(\x03\x12Z\n\x1c\x66ollowing_distance_for_frame\x18\x02 \x03(\x0b\x32\x34.FollowingDistanceForVideo.FollowingDistanceForFrame\x1a\x46\n\x19\x46ollowingDistanceForFrame\x12\x13\n\x0b\x66rame_index\x18\x01 \x01(\x03\x12\x14\n\x0cis_too_close\x18\x65 \x01(\x08\"X\n FollowingDistanceForVideoRequest\x12\x12\n\nrequest_id\x18\x01 \x01(\t\x12 \n\x18simple_storage_video_url\x18\x02 \x01(\t\"y\n!FollowingDistanceForVideoResponse\x12\x12\n\nrequest_id\x18\x01 \x01(\t\x12@\n\x1c\x66ollowing_distance_for_video\x18\x02 \x01(\x0b\x32\x1a.FollowingDistanceForVideoB\nZ\x08\x61pi/typeb\x06proto3'
 )
 
 
@@ -312,7 +312,7 @@ _FOLLOWINGDISTANCEFORVIDEORESPONSE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='lane_changes_for_video', full_name='FollowingDistanceForVideoResponse.lane_changes_for_video', index=1,
+      name='following_distance_for_video', full_name='FollowingDistanceForVideoResponse.following_distance_for_video', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -331,7 +331,7 @@ _FOLLOWINGDISTANCEFORVIDEORESPONSE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=692,
-  serialized_end=807,
+  serialized_end=813,
 )
 
 _LANECHANGESFORVIDEO_LANECHANGEFORFRAME.containing_type = _LANECHANGESFORVIDEO
@@ -339,7 +339,7 @@ _LANECHANGESFORVIDEO.fields_by_name['lane_change_for_frame'].message_type = _LAN
 _LANECHANGESFORVIDEORESPONSE.fields_by_name['lane_changes_for_video'].message_type = _LANECHANGESFORVIDEO
 _FOLLOWINGDISTANCEFORVIDEO_FOLLOWINGDISTANCEFORFRAME.containing_type = _FOLLOWINGDISTANCEFORVIDEO
 _FOLLOWINGDISTANCEFORVIDEO.fields_by_name['following_distance_for_frame'].message_type = _FOLLOWINGDISTANCEFORVIDEO_FOLLOWINGDISTANCEFORFRAME
-_FOLLOWINGDISTANCEFORVIDEORESPONSE.fields_by_name['lane_changes_for_video'].message_type = _FOLLOWINGDISTANCEFORVIDEO
+_FOLLOWINGDISTANCEFORVIDEORESPONSE.fields_by_name['following_distance_for_video'].message_type = _FOLLOWINGDISTANCEFORVIDEO
 DESCRIPTOR.message_types_by_name['LaneChangesForVideo'] = _LANECHANGESFORVIDEO
 DESCRIPTOR.message_types_by_name['LaneChangesForVideoRequest'] = _LANECHANGESFORVIDEOREQUEST
 DESCRIPTOR.message_types_by_name['LaneChangesForVideoResponse'] = _LANECHANGESFORVIDEORESPONSE
