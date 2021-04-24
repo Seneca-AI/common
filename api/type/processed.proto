@@ -47,5 +47,5 @@ message FollowingDistanceForVideoRequest {
 message FollowingDistanceForVideoResponse {
     // The request this response is for.
     string request_id = 1;
-    FollowingDistanceForVideo lane_changes_for_video = 2;
+    FollowingDistanceForVideo following_distance_for_video = 2;
 }
