@@ -21,6 +21,18 @@ message RawVideo {
     string original_file_id = 9;
 }
 
+message RawVideoProcessRequest {
+    string user_id = 1;
+    string video_name = 2;
+    string local_path = 3;
+    bytes video_bytes = 4;
+}
+
+message RawVideoProcessResponse {
+    int64 error_code = 1;
+    string message = 2;
+}
+
 // key(user_id, id)
 message CutVideo {
     string user_id = 1;
