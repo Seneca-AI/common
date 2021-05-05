@@ -29,8 +29,7 @@ message RawVideoProcessRequest {
 }
 
 message RawVideoProcessResponse {
-    int64 error_code = 1;
-    string message = 2;
+    string raw_video_id = 1;
 }
 
 // key(user_id, id)
