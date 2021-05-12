@@ -23,14 +23,16 @@ message DrivingCondition {
     }
 
     ConditionType condition_type = 1;
-    double severity = 2; 
+    double severity = 2;
+    api.Source source = 3; 
 }
 
 message DrivingPeriod {
-    string user_id = 1;
-    int64 start_time_ms = 2;
-    int64 end_time_ms = 3;
-    repeated DrivingCondition driving_condition = 4;
+    string id = 1;
+    string user_id = 2;
+    int64 start_time_ms = 3;
+    int64 end_time_ms = 4;
+    repeated DrivingCondition driving_condition = 5;
 }
 
 message SubEvent {
