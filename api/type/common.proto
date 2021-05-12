@@ -59,7 +59,7 @@ message Source {
 }
 
 enum ConditionType {
-    UNKNOWN = 0;
+    NONE_CONDITION_TYPE = 0;
     NIGHT = 1;
 
     RAIN = 2;
@@ -74,7 +74,7 @@ enum ConditionType {
 }
 
 enum EventType {
-    UNKNOWN = 0;
+    UNKNOWN_EVENT_TYPE = 0;
     LANE_CHANGE = 1;
     FAST_ACCELERATION = 2;
     FAST_DECELERATION = 3;
