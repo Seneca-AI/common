@@ -6,53 +6,28 @@ option go_package ="api/type";
 
 // TODO(lucaloncar): figure out how to incorporate long duration drivings
 
-message DrivingCondition {
-    enum ConditionType {
-        UNKNOWN = 0;
-        NIGHT = 1;
-
-        RAIN = 2;
-        SNOW = 3;
-        ICE = 4;
-
-        URBAN = 5;
-        HIGHWAY = 6;
-        RURAL = 7;
-
-        TRAFFIC = 8;
-    }
-
-    ConditionType condition_type = 1;
-    double severity = 2;
-    api.Source source = 3; 
+message DrivingConditionInternal {
+    string id = 1;
+    string user_id = 2;
+    api.ConditionType condition_type = 3;
+    double severity = 4;
+    int64 start_time_ms = 5;
+    int64 end_time_ms = 6; 
+    api.Source source = 7;
 }
 
-message DrivingPeriod {
+message DrivingPeriodInternal {
     string id = 1;
     string user_id = 2;
     int64 start_time_ms = 3;
     int64 end_time_ms = 4;
-    repeated DrivingCondition driving_condition = 5;
+    repeated string driving_condition_id = 5;
 }
 
 message SubEvent {
-    enum EventType {
-        UNKNOWN = 0;
-        LANE_CHANGE = 1;
-        FAST_ACCELERATION = 2;
-        FAST_DECELERATION = 3;
-    }
-
-    EventType event_type = 1;
+    api.EventType event_type = 1;
     // Value depends on type.  For example, FAST_ACCELERATION will be in mph/s.
     double value = 2;
     double severity = 3;
     api.Source source = 4;
-}
-
-message Event {
-    string id = 1;
-    string user_id = 2;
-    int64 start_time_ms = 3;
-    repeated SubEvent sub_event = 4;
 }

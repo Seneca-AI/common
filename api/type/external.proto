@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+import "common.proto";
+
+option go_package ="api/type";
+
+message DrivingCondition {
+    repeated api.ConditionType condition_type = 1;
+    double severity = 2;
+    int64 start_time_ms = 3;
+    int64 end_time_ms = 4; 
+}
+
+message DrivingPeriod {
+    int64 start_time_ms = 1;
+    int64 end_time_ms = 2;
+    repeated DrivingCondition driving_condition = 3;
+}
+
+message SubEvent {
+    api.EventType event_type = 1;
+    // Value depends on type.  For example, FAST_ACCELERATION will be in mph/s.
+    double value = 2;
+    double severity = 3;
+}
+
+message Event {
+    int64 start_time_ms = 1;
+    repeated SubEvent sub_event = 2;
+}

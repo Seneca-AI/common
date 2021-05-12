@@ -57,3 +57,25 @@ message Source {
     string source_id = 1;
     Type source_type = 2;
 }
+
+enum ConditionType {
+    UNKNOWN = 0;
+    NIGHT = 1;
+
+    RAIN = 2;
+    SNOW = 3;
+    ICE = 4;
+
+    URBAN = 5;
+    HIGHWAY = 6;
+    RURAL = 7;
+
+    TRAFFIC = 8;
+}
+
+enum EventType {
+    UNKNOWN = 0;
+    LANE_CHANGE = 1;
+    FAST_ACCELERATION = 2;
+    FAST_DECELERATION = 3;
+}
