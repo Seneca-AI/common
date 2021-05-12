@@ -20,6 +20,125 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+type ConditionType int32
+
+const (
+	ConditionType_NONE_CONDITION_TYPE ConditionType = 0
+	ConditionType_NIGHT               ConditionType = 1
+	ConditionType_RAIN                ConditionType = 2
+	ConditionType_SNOW                ConditionType = 3
+	ConditionType_ICE                 ConditionType = 4
+	ConditionType_URBAN               ConditionType = 5
+	ConditionType_HIGHWAY             ConditionType = 6
+	ConditionType_RURAL               ConditionType = 7
+	ConditionType_TRAFFIC             ConditionType = 8
+)
+
+// Enum value maps for ConditionType.
+var (
+	ConditionType_name = map[int32]string{
+		0: "NONE_CONDITION_TYPE",
+		1: "NIGHT",
+		2: "RAIN",
+		3: "SNOW",
+		4: "ICE",
+		5: "URBAN",
+		6: "HIGHWAY",
+		7: "RURAL",
+		8: "TRAFFIC",
+	}
+	ConditionType_value = map[string]int32{
+		"NONE_CONDITION_TYPE": 0,
+		"NIGHT":               1,
+		"RAIN":                2,
+		"SNOW":                3,
+		"ICE":                 4,
+		"URBAN":               5,
+		"HIGHWAY":             6,
+		"RURAL":               7,
+		"TRAFFIC":             8,
+	}
+)
+
+func (x ConditionType) Enum() *ConditionType {
+	p := new(ConditionType)
+	*p = x
+	return p
+}
+
+func (x ConditionType) String() string {
+	return protoimpl.X.EnumStringOf(x.Descriptor(), protoreflect.EnumNumber(x))
+}
+
+func (ConditionType) Descriptor() protoreflect.EnumDescriptor {
+	return file_common_proto_enumTypes[0].Descriptor()
+}
+
+func (ConditionType) Type() protoreflect.EnumType {
+	return &file_common_proto_enumTypes[0]
+}
+
+func (x ConditionType) Number() protoreflect.EnumNumber {
+	return protoreflect.EnumNumber(x)
+}
+
+// Deprecated: Use ConditionType.Descriptor instead.
+func (ConditionType) EnumDescriptor() ([]byte, []int) {
+	return file_common_proto_rawDescGZIP(), []int{0}
+}
+
+type EventType int32
+
+const (
+	EventType_UNKNOWN_EVENT_TYPE EventType = 0
+	EventType_LANE_CHANGE        EventType = 1
+	EventType_FAST_ACCELERATION  EventType = 2
+	EventType_FAST_DECELERATION  EventType = 3
+)
+
+// Enum value maps for EventType.
+var (
+	EventType_name = map[int32]string{
+		0: "UNKNOWN_EVENT_TYPE",
+		1: "LANE_CHANGE",
+		2: "FAST_ACCELERATION",
+		3: "FAST_DECELERATION",
+	}
+	EventType_value = map[string]int32{
+		"UNKNOWN_EVENT_TYPE": 0,
+		"LANE_CHANGE":        1,
+		"FAST_ACCELERATION":  2,
+		"FAST_DECELERATION":  3,
+	}
+)
+
+func (x EventType) Enum() *EventType {
+	p := new(EventType)
+	*p = x
+	return p
+}
+
+func (x EventType) String() string {
+	return protoimpl.X.EnumStringOf(x.Descriptor(), protoreflect.EnumNumber(x))
+}
+
+func (EventType) Descriptor() protoreflect.EnumDescriptor {
+	return file_common_proto_enumTypes[1].Descriptor()
+}
+
+func (EventType) Type() protoreflect.EnumType {
+	return &file_common_proto_enumTypes[1]
+}
+
+func (x EventType) Number() protoreflect.EnumNumber {
+	return protoreflect.EnumNumber(x)
+}
+
+// Deprecated: Use EventType.Descriptor instead.
+func (EventType) EnumDescriptor() ([]byte, []int) {
+	return file_common_proto_rawDescGZIP(), []int{1}
+}
+
 type Latitude_LatDirection int32
 
 const (
@@ -53,11 +172,11 @@ func (x Latitude_LatDirection) String() string {
 }
 
 func (Latitude_LatDirection) Descriptor() protoreflect.EnumDescriptor {
-	return file_common_proto_enumTypes[0].Descriptor()
+	return file_common_proto_enumTypes[2].Descriptor()
 }
 
 func (Latitude_LatDirection) Type() protoreflect.EnumType {
-	return &file_common_proto_enumTypes[0]
+	return &file_common_proto_enumTypes[2]
 }
 
 func (x Latitude_LatDirection) Number() protoreflect.EnumNumber {
@@ -102,11 +221,11 @@ func (x Longitude_LongDirection) String() string {
 }
 
 func (Longitude_LongDirection) Descriptor() protoreflect.EnumDescriptor {
-	return file_common_proto_enumTypes[1].Descriptor()
+	return file_common_proto_enumTypes[3].Descriptor()
 }
 
 func (Longitude_LongDirection) Type() protoreflect.EnumType {
-	return &file_common_proto_enumTypes[1]
+	return &file_common_proto_enumTypes[3]
 }
 
 func (x Longitude_LongDirection) Number() protoreflect.EnumNumber {
@@ -154,11 +273,11 @@ func (x Source_Type) String() string {
 }
 
 func (Source_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_common_proto_enumTypes[2].Descriptor()
+	return file_common_proto_enumTypes[4].Descriptor()
 }
 
 func (Source_Type) Type() protoreflect.EnumType {
-	return &file_common_proto_enumTypes[2]
+	return &file_common_proto_enumTypes[4]
 }
 
 func (x Source_Type) Number() protoreflect.EnumNumber {
@@ -591,8 +710,23 @@ var file_common_proto_rawDesc = []byte{
 	0x4b, 0x4e, 0x4f, 0x57, 0x4e, 0x10, 0x00, 0x12, 0x0d, 0x0a, 0x09, 0x52, 0x41, 0x57, 0x5f, 0x56,
 	0x49, 0x44, 0x45, 0x4f, 0x10, 0x01, 0x12, 0x10, 0x0a, 0x0c, 0x52, 0x41, 0x57, 0x5f, 0x4c, 0x4f,
 	0x43, 0x41, 0x54, 0x49, 0x4f, 0x4e, 0x10, 0x02, 0x12, 0x0e, 0x0a, 0x0a, 0x52, 0x41, 0x57, 0x5f,
-	0x4d, 0x4f, 0x54, 0x49, 0x4f, 0x4e, 0x10, 0x03, 0x42, 0x0a, 0x5a, 0x08, 0x61, 0x70, 0x69, 0x2f,
-	0x74, 0x79, 0x70, 0x65, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x4d, 0x4f, 0x54, 0x49, 0x4f, 0x4e, 0x10, 0x03, 0x2a, 0x80, 0x01, 0x0a, 0x0d, 0x43, 0x6f, 0x6e,
+	0x64, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x54, 0x79, 0x70, 0x65, 0x12, 0x17, 0x0a, 0x13, 0x4e, 0x4f,
+	0x4e, 0x45, 0x5f, 0x43, 0x4f, 0x4e, 0x44, 0x49, 0x54, 0x49, 0x4f, 0x4e, 0x5f, 0x54, 0x59, 0x50,
+	0x45, 0x10, 0x00, 0x12, 0x09, 0x0a, 0x05, 0x4e, 0x49, 0x47, 0x48, 0x54, 0x10, 0x01, 0x12, 0x08,
+	0x0a, 0x04, 0x52, 0x41, 0x49, 0x4e, 0x10, 0x02, 0x12, 0x08, 0x0a, 0x04, 0x53, 0x4e, 0x4f, 0x57,
+	0x10, 0x03, 0x12, 0x07, 0x0a, 0x03, 0x49, 0x43, 0x45, 0x10, 0x04, 0x12, 0x09, 0x0a, 0x05, 0x55,
+	0x52, 0x42, 0x41, 0x4e, 0x10, 0x05, 0x12, 0x0b, 0x0a, 0x07, 0x48, 0x49, 0x47, 0x48, 0x57, 0x41,
+	0x59, 0x10, 0x06, 0x12, 0x09, 0x0a, 0x05, 0x52, 0x55, 0x52, 0x41, 0x4c, 0x10, 0x07, 0x12, 0x0b,
+	0x0a, 0x07, 0x54, 0x52, 0x41, 0x46, 0x46, 0x49, 0x43, 0x10, 0x08, 0x2a, 0x62, 0x0a, 0x09, 0x45,
+	0x76, 0x65, 0x6e, 0x74, 0x54, 0x79, 0x70, 0x65, 0x12, 0x16, 0x0a, 0x12, 0x55, 0x4e, 0x4b, 0x4e,
+	0x4f, 0x57, 0x4e, 0x5f, 0x45, 0x56, 0x45, 0x4e, 0x54, 0x5f, 0x54, 0x59, 0x50, 0x45, 0x10, 0x00,
+	0x12, 0x0f, 0x0a, 0x0b, 0x4c, 0x41, 0x4e, 0x45, 0x5f, 0x43, 0x48, 0x41, 0x4e, 0x47, 0x45, 0x10,
+	0x01, 0x12, 0x15, 0x0a, 0x11, 0x46, 0x41, 0x53, 0x54, 0x5f, 0x41, 0x43, 0x43, 0x45, 0x4c, 0x45,
+	0x52, 0x41, 0x54, 0x49, 0x4f, 0x4e, 0x10, 0x02, 0x12, 0x15, 0x0a, 0x11, 0x46, 0x41, 0x53, 0x54,
+	0x5f, 0x44, 0x45, 0x43, 0x45, 0x4c, 0x45, 0x52, 0x41, 0x54, 0x49, 0x4f, 0x4e, 0x10, 0x03, 0x42,
+	0x0a, 0x5a, 0x08, 0x61, 0x70, 0x69, 0x2f, 0x74, 0x79, 0x70, 0x65, 0x62, 0x06, 0x70, 0x72, 0x6f,
+	0x74, 0x6f, 0x33,
 }
 
 var (
@@ -607,25 +741,27 @@ func file_common_proto_rawDescGZIP() []byte {
 	return file_common_proto_rawDescData
 }
 
-var file_common_proto_enumTypes = make([]protoimpl.EnumInfo, 3)
+var file_common_proto_enumTypes = make([]protoimpl.EnumInfo, 5)
 var file_common_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
 var file_common_proto_goTypes = []interface{}{
-	(Latitude_LatDirection)(0),   // 0: api.Latitude.LatDirection
-	(Longitude_LongDirection)(0), // 1: api.Longitude.LongDirection
-	(Source_Type)(0),             // 2: api.Source.Type
-	(*TimePeriod)(nil),           // 3: api.TimePeriod
-	(*Latitude)(nil),             // 4: api.Latitude
-	(*Longitude)(nil),            // 5: api.Longitude
-	(*Location)(nil),             // 6: api.Location
-	(*Motion)(nil),               // 7: api.Motion
-	(*Source)(nil),               // 8: api.Source
+	(ConditionType)(0),           // 0: api.ConditionType
+	(EventType)(0),               // 1: api.EventType
+	(Latitude_LatDirection)(0),   // 2: api.Latitude.LatDirection
+	(Longitude_LongDirection)(0), // 3: api.Longitude.LongDirection
+	(Source_Type)(0),             // 4: api.Source.Type
+	(*TimePeriod)(nil),           // 5: api.TimePeriod
+	(*Latitude)(nil),             // 6: api.Latitude
+	(*Longitude)(nil),            // 7: api.Longitude
+	(*Location)(nil),             // 8: api.Location
+	(*Motion)(nil),               // 9: api.Motion
+	(*Source)(nil),               // 10: api.Source
 }
 var file_common_proto_depIdxs = []int32{
-	0, // 0: api.Latitude.lat_direction:type_name -> api.Latitude.LatDirection
-	1, // 1: api.Longitude.long_direction:type_name -> api.Longitude.LongDirection
-	4, // 2: api.Location.lat:type_name -> api.Latitude
-	5, // 3: api.Location.long:type_name -> api.Longitude
-	2, // 4: api.Source.source_type:type_name -> api.Source.Type
+	2, // 0: api.Latitude.lat_direction:type_name -> api.Latitude.LatDirection
+	3, // 1: api.Longitude.long_direction:type_name -> api.Longitude.LongDirection
+	6, // 2: api.Location.lat:type_name -> api.Latitude
+	7, // 3: api.Location.long:type_name -> api.Longitude
+	4, // 4: api.Source.source_type:type_name -> api.Source.Type
 	5, // [5:5] is the sub-list for method output_type
 	5, // [5:5] is the sub-list for method input_type
 	5, // [5:5] is the sub-list for extension type_name
@@ -717,7 +853,7 @@ func file_common_proto_init() {
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_common_proto_rawDesc,
-			NumEnums:      3,
+			NumEnums:      5,
 			NumMessages:   6,
 			NumExtensions: 0,
 			NumServices:   0,
