@@ -46,30 +46,14 @@ message Motion {
     double acceleration_mph_s = 2;
 }
 
-enum Tag {
-    UNKNOWN = 0;
-    // Values: [0, 1000]
-    TRAFFIC = 1;
-    // Values: [0.0, 1000.0] hours
-    LONG_DURATION = 2;
-    // Values: [0, 1000] mph
-    SPEED = 3;
-    /// Values: [-1000, 1000] feet/s/s
-    ACCELERATION = 4;
-    // Values: [0, 1000] feet
-    FOLLOWING_DISTANCE = 5;
-    // Values: [0, 1000]
-    NIGHT = 6;
-    // Values: true, false
-    WEEKEND = 7;
-    // Values: [0, 1000]
-    SNOW = 8;
-    // Values: [0, 1000]
-    RAIN = 9;
-    // Values: [0, 1000]
-    ICE = 10;
-    // Values: [0, 1000]
-    CITY = 11;
-    // Values: [0, 1000]
-    HIGH_WAY = 12;
+message Source {
+    enum Type {
+        UNKNOWN = 0;
+        RAW_VIDEO = 1;
+        RAW_LOCATION = 2;
+        RAW_MOTION = 3;
+    }
+
+    string source_id = 1;
+    Type source_type = 2;
 }
