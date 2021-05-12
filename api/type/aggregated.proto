@@ -1,4 +1,5 @@
 syntax = "proto3";
+package api;
 
 import "common.proto";
 
@@ -24,10 +25,12 @@ message DrivingPeriodInternal {
     repeated string driving_condition_id = 5;
 }
 
-message SubEvent {
-    api.EventType event_type = 1;
+message SubEventInternal {
+    string id = 1;
+    string user_id = 2;
+    api.EventType event_type = 3;
     // Value depends on type.  For example, FAST_ACCELERATION will be in mph/s.
-    double value = 2;
-    double severity = 3;
-    api.Source source = 4;
+    double value = 4;
+    double severity = 5;
+    api.Source source = 6;
 }
