@@ -3,6 +3,11 @@ package api;
 
 option go_package ="api/type";
 
+message Header {
+    int64 code = 1;
+    string message = 2;
+}
+
 message TimePeriod {
     int64 start_time_ms = 1;
     int64 end_time_ms = 2;
