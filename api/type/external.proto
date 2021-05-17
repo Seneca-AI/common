@@ -30,7 +30,7 @@ message Event {
 message TripListRequest {
     string user_id = 1;
     int64 start_time_ms = 2;
-    int64 end_time_ms = 2;
+    int64 end_time_ms = 3;
 }
 
 message TripListResponse {
