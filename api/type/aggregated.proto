@@ -34,3 +34,25 @@ message EventInternal {
     int64 timestamp_ms = 7;
     api.Source source = 8;
 }
+
+message EventCreateRequest {
+    string user_id = 1;
+    EventInternal driving_condition = 2;
+}
+
+message EventCreateResponse {
+    api.Header header = 1;
+    string user_id = 2;
+    EventInternal driving_condition = 3;
+}
+
+message DrivingConditionCreateRequest {
+    string user_id = 1;
+    DrivingConditionInternal driving_condition = 2;
+}
+
+message DrivingConditionCreateResponse {
+    api.Header header = 1;
+    string user_id = 2;
+    DrivingConditionInternal driving_condition = 3;
+}

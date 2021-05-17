@@ -1,0 +1,60 @@
+{
+    "services": [
+        {
+            "name": "ml_server",
+            "description": "flask server where all ML work is done",
+            "domain": "ml.internal.seneca.com.",
+            "endpoints": [
+                {
+                    "url": "/lane_changing",
+                    "description": "responds to a LaneChangesForVideoRequest with a LaneChangesForVideoResponse",
+                    "http_method": "POST"
+                },
+                {
+                    "url": "/following_distance",
+                    "description": "responds to a FollowingDistanceForVideoRequest with a FollowingDistanceForVideoResponse",
+                    "http_method": "POST"
+                }
+            ]
+        },
+        {
+            "name": "seneca_server",
+            "description": "server that hosts the logic in the main seneca repo",
+            "domain": "internal.seneca.com.",
+            "endpoints": [
+                {
+                    "url": "/users/{user_id}/events",
+                    "description": "responds to an EventCreateRequest with an EventCreateResponse",
+                    "http_method": "POST"
+                },
+                {
+                    "url": "/users/{user_id}/driving_conditions",
+                    "description": "responds to a DrivingConditionCreateRequest with a DrivingConditionCreateResponse",
+                    "http_method": "POST"
+                },
+                {
+                    "url": "/syncer",
+                    "description": "runs the syncer once, which lists all user IDs, and moves all unprocessed google drive videos to seneca",
+                    "http_method": "POST"
+                }
+            ]
+        },
+        {
+            "name": "api_server",
+            "description": "server would be exposed to insurance companies or the frontend",
+            "domain": "external.seneca.com.",
+            "endpoints": [
+                {
+                    "url": "/users/{user_id}/trips",
+                    "description": "responds to a TripListRequest with a TripListResponse",
+                    "http_method": "GET"
+                },
+                {
+                    "url": "/users/{user_id}/trips/{trip_id}",
+                    "description": "responds to a TripGetRequest with a TripGetResponse",
+                    "http_method": "GET"
+                }
+            ]
+        }
+    ]
+}

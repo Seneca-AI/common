@@ -1,0 +1,1 @@
+The JSON file in this directory describes how to access Seneca's services on the private network.

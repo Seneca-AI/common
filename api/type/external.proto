@@ -41,3 +41,26 @@ message Event {
     double severity = 5;
     int64 timestamp_ms = 6;
 }
+
+message TripListRequest {
+    string user_id = 1;
+    int64 start_time_ms = 2;
+    int64 end_time_ms = 2;
+}
+
+message TripListResponse {
+    api.Header header = 1;
+    string user_id = 2;
+    repeated string trip_id = 3;
+}
+
+message TripGetRequest {
+    string user_id = 1;
+    strin trip_id = 2;
+}
+
+message TripGetResponse {
+    api.Header header = 1;
+    string user_id = 2;
+    Trip trip = 3;
+}
