@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\010api/type',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x10\x61ggregated.proto\x12\x03\x61pi\x1a\x0c\x63ommon.proto\"W\n\x0cTripInternal\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12\x15\n\rstart_time_ms\x18\x03 \x01(\x03\x12\x13\n\x0b\x65nd_time_ms\x18\x04 \x01(\x03\"\xcf\x01\n\x18\x44rivingConditionInternal\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12\x0f\n\x07trip_id\x18\x03 \x01(\t\x12*\n\x0e\x63ondition_type\x18\x04 \x01(\x0e\x32\x12.api.ConditionType\x12\x10\n\x08severity\x18\x05 \x01(\x01\x12\x15\n\rstart_time_ms\x18\x06 \x01(\x03\x12\x13\n\x0b\x65nd_time_ms\x18\x07 \x01(\x03\x12\x1b\n\x06source\x18\x08 \x01(\x0b\x32\x0b.api.Source\"\xb5\x01\n\rEventInternal\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12\x0f\n\x07trip_id\x18\x03 \x01(\t\x12\"\n\nevent_type\x18\x04 \x01(\x0e\x32\x0e.api.EventType\x12\r\n\x05value\x18\x05 \x01(\x01\x12\x10\n\x08severity\x18\x06 \x01(\x01\x12\x14\n\x0ctimestamp_ms\x18\x07 \x01(\x03\x12\x1b\n\x06source\x18\x08 \x01(\x0b\x32\x0b.api.Source\"T\n\x12\x45ventCreateRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12-\n\x11\x64riving_condition\x18\x02 \x01(\x0b\x32\x12.api.EventInternal\"r\n\x13\x45ventCreateResponse\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.api.Header\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12-\n\x11\x64riving_condition\x18\x03 \x01(\x0b\x32\x12.api.EventInternal\"j\n\x1d\x44rivingConditionCreateRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x38\n\x11\x64riving_condition\x18\x02 \x01(\x0b\x32\x1d.api.DrivingConditionInternal\"\x88\x01\n\x1e\x44rivingConditionCreateResponse\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.api.Header\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12\x38\n\x11\x64riving_condition\x18\x03 \x01(\x0b\x32\x1d.api.DrivingConditionInternalB\nZ\x08\x61pi/typeb\x06proto3'
+  serialized_pb=b'\n\x10\x61ggregated.proto\x12\x03\x61pi\x1a\x0c\x63ommon.proto\"W\n\x0cTripInternal\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12\x15\n\rstart_time_ms\x18\x03 \x01(\x03\x12\x13\n\x0b\x65nd_time_ms\x18\x04 \x01(\x03\"\xcf\x01\n\x18\x44rivingConditionInternal\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12\x0f\n\x07trip_id\x18\x03 \x01(\t\x12*\n\x0e\x63ondition_type\x18\x04 \x01(\x0e\x32\x12.api.ConditionType\x12\x10\n\x08severity\x18\x05 \x01(\x01\x12\x15\n\rstart_time_ms\x18\x06 \x01(\x03\x12\x13\n\x0b\x65nd_time_ms\x18\x07 \x01(\x03\x12\x1b\n\x06source\x18\x08 \x01(\x0b\x32\x0b.api.Source\"\xb5\x01\n\rEventInternal\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12\x0f\n\x07trip_id\x18\x03 \x01(\t\x12\"\n\nevent_type\x18\x04 \x01(\x0e\x32\x0e.api.EventType\x12\r\n\x05value\x18\x05 \x01(\x01\x12\x10\n\x08severity\x18\x06 \x01(\x01\x12\x14\n\x0ctimestamp_ms\x18\x07 \x01(\x03\x12\x1b\n\x06source\x18\x08 \x01(\x0b\x32\x0b.api.Source\"H\n\x12\x45ventCreateRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12!\n\x05\x65vent\x18\x02 \x01(\x0b\x32\x12.api.EventInternal\"f\n\x13\x45ventCreateResponse\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.api.Header\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12!\n\x05\x65vent\x18\x03 \x01(\x0b\x32\x12.api.EventInternal\"j\n\x1d\x44rivingConditionCreateRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x38\n\x11\x64riving_condition\x18\x02 \x01(\x0b\x32\x1d.api.DrivingConditionInternal\"\x88\x01\n\x1e\x44rivingConditionCreateResponse\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.api.Header\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12\x38\n\x11\x64riving_condition\x18\x03 \x01(\x0b\x32\x1d.api.DrivingConditionInternalB\nZ\x08\x61pi/typeb\x06proto3'
   ,
   dependencies=[common__pb2.DESCRIPTOR,])
 
@@ -258,7 +258,7 @@ _EVENTCREATEREQUEST = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='driving_condition', full_name='api.EventCreateRequest.driving_condition', index=1,
+      name='event', full_name='api.EventCreateRequest.event', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -277,7 +277,7 @@ _EVENTCREATEREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=522,
-  serialized_end=606,
+  serialized_end=594,
 )
 
 
@@ -304,7 +304,7 @@ _EVENTCREATERESPONSE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='driving_condition', full_name='api.EventCreateResponse.driving_condition', index=2,
+      name='event', full_name='api.EventCreateResponse.event', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -322,8 +322,8 @@ _EVENTCREATERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=608,
-  serialized_end=722,
+  serialized_start=596,
+  serialized_end=698,
 )
 
 
@@ -361,8 +361,8 @@ _DRIVINGCONDITIONCREATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=724,
-  serialized_end=830,
+  serialized_start=700,
+  serialized_end=806,
 )
 
 
@@ -407,17 +407,17 @@ _DRIVINGCONDITIONCREATERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=833,
-  serialized_end=969,
+  serialized_start=809,
+  serialized_end=945,
 )
 
 _DRIVINGCONDITIONINTERNAL.fields_by_name['condition_type'].enum_type = common__pb2._CONDITIONTYPE
 _DRIVINGCONDITIONINTERNAL.fields_by_name['source'].message_type = common__pb2._SOURCE
 _EVENTINTERNAL.fields_by_name['event_type'].enum_type = common__pb2._EVENTTYPE
 _EVENTINTERNAL.fields_by_name['source'].message_type = common__pb2._SOURCE
-_EVENTCREATEREQUEST.fields_by_name['driving_condition'].message_type = _EVENTINTERNAL
+_EVENTCREATEREQUEST.fields_by_name['event'].message_type = _EVENTINTERNAL
 _EVENTCREATERESPONSE.fields_by_name['header'].message_type = common__pb2._HEADER
-_EVENTCREATERESPONSE.fields_by_name['driving_condition'].message_type = _EVENTINTERNAL
+_EVENTCREATERESPONSE.fields_by_name['event'].message_type = _EVENTINTERNAL
 _DRIVINGCONDITIONCREATEREQUEST.fields_by_name['driving_condition'].message_type = _DRIVINGCONDITIONINTERNAL
 _DRIVINGCONDITIONCREATERESPONSE.fields_by_name['header'].message_type = common__pb2._HEADER
 _DRIVINGCONDITIONCREATERESPONSE.fields_by_name['driving_condition'].message_type = _DRIVINGCONDITIONINTERNAL
