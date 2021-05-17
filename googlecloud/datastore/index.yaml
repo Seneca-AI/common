@@ -19,4 +19,14 @@ indexes:
   properties:
   - name: UserId
   - name: TimestampMs
+
+- kind: Trip
+  properties:
+  - name: UserId
+  - name: StartTimeMs
+
+- kind: Trip
+  properties:
+  - name: UserId
+  - name: EndTimeMs
   
