@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\010api/type',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x10\x61ggregated.proto\x12\x03\x61pi\x1a\x0c\x63ommon.proto\"W\n\x0cTripInternal\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12\x15\n\rstart_time_ms\x18\x03 \x01(\x03\x12\x13\n\x0b\x65nd_time_ms\x18\x04 \x01(\x03\"\xcf\x01\n\x18\x44rivingConditionInternal\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12\x0f\n\x07trip_id\x18\x03 \x01(\t\x12*\n\x0e\x63ondition_type\x18\x04 \x01(\x0e\x32\x12.api.ConditionType\x12\x10\n\x08severity\x18\x05 \x01(\x01\x12\x15\n\rstart_time_ms\x18\x06 \x01(\x03\x12\x13\n\x0b\x65nd_time_ms\x18\x07 \x01(\x03\x12\x1b\n\x06source\x18\x08 \x01(\x0b\x32\x0b.api.Source\"\xb5\x01\n\rEventInternal\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12\x0f\n\x07trip_id\x18\x03 \x01(\t\x12\"\n\nevent_type\x18\x04 \x01(\x0e\x32\x0e.api.EventType\x12\r\n\x05value\x18\x05 \x01(\x01\x12\x10\n\x08severity\x18\x06 \x01(\x01\x12\x14\n\x0ctimestamp_ms\x18\x07 \x01(\x03\x12\x1b\n\x06source\x18\x08 \x01(\x0b\x32\x0b.api.SourceB\nZ\x08\x61pi/typeb\x06proto3'
+  serialized_pb=b'\n\x10\x61ggregated.proto\x12\x03\x61pi\x1a\x0c\x63ommon.proto\"W\n\x0cTripInternal\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12\x15\n\rstart_time_ms\x18\x03 \x01(\x03\x12\x13\n\x0b\x65nd_time_ms\x18\x04 \x01(\x03\"\xcf\x01\n\x18\x44rivingConditionInternal\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12\x0f\n\x07trip_id\x18\x03 \x01(\t\x12*\n\x0e\x63ondition_type\x18\x04 \x01(\x0e\x32\x12.api.ConditionType\x12\x10\n\x08severity\x18\x05 \x01(\x01\x12\x15\n\rstart_time_ms\x18\x06 \x01(\x03\x12\x13\n\x0b\x65nd_time_ms\x18\x07 \x01(\x03\x12\x1b\n\x06source\x18\x08 \x01(\x0b\x32\x0b.api.Source\"\xb5\x01\n\rEventInternal\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12\x0f\n\x07trip_id\x18\x03 \x01(\t\x12\"\n\nevent_type\x18\x04 \x01(\x0e\x32\x0e.api.EventType\x12\r\n\x05value\x18\x05 \x01(\x01\x12\x10\n\x08severity\x18\x06 \x01(\x01\x12\x14\n\x0ctimestamp_ms\x18\x07 \x01(\x03\x12\x1b\n\x06source\x18\x08 \x01(\x0b\x32\x0b.api.Source\"T\n\x12\x45ventCreateRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12-\n\x11\x64riving_condition\x18\x02 \x01(\x0b\x32\x12.api.EventInternal\"r\n\x13\x45ventCreateResponse\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.api.Header\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12-\n\x11\x64riving_condition\x18\x03 \x01(\x0b\x32\x12.api.EventInternal\"j\n\x1d\x44rivingConditionCreateRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x38\n\x11\x64riving_condition\x18\x02 \x01(\x0b\x32\x1d.api.DrivingConditionInternal\"\x88\x01\n\x1e\x44rivingConditionCreateResponse\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.api.Header\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12\x38\n\x11\x64riving_condition\x18\x03 \x01(\x0b\x32\x1d.api.DrivingConditionInternalB\nZ\x08\x61pi/typeb\x06proto3'
   ,
   dependencies=[common__pb2.DESCRIPTOR,])
 
@@ -241,13 +241,193 @@ _EVENTINTERNAL = _descriptor.Descriptor(
   serialized_end=520,
 )
 
+
+_EVENTCREATEREQUEST = _descriptor.Descriptor(
+  name='EventCreateRequest',
+  full_name='api.EventCreateRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='user_id', full_name='api.EventCreateRequest.user_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='driving_condition', full_name='api.EventCreateRequest.driving_condition', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=522,
+  serialized_end=606,
+)
+
+
+_EVENTCREATERESPONSE = _descriptor.Descriptor(
+  name='EventCreateResponse',
+  full_name='api.EventCreateResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='header', full_name='api.EventCreateResponse.header', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='user_id', full_name='api.EventCreateResponse.user_id', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='driving_condition', full_name='api.EventCreateResponse.driving_condition', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=608,
+  serialized_end=722,
+)
+
+
+_DRIVINGCONDITIONCREATEREQUEST = _descriptor.Descriptor(
+  name='DrivingConditionCreateRequest',
+  full_name='api.DrivingConditionCreateRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='user_id', full_name='api.DrivingConditionCreateRequest.user_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='driving_condition', full_name='api.DrivingConditionCreateRequest.driving_condition', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=724,
+  serialized_end=830,
+)
+
+
+_DRIVINGCONDITIONCREATERESPONSE = _descriptor.Descriptor(
+  name='DrivingConditionCreateResponse',
+  full_name='api.DrivingConditionCreateResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='header', full_name='api.DrivingConditionCreateResponse.header', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='user_id', full_name='api.DrivingConditionCreateResponse.user_id', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='driving_condition', full_name='api.DrivingConditionCreateResponse.driving_condition', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=833,
+  serialized_end=969,
+)
+
 _DRIVINGCONDITIONINTERNAL.fields_by_name['condition_type'].enum_type = common__pb2._CONDITIONTYPE
 _DRIVINGCONDITIONINTERNAL.fields_by_name['source'].message_type = common__pb2._SOURCE
 _EVENTINTERNAL.fields_by_name['event_type'].enum_type = common__pb2._EVENTTYPE
 _EVENTINTERNAL.fields_by_name['source'].message_type = common__pb2._SOURCE
+_EVENTCREATEREQUEST.fields_by_name['driving_condition'].message_type = _EVENTINTERNAL
+_EVENTCREATERESPONSE.fields_by_name['header'].message_type = common__pb2._HEADER
+_EVENTCREATERESPONSE.fields_by_name['driving_condition'].message_type = _EVENTINTERNAL
+_DRIVINGCONDITIONCREATEREQUEST.fields_by_name['driving_condition'].message_type = _DRIVINGCONDITIONINTERNAL
+_DRIVINGCONDITIONCREATERESPONSE.fields_by_name['header'].message_type = common__pb2._HEADER
+_DRIVINGCONDITIONCREATERESPONSE.fields_by_name['driving_condition'].message_type = _DRIVINGCONDITIONINTERNAL
 DESCRIPTOR.message_types_by_name['TripInternal'] = _TRIPINTERNAL
 DESCRIPTOR.message_types_by_name['DrivingConditionInternal'] = _DRIVINGCONDITIONINTERNAL
 DESCRIPTOR.message_types_by_name['EventInternal'] = _EVENTINTERNAL
+DESCRIPTOR.message_types_by_name['EventCreateRequest'] = _EVENTCREATEREQUEST
+DESCRIPTOR.message_types_by_name['EventCreateResponse'] = _EVENTCREATERESPONSE
+DESCRIPTOR.message_types_by_name['DrivingConditionCreateRequest'] = _DRIVINGCONDITIONCREATEREQUEST
+DESCRIPTOR.message_types_by_name['DrivingConditionCreateResponse'] = _DRIVINGCONDITIONCREATERESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 TripInternal = _reflection.GeneratedProtocolMessageType('TripInternal', (_message.Message,), {
@@ -270,6 +450,34 @@ EventInternal = _reflection.GeneratedProtocolMessageType('EventInternal', (_mess
   # @@protoc_insertion_point(class_scope:api.EventInternal)
   })
 _sym_db.RegisterMessage(EventInternal)
+
+EventCreateRequest = _reflection.GeneratedProtocolMessageType('EventCreateRequest', (_message.Message,), {
+  'DESCRIPTOR' : _EVENTCREATEREQUEST,
+  '__module__' : 'aggregated_pb2'
+  # @@protoc_insertion_point(class_scope:api.EventCreateRequest)
+  })
+_sym_db.RegisterMessage(EventCreateRequest)
+
+EventCreateResponse = _reflection.GeneratedProtocolMessageType('EventCreateResponse', (_message.Message,), {
+  'DESCRIPTOR' : _EVENTCREATERESPONSE,
+  '__module__' : 'aggregated_pb2'
+  # @@protoc_insertion_point(class_scope:api.EventCreateResponse)
+  })
+_sym_db.RegisterMessage(EventCreateResponse)
+
+DrivingConditionCreateRequest = _reflection.GeneratedProtocolMessageType('DrivingConditionCreateRequest', (_message.Message,), {
+  'DESCRIPTOR' : _DRIVINGCONDITIONCREATEREQUEST,
+  '__module__' : 'aggregated_pb2'
+  # @@protoc_insertion_point(class_scope:api.DrivingConditionCreateRequest)
+  })
+_sym_db.RegisterMessage(DrivingConditionCreateRequest)
+
+DrivingConditionCreateResponse = _reflection.GeneratedProtocolMessageType('DrivingConditionCreateResponse', (_message.Message,), {
+  'DESCRIPTOR' : _DRIVINGCONDITIONCREATERESPONSE,
+  '__module__' : 'aggregated_pb2'
+  # @@protoc_insertion_point(class_scope:api.DrivingConditionCreateResponse)
+  })
+_sym_db.RegisterMessage(DrivingConditionCreateResponse)
 
 
 DESCRIPTOR._options = None

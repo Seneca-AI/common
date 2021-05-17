@@ -20,103 +20,11 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\010api/type',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0e\x65xternal.proto\x12\x03\x61pi\x1a\x0c\x63ommon.proto\"N\n\x0fTripListRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x15\n\rstart_time_ms\x18\x02 \x01(\x03\x12\x13\n\x0b\x65nd_time_ms\x18\x03 \x01(\x03\"W\n\x10TripListResponse\x12\x15\n\rstart_time_ms\x18\x01 \x01(\x03\x12\x13\n\x0b\x65nd_time_ms\x18\x02 \x01(\x03\x12\x17\n\x04trip\x18\x03 \x03(\x0b\x32\t.api.Trip\"\x7f\n\x04Trip\x12\x15\n\rstart_time_ms\x18\x01 \x01(\x03\x12\x13\n\x0b\x65nd_time_ms\x18\x02 \x01(\x03\x12\x19\n\x05\x65vent\x18\x03 \x03(\x0b\x32\n.api.Event\x12\x30\n\x11\x64riving_condition\x18\x04 \x03(\x0b\x32\x15.api.DrivingCondition\"|\n\x10\x44rivingCondition\x12*\n\x0e\x63ondition_type\x18\x02 \x03(\x0e\x32\x12.api.ConditionType\x12\x10\n\x08severity\x18\x05 \x03(\x01\x12\x15\n\rstart_time_ms\x18\x06 \x01(\x03\x12\x13\n\x0b\x65nd_time_ms\x18\x07 \x01(\x03\"b\n\x05\x45vent\x12\"\n\nevent_type\x18\x03 \x01(\x0e\x32\x0e.api.EventType\x12\r\n\x05value\x18\x04 \x01(\x01\x12\x10\n\x08severity\x18\x05 \x01(\x01\x12\x14\n\x0ctimestamp_ms\x18\x06 \x01(\x03\x42\nZ\x08\x61pi/typeb\x06proto3'
+  serialized_pb=b'\n\x0e\x65xternal.proto\x12\x03\x61pi\x1a\x0c\x63ommon.proto\"\x7f\n\x04Trip\x12\x15\n\rstart_time_ms\x18\x01 \x01(\x03\x12\x13\n\x0b\x65nd_time_ms\x18\x02 \x01(\x03\x12\x19\n\x05\x65vent\x18\x03 \x03(\x0b\x32\n.api.Event\x12\x30\n\x11\x64riving_condition\x18\x04 \x03(\x0b\x32\x15.api.DrivingCondition\"|\n\x10\x44rivingCondition\x12*\n\x0e\x63ondition_type\x18\x02 \x03(\x0e\x32\x12.api.ConditionType\x12\x10\n\x08severity\x18\x05 \x03(\x01\x12\x15\n\rstart_time_ms\x18\x06 \x01(\x03\x12\x13\n\x0b\x65nd_time_ms\x18\x07 \x01(\x03\"b\n\x05\x45vent\x12\"\n\nevent_type\x18\x03 \x01(\x0e\x32\x0e.api.EventType\x12\r\n\x05value\x18\x04 \x01(\x01\x12\x10\n\x08severity\x18\x05 \x01(\x01\x12\x14\n\x0ctimestamp_ms\x18\x06 \x01(\x03\"N\n\x0fTripListRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x15\n\rstart_time_ms\x18\x02 \x01(\x03\x12\x13\n\x0b\x65nd_time_ms\x18\x03 \x01(\x03\"Q\n\x10TripListResponse\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.api.Header\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12\x0f\n\x07trip_id\x18\x03 \x03(\t\"2\n\x0eTripGetRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x0f\n\x07trip_id\x18\x02 \x01(\t\"X\n\x0fTripGetResponse\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.api.Header\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12\x17\n\x04trip\x18\x03 \x01(\x0b\x32\t.api.TripB\nZ\x08\x61pi/typeb\x06proto3'
   ,
   dependencies=[common__pb2.DESCRIPTOR,])
 
 
-
-
-_TRIPLISTREQUEST = _descriptor.Descriptor(
-  name='TripListRequest',
-  full_name='api.TripListRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='user_id', full_name='api.TripListRequest.user_id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='start_time_ms', full_name='api.TripListRequest.start_time_ms', index=1,
-      number=2, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='end_time_ms', full_name='api.TripListRequest.end_time_ms', index=2,
-      number=3, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=37,
-  serialized_end=115,
-)
-
-
-_TRIPLISTRESPONSE = _descriptor.Descriptor(
-  name='TripListResponse',
-  full_name='api.TripListResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='start_time_ms', full_name='api.TripListResponse.start_time_ms', index=0,
-      number=1, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='end_time_ms', full_name='api.TripListResponse.end_time_ms', index=1,
-      number=2, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='trip', full_name='api.TripListResponse.trip', index=2,
-      number=3, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=117,
-  serialized_end=204,
-)
 
 
 _TRIP = _descriptor.Descriptor(
@@ -167,8 +75,8 @@ _TRIP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=206,
-  serialized_end=333,
+  serialized_start=37,
+  serialized_end=164,
 )
 
 
@@ -220,8 +128,8 @@ _DRIVINGCONDITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=335,
-  serialized_end=459,
+  serialized_start=166,
+  serialized_end=290,
 )
 
 
@@ -273,35 +181,202 @@ _EVENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=461,
-  serialized_end=559,
+  serialized_start=292,
+  serialized_end=390,
 )
 
-_TRIPLISTRESPONSE.fields_by_name['trip'].message_type = _TRIP
+
+_TRIPLISTREQUEST = _descriptor.Descriptor(
+  name='TripListRequest',
+  full_name='api.TripListRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='user_id', full_name='api.TripListRequest.user_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='start_time_ms', full_name='api.TripListRequest.start_time_ms', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='end_time_ms', full_name='api.TripListRequest.end_time_ms', index=2,
+      number=3, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=392,
+  serialized_end=470,
+)
+
+
+_TRIPLISTRESPONSE = _descriptor.Descriptor(
+  name='TripListResponse',
+  full_name='api.TripListResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='header', full_name='api.TripListResponse.header', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='user_id', full_name='api.TripListResponse.user_id', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='trip_id', full_name='api.TripListResponse.trip_id', index=2,
+      number=3, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=472,
+  serialized_end=553,
+)
+
+
+_TRIPGETREQUEST = _descriptor.Descriptor(
+  name='TripGetRequest',
+  full_name='api.TripGetRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='user_id', full_name='api.TripGetRequest.user_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='trip_id', full_name='api.TripGetRequest.trip_id', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=555,
+  serialized_end=605,
+)
+
+
+_TRIPGETRESPONSE = _descriptor.Descriptor(
+  name='TripGetResponse',
+  full_name='api.TripGetResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='header', full_name='api.TripGetResponse.header', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='user_id', full_name='api.TripGetResponse.user_id', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='trip', full_name='api.TripGetResponse.trip', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=607,
+  serialized_end=695,
+)
+
 _TRIP.fields_by_name['event'].message_type = _EVENT
 _TRIP.fields_by_name['driving_condition'].message_type = _DRIVINGCONDITION
 _DRIVINGCONDITION.fields_by_name['condition_type'].enum_type = common__pb2._CONDITIONTYPE
 _EVENT.fields_by_name['event_type'].enum_type = common__pb2._EVENTTYPE
-DESCRIPTOR.message_types_by_name['TripListRequest'] = _TRIPLISTREQUEST
-DESCRIPTOR.message_types_by_name['TripListResponse'] = _TRIPLISTRESPONSE
+_TRIPLISTRESPONSE.fields_by_name['header'].message_type = common__pb2._HEADER
+_TRIPGETRESPONSE.fields_by_name['header'].message_type = common__pb2._HEADER
+_TRIPGETRESPONSE.fields_by_name['trip'].message_type = _TRIP
 DESCRIPTOR.message_types_by_name['Trip'] = _TRIP
 DESCRIPTOR.message_types_by_name['DrivingCondition'] = _DRIVINGCONDITION
 DESCRIPTOR.message_types_by_name['Event'] = _EVENT
+DESCRIPTOR.message_types_by_name['TripListRequest'] = _TRIPLISTREQUEST
+DESCRIPTOR.message_types_by_name['TripListResponse'] = _TRIPLISTRESPONSE
+DESCRIPTOR.message_types_by_name['TripGetRequest'] = _TRIPGETREQUEST
+DESCRIPTOR.message_types_by_name['TripGetResponse'] = _TRIPGETRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
-
-TripListRequest = _reflection.GeneratedProtocolMessageType('TripListRequest', (_message.Message,), {
-  'DESCRIPTOR' : _TRIPLISTREQUEST,
-  '__module__' : 'external_pb2'
-  # @@protoc_insertion_point(class_scope:api.TripListRequest)
-  })
-_sym_db.RegisterMessage(TripListRequest)
-
-TripListResponse = _reflection.GeneratedProtocolMessageType('TripListResponse', (_message.Message,), {
-  'DESCRIPTOR' : _TRIPLISTRESPONSE,
-  '__module__' : 'external_pb2'
-  # @@protoc_insertion_point(class_scope:api.TripListResponse)
-  })
-_sym_db.RegisterMessage(TripListResponse)
 
 Trip = _reflection.GeneratedProtocolMessageType('Trip', (_message.Message,), {
   'DESCRIPTOR' : _TRIP,
@@ -323,6 +398,34 @@ Event = _reflection.GeneratedProtocolMessageType('Event', (_message.Message,), {
   # @@protoc_insertion_point(class_scope:api.Event)
   })
 _sym_db.RegisterMessage(Event)
+
+TripListRequest = _reflection.GeneratedProtocolMessageType('TripListRequest', (_message.Message,), {
+  'DESCRIPTOR' : _TRIPLISTREQUEST,
+  '__module__' : 'external_pb2'
+  # @@protoc_insertion_point(class_scope:api.TripListRequest)
+  })
+_sym_db.RegisterMessage(TripListRequest)
+
+TripListResponse = _reflection.GeneratedProtocolMessageType('TripListResponse', (_message.Message,), {
+  'DESCRIPTOR' : _TRIPLISTRESPONSE,
+  '__module__' : 'external_pb2'
+  # @@protoc_insertion_point(class_scope:api.TripListResponse)
+  })
+_sym_db.RegisterMessage(TripListResponse)
+
+TripGetRequest = _reflection.GeneratedProtocolMessageType('TripGetRequest', (_message.Message,), {
+  'DESCRIPTOR' : _TRIPGETREQUEST,
+  '__module__' : 'external_pb2'
+  # @@protoc_insertion_point(class_scope:api.TripGetRequest)
+  })
+_sym_db.RegisterMessage(TripGetRequest)
+
+TripGetResponse = _reflection.GeneratedProtocolMessageType('TripGetResponse', (_message.Message,), {
+  'DESCRIPTOR' : _TRIPGETRESPONSE,
+  '__module__' : 'external_pb2'
+  # @@protoc_insertion_point(class_scope:api.TripGetResponse)
+  })
+_sym_db.RegisterMessage(TripGetResponse)
 
 
 DESCRIPTOR._options = None

@@ -298,6 +298,242 @@ func (x *EventInternal) GetSource() *Source {
 	return nil
 }
 
+type EventCreateRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	UserId           string         `protobuf:"bytes,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	DrivingCondition *EventInternal `protobuf:"bytes,2,opt,name=driving_condition,json=drivingCondition,proto3" json:"driving_condition,omitempty"`
+}
+
+func (x *EventCreateRequest) Reset() {
+	*x = EventCreateRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_aggregated_proto_msgTypes[3]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *EventCreateRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*EventCreateRequest) ProtoMessage() {}
+
+func (x *EventCreateRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_aggregated_proto_msgTypes[3]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use EventCreateRequest.ProtoReflect.Descriptor instead.
+func (*EventCreateRequest) Descriptor() ([]byte, []int) {
+	return file_aggregated_proto_rawDescGZIP(), []int{3}
+}
+
+func (x *EventCreateRequest) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
+func (x *EventCreateRequest) GetDrivingCondition() *EventInternal {
+	if x != nil {
+		return x.DrivingCondition
+	}
+	return nil
+}
+
+type EventCreateResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Header           *Header        `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	UserId           string         `protobuf:"bytes,2,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	DrivingCondition *EventInternal `protobuf:"bytes,3,opt,name=driving_condition,json=drivingCondition,proto3" json:"driving_condition,omitempty"`
+}
+
+func (x *EventCreateResponse) Reset() {
+	*x = EventCreateResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_aggregated_proto_msgTypes[4]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *EventCreateResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*EventCreateResponse) ProtoMessage() {}
+
+func (x *EventCreateResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_aggregated_proto_msgTypes[4]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use EventCreateResponse.ProtoReflect.Descriptor instead.
+func (*EventCreateResponse) Descriptor() ([]byte, []int) {
+	return file_aggregated_proto_rawDescGZIP(), []int{4}
+}
+
+func (x *EventCreateResponse) GetHeader() *Header {
+	if x != nil {
+		return x.Header
+	}
+	return nil
+}
+
+func (x *EventCreateResponse) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
+func (x *EventCreateResponse) GetDrivingCondition() *EventInternal {
+	if x != nil {
+		return x.DrivingCondition
+	}
+	return nil
+}
+
+type DrivingConditionCreateRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	UserId           string                    `protobuf:"bytes,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	DrivingCondition *DrivingConditionInternal `protobuf:"bytes,2,opt,name=driving_condition,json=drivingCondition,proto3" json:"driving_condition,omitempty"`
+}
+
+func (x *DrivingConditionCreateRequest) Reset() {
+	*x = DrivingConditionCreateRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_aggregated_proto_msgTypes[5]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *DrivingConditionCreateRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*DrivingConditionCreateRequest) ProtoMessage() {}
+
+func (x *DrivingConditionCreateRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_aggregated_proto_msgTypes[5]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use DrivingConditionCreateRequest.ProtoReflect.Descriptor instead.
+func (*DrivingConditionCreateRequest) Descriptor() ([]byte, []int) {
+	return file_aggregated_proto_rawDescGZIP(), []int{5}
+}
+
+func (x *DrivingConditionCreateRequest) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
+func (x *DrivingConditionCreateRequest) GetDrivingCondition() *DrivingConditionInternal {
+	if x != nil {
+		return x.DrivingCondition
+	}
+	return nil
+}
+
+type DrivingConditionCreateResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Header           *Header                   `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	UserId           string                    `protobuf:"bytes,2,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	DrivingCondition *DrivingConditionInternal `protobuf:"bytes,3,opt,name=driving_condition,json=drivingCondition,proto3" json:"driving_condition,omitempty"`
+}
+
+func (x *DrivingConditionCreateResponse) Reset() {
+	*x = DrivingConditionCreateResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_aggregated_proto_msgTypes[6]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *DrivingConditionCreateResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*DrivingConditionCreateResponse) ProtoMessage() {}
+
+func (x *DrivingConditionCreateResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_aggregated_proto_msgTypes[6]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use DrivingConditionCreateResponse.ProtoReflect.Descriptor instead.
+func (*DrivingConditionCreateResponse) Descriptor() ([]byte, []int) {
+	return file_aggregated_proto_rawDescGZIP(), []int{6}
+}
+
+func (x *DrivingConditionCreateResponse) GetHeader() *Header {
+	if x != nil {
+		return x.Header
+	}
+	return nil
+}
+
+func (x *DrivingConditionCreateResponse) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
+func (x *DrivingConditionCreateResponse) GetDrivingCondition() *DrivingConditionInternal {
+	if x != nil {
+		return x.DrivingCondition
+	}
+	return nil
+}
+
 var File_aggregated_proto protoreflect.FileDescriptor
 
 var file_aggregated_proto_rawDesc = []byte{
@@ -344,9 +580,44 @@ var file_aggregated_proto_rawDesc = []byte{
 	0x61, 0x6d, 0x70, 0x5f, 0x6d, 0x73, 0x18, 0x07, 0x20, 0x01, 0x28, 0x03, 0x52, 0x0b, 0x74, 0x69,
 	0x6d, 0x65, 0x73, 0x74, 0x61, 0x6d, 0x70, 0x4d, 0x73, 0x12, 0x23, 0x0a, 0x06, 0x73, 0x6f, 0x75,
 	0x72, 0x63, 0x65, 0x18, 0x08, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0b, 0x2e, 0x61, 0x70, 0x69, 0x2e,
-	0x53, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x52, 0x06, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x42, 0x0a,
-	0x5a, 0x08, 0x61, 0x70, 0x69, 0x2f, 0x74, 0x79, 0x70, 0x65, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74,
-	0x6f, 0x33,
+	0x53, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x52, 0x06, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x22, 0x6e,
+	0x0a, 0x12, 0x45, 0x76, 0x65, 0x6e, 0x74, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x52, 0x65, 0x71,
+	0x75, 0x65, 0x73, 0x74, 0x12, 0x17, 0x0a, 0x07, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18,
+	0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x12, 0x3f, 0x0a,
+	0x11, 0x64, 0x72, 0x69, 0x76, 0x69, 0x6e, 0x67, 0x5f, 0x63, 0x6f, 0x6e, 0x64, 0x69, 0x74, 0x69,
+	0x6f, 0x6e, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x12, 0x2e, 0x61, 0x70, 0x69, 0x2e, 0x45,
+	0x76, 0x65, 0x6e, 0x74, 0x49, 0x6e, 0x74, 0x65, 0x72, 0x6e, 0x61, 0x6c, 0x52, 0x10, 0x64, 0x72,
+	0x69, 0x76, 0x69, 0x6e, 0x67, 0x43, 0x6f, 0x6e, 0x64, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x22, 0x94,
+	0x01, 0x0a, 0x13, 0x45, 0x76, 0x65, 0x6e, 0x74, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x52, 0x65,
+	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x23, 0x0a, 0x06, 0x68, 0x65, 0x61, 0x64, 0x65, 0x72,
+	0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0b, 0x2e, 0x61, 0x70, 0x69, 0x2e, 0x48, 0x65, 0x61,
+	0x64, 0x65, 0x72, 0x52, 0x06, 0x68, 0x65, 0x61, 0x64, 0x65, 0x72, 0x12, 0x17, 0x0a, 0x07, 0x75,
+	0x73, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x75, 0x73,
+	0x65, 0x72, 0x49, 0x64, 0x12, 0x3f, 0x0a, 0x11, 0x64, 0x72, 0x69, 0x76, 0x69, 0x6e, 0x67, 0x5f,
+	0x63, 0x6f, 0x6e, 0x64, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x18, 0x03, 0x20, 0x01, 0x28, 0x0b, 0x32,
+	0x12, 0x2e, 0x61, 0x70, 0x69, 0x2e, 0x45, 0x76, 0x65, 0x6e, 0x74, 0x49, 0x6e, 0x74, 0x65, 0x72,
+	0x6e, 0x61, 0x6c, 0x52, 0x10, 0x64, 0x72, 0x69, 0x76, 0x69, 0x6e, 0x67, 0x43, 0x6f, 0x6e, 0x64,
+	0x69, 0x74, 0x69, 0x6f, 0x6e, 0x22, 0x84, 0x01, 0x0a, 0x1d, 0x44, 0x72, 0x69, 0x76, 0x69, 0x6e,
+	0x67, 0x43, 0x6f, 0x6e, 0x64, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65,
+	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x17, 0x0a, 0x07, 0x75, 0x73, 0x65, 0x72, 0x5f,
+	0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64,
+	0x12, 0x4a, 0x0a, 0x11, 0x64, 0x72, 0x69, 0x76, 0x69, 0x6e, 0x67, 0x5f, 0x63, 0x6f, 0x6e, 0x64,
+	0x69, 0x74, 0x69, 0x6f, 0x6e, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1d, 0x2e, 0x61, 0x70,
+	0x69, 0x2e, 0x44, 0x72, 0x69, 0x76, 0x69, 0x6e, 0x67, 0x43, 0x6f, 0x6e, 0x64, 0x69, 0x74, 0x69,
+	0x6f, 0x6e, 0x49, 0x6e, 0x74, 0x65, 0x72, 0x6e, 0x61, 0x6c, 0x52, 0x10, 0x64, 0x72, 0x69, 0x76,
+	0x69, 0x6e, 0x67, 0x43, 0x6f, 0x6e, 0x64, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x22, 0xaa, 0x01, 0x0a,
+	0x1e, 0x44, 0x72, 0x69, 0x76, 0x69, 0x6e, 0x67, 0x43, 0x6f, 0x6e, 0x64, 0x69, 0x74, 0x69, 0x6f,
+	0x6e, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12,
+	0x23, 0x0a, 0x06, 0x68, 0x65, 0x61, 0x64, 0x65, 0x72, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32,
+	0x0b, 0x2e, 0x61, 0x70, 0x69, 0x2e, 0x48, 0x65, 0x61, 0x64, 0x65, 0x72, 0x52, 0x06, 0x68, 0x65,
+	0x61, 0x64, 0x65, 0x72, 0x12, 0x17, 0x0a, 0x07, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18,
+	0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x12, 0x4a, 0x0a,
+	0x11, 0x64, 0x72, 0x69, 0x76, 0x69, 0x6e, 0x67, 0x5f, 0x63, 0x6f, 0x6e, 0x64, 0x69, 0x74, 0x69,
+	0x6f, 0x6e, 0x18, 0x03, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1d, 0x2e, 0x61, 0x70, 0x69, 0x2e, 0x44,
+	0x72, 0x69, 0x76, 0x69, 0x6e, 0x67, 0x43, 0x6f, 0x6e, 0x64, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x49,
+	0x6e, 0x74, 0x65, 0x72, 0x6e, 0x61, 0x6c, 0x52, 0x10, 0x64, 0x72, 0x69, 0x76, 0x69, 0x6e, 0x67,
+	0x43, 0x6f, 0x6e, 0x64, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x42, 0x0a, 0x5a, 0x08, 0x61, 0x70, 0x69,
+	0x2f, 0x74, 0x79, 0x70, 0x65, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -361,25 +632,36 @@ func file_aggregated_proto_rawDescGZIP() []byte {
 	return file_aggregated_proto_rawDescData
 }
 
-var file_aggregated_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
+var file_aggregated_proto_msgTypes = make([]protoimpl.MessageInfo, 7)
 var file_aggregated_proto_goTypes = []interface{}{
-	(*TripInternal)(nil),             // 0: api.TripInternal
-	(*DrivingConditionInternal)(nil), // 1: api.DrivingConditionInternal
-	(*EventInternal)(nil),            // 2: api.EventInternal
-	(ConditionType)(0),               // 3: api.ConditionType
-	(*Source)(nil),                   // 4: api.Source
-	(EventType)(0),                   // 5: api.EventType
+	(*TripInternal)(nil),                   // 0: api.TripInternal
+	(*DrivingConditionInternal)(nil),       // 1: api.DrivingConditionInternal
+	(*EventInternal)(nil),                  // 2: api.EventInternal
+	(*EventCreateRequest)(nil),             // 3: api.EventCreateRequest
+	(*EventCreateResponse)(nil),            // 4: api.EventCreateResponse
+	(*DrivingConditionCreateRequest)(nil),  // 5: api.DrivingConditionCreateRequest
+	(*DrivingConditionCreateResponse)(nil), // 6: api.DrivingConditionCreateResponse
+	(ConditionType)(0),                     // 7: api.ConditionType
+	(*Source)(nil),                         // 8: api.Source
+	(EventType)(0),                         // 9: api.EventType
+	(*Header)(nil),                         // 10: api.Header
 }
 var file_aggregated_proto_depIdxs = []int32{
-	3, // 0: api.DrivingConditionInternal.condition_type:type_name -> api.ConditionType
-	4, // 1: api.DrivingConditionInternal.source:type_name -> api.Source
-	5, // 2: api.EventInternal.event_type:type_name -> api.EventType
-	4, // 3: api.EventInternal.source:type_name -> api.Source
-	4, // [4:4] is the sub-list for method output_type
-	4, // [4:4] is the sub-list for method input_type
-	4, // [4:4] is the sub-list for extension type_name
-	4, // [4:4] is the sub-list for extension extendee
-	0, // [0:4] is the sub-list for field type_name
+	7,  // 0: api.DrivingConditionInternal.condition_type:type_name -> api.ConditionType
+	8,  // 1: api.DrivingConditionInternal.source:type_name -> api.Source
+	9,  // 2: api.EventInternal.event_type:type_name -> api.EventType
+	8,  // 3: api.EventInternal.source:type_name -> api.Source
+	2,  // 4: api.EventCreateRequest.driving_condition:type_name -> api.EventInternal
+	10, // 5: api.EventCreateResponse.header:type_name -> api.Header
+	2,  // 6: api.EventCreateResponse.driving_condition:type_name -> api.EventInternal
+	1,  // 7: api.DrivingConditionCreateRequest.driving_condition:type_name -> api.DrivingConditionInternal
+	10, // 8: api.DrivingConditionCreateResponse.header:type_name -> api.Header
+	1,  // 9: api.DrivingConditionCreateResponse.driving_condition:type_name -> api.DrivingConditionInternal
+	10, // [10:10] is the sub-list for method output_type
+	10, // [10:10] is the sub-list for method input_type
+	10, // [10:10] is the sub-list for extension type_name
+	10, // [10:10] is the sub-list for extension extendee
+	0,  // [0:10] is the sub-list for field type_name
 }
 
 func init() { file_aggregated_proto_init() }
@@ -425,6 +707,54 @@ func file_aggregated_proto_init() {
 				return nil
 			}
 		}
+		file_aggregated_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*EventCreateRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_aggregated_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*EventCreateResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_aggregated_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*DrivingConditionCreateRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_aggregated_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*DrivingConditionCreateResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -432,7 +762,7 @@ func file_aggregated_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_aggregated_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   3,
+			NumMessages:   7,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
