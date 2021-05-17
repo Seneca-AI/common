@@ -37,13 +37,13 @@ message EventInternal {
 
 message EventCreateRequest {
     string user_id = 1;
-    EventInternal driving_condition = 2;
+    EventInternal event = 2;
 }
 
 message EventCreateResponse {
     api.Header header = 1;
     string user_id = 2;
-    EventInternal driving_condition = 3;
+    EventInternal event = 3;
 }
 
 message DrivingConditionCreateRequest {
