@@ -5,21 +5,6 @@ import "common.proto";
 
 option go_package ="api/type";
 
-message TripListRequest {
-    string user_id = 1;
-    int64 start_time_ms = 2;
-    int64 end_time_ms = 3;
-}
-
-// Response time bounds are different than request time bounds, 
-// to include the entirety of the trip that may have been partially specified by the request,
-// or to exclude time periods that had no trip data.
-message TripListResponse {
-    int64 start_time_ms = 1;
-    int64 end_time_ms = 2;
-    repeated Trip trip = 3;
-}
-
 message Trip {
     int64 start_time_ms = 1;
     int64 end_time_ms = 2;
