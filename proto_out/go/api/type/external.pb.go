@@ -302,9 +302,9 @@ type TripListResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Header *Header  `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
-	UserId string   `protobuf:"bytes,2,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
-	TripId []string `protobuf:"bytes,3,rep,name=trip_id,json=tripId,proto3" json:"trip_id,omitempty"`
+	Header *Header `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	UserId string  `protobuf:"bytes,2,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	Trip   []*Trip `protobuf:"bytes,3,rep,name=trip,proto3" json:"trip,omitempty"`
 }
 
 func (x *TripListResponse) Reset() {
@@ -353,125 +353,7 @@ func (x *TripListResponse) GetUserId() string {
 	return ""
 }
 
-func (x *TripListResponse) GetTripId() []string {
-	if x != nil {
-		return x.TripId
-	}
-	return nil
-}
-
-type TripGetRequest struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	UserId string `protobuf:"bytes,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
-	TripId string `protobuf:"bytes,2,opt,name=trip_id,json=tripId,proto3" json:"trip_id,omitempty"`
-}
-
-func (x *TripGetRequest) Reset() {
-	*x = TripGetRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_external_proto_msgTypes[5]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *TripGetRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*TripGetRequest) ProtoMessage() {}
-
-func (x *TripGetRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_external_proto_msgTypes[5]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use TripGetRequest.ProtoReflect.Descriptor instead.
-func (*TripGetRequest) Descriptor() ([]byte, []int) {
-	return file_external_proto_rawDescGZIP(), []int{5}
-}
-
-func (x *TripGetRequest) GetUserId() string {
-	if x != nil {
-		return x.UserId
-	}
-	return ""
-}
-
-func (x *TripGetRequest) GetTripId() string {
-	if x != nil {
-		return x.TripId
-	}
-	return ""
-}
-
-type TripGetResponse struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Header *Header `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
-	UserId string  `protobuf:"bytes,2,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
-	Trip   *Trip   `protobuf:"bytes,3,opt,name=trip,proto3" json:"trip,omitempty"`
-}
-
-func (x *TripGetResponse) Reset() {
-	*x = TripGetResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_external_proto_msgTypes[6]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *TripGetResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*TripGetResponse) ProtoMessage() {}
-
-func (x *TripGetResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_external_proto_msgTypes[6]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use TripGetResponse.ProtoReflect.Descriptor instead.
-func (*TripGetResponse) Descriptor() ([]byte, []int) {
-	return file_external_proto_rawDescGZIP(), []int{6}
-}
-
-func (x *TripGetResponse) GetHeader() *Header {
-	if x != nil {
-		return x.Header
-	}
-	return nil
-}
-
-func (x *TripGetResponse) GetUserId() string {
-	if x != nil {
-		return x.UserId
-	}
-	return ""
-}
-
-func (x *TripGetResponse) GetTrip() *Trip {
+func (x *TripListResponse) GetTrip() []*Trip {
 	if x != nil {
 		return x.Trip
 	}
@@ -521,26 +403,15 @@ var file_external_proto_rawDesc = []byte{
 	0x73, 0x18, 0x02, 0x20, 0x01, 0x28, 0x03, 0x52, 0x0b, 0x73, 0x74, 0x61, 0x72, 0x74, 0x54, 0x69,
 	0x6d, 0x65, 0x4d, 0x73, 0x12, 0x1e, 0x0a, 0x0b, 0x65, 0x6e, 0x64, 0x5f, 0x74, 0x69, 0x6d, 0x65,
 	0x5f, 0x6d, 0x73, 0x18, 0x03, 0x20, 0x01, 0x28, 0x03, 0x52, 0x09, 0x65, 0x6e, 0x64, 0x54, 0x69,
-	0x6d, 0x65, 0x4d, 0x73, 0x22, 0x69, 0x0a, 0x10, 0x54, 0x72, 0x69, 0x70, 0x4c, 0x69, 0x73, 0x74,
+	0x6d, 0x65, 0x4d, 0x73, 0x22, 0x6f, 0x0a, 0x10, 0x54, 0x72, 0x69, 0x70, 0x4c, 0x69, 0x73, 0x74,
 	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x23, 0x0a, 0x06, 0x68, 0x65, 0x61, 0x64,
 	0x65, 0x72, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0b, 0x2e, 0x61, 0x70, 0x69, 0x2e, 0x48,
 	0x65, 0x61, 0x64, 0x65, 0x72, 0x52, 0x06, 0x68, 0x65, 0x61, 0x64, 0x65, 0x72, 0x12, 0x17, 0x0a,
 	0x07, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06,
-	0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x12, 0x17, 0x0a, 0x07, 0x74, 0x72, 0x69, 0x70, 0x5f, 0x69,
-	0x64, 0x18, 0x03, 0x20, 0x03, 0x28, 0x09, 0x52, 0x06, 0x74, 0x72, 0x69, 0x70, 0x49, 0x64, 0x22,
-	0x42, 0x0a, 0x0e, 0x54, 0x72, 0x69, 0x70, 0x47, 0x65, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
-	0x74, 0x12, 0x17, 0x0a, 0x07, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01,
-	0x28, 0x09, 0x52, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x12, 0x17, 0x0a, 0x07, 0x74, 0x72,
-	0x69, 0x70, 0x5f, 0x69, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x74, 0x72, 0x69,
-	0x70, 0x49, 0x64, 0x22, 0x6e, 0x0a, 0x0f, 0x54, 0x72, 0x69, 0x70, 0x47, 0x65, 0x74, 0x52, 0x65,
-	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x23, 0x0a, 0x06, 0x68, 0x65, 0x61, 0x64, 0x65, 0x72,
-	0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0b, 0x2e, 0x61, 0x70, 0x69, 0x2e, 0x48, 0x65, 0x61,
-	0x64, 0x65, 0x72, 0x52, 0x06, 0x68, 0x65, 0x61, 0x64, 0x65, 0x72, 0x12, 0x17, 0x0a, 0x07, 0x75,
-	0x73, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x75, 0x73,
-	0x65, 0x72, 0x49, 0x64, 0x12, 0x1d, 0x0a, 0x04, 0x74, 0x72, 0x69, 0x70, 0x18, 0x03, 0x20, 0x01,
-	0x28, 0x0b, 0x32, 0x09, 0x2e, 0x61, 0x70, 0x69, 0x2e, 0x54, 0x72, 0x69, 0x70, 0x52, 0x04, 0x74,
-	0x72, 0x69, 0x70, 0x42, 0x0a, 0x5a, 0x08, 0x61, 0x70, 0x69, 0x2f, 0x74, 0x79, 0x70, 0x65, 0x62,
-	0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x12, 0x1d, 0x0a, 0x04, 0x74, 0x72, 0x69, 0x70, 0x18, 0x03,
+	0x20, 0x03, 0x28, 0x0b, 0x32, 0x09, 0x2e, 0x61, 0x70, 0x69, 0x2e, 0x54, 0x72, 0x69, 0x70, 0x52,
+	0x04, 0x74, 0x72, 0x69, 0x70, 0x42, 0x0a, 0x5a, 0x08, 0x61, 0x70, 0x69, 0x2f, 0x74, 0x79, 0x70,
+	0x65, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -555,32 +426,29 @@ func file_external_proto_rawDescGZIP() []byte {
 	return file_external_proto_rawDescData
 }
 
-var file_external_proto_msgTypes = make([]protoimpl.MessageInfo, 7)
+var file_external_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
 var file_external_proto_goTypes = []interface{}{
 	(*Trip)(nil),             // 0: api.Trip
 	(*DrivingCondition)(nil), // 1: api.DrivingCondition
 	(*Event)(nil),            // 2: api.Event
 	(*TripListRequest)(nil),  // 3: api.TripListRequest
 	(*TripListResponse)(nil), // 4: api.TripListResponse
-	(*TripGetRequest)(nil),   // 5: api.TripGetRequest
-	(*TripGetResponse)(nil),  // 6: api.TripGetResponse
-	(ConditionType)(0),       // 7: api.ConditionType
-	(EventType)(0),           // 8: api.EventType
-	(*Header)(nil),           // 9: api.Header
+	(ConditionType)(0),       // 5: api.ConditionType
+	(EventType)(0),           // 6: api.EventType
+	(*Header)(nil),           // 7: api.Header
 }
 var file_external_proto_depIdxs = []int32{
 	2, // 0: api.Trip.event:type_name -> api.Event
 	1, // 1: api.Trip.driving_condition:type_name -> api.DrivingCondition
-	7, // 2: api.DrivingCondition.condition_type:type_name -> api.ConditionType
-	8, // 3: api.Event.event_type:type_name -> api.EventType
-	9, // 4: api.TripListResponse.header:type_name -> api.Header
-	9, // 5: api.TripGetResponse.header:type_name -> api.Header
-	0, // 6: api.TripGetResponse.trip:type_name -> api.Trip
-	7, // [7:7] is the sub-list for method output_type
-	7, // [7:7] is the sub-list for method input_type
-	7, // [7:7] is the sub-list for extension type_name
-	7, // [7:7] is the sub-list for extension extendee
-	0, // [0:7] is the sub-list for field type_name
+	5, // 2: api.DrivingCondition.condition_type:type_name -> api.ConditionType
+	6, // 3: api.Event.event_type:type_name -> api.EventType
+	7, // 4: api.TripListResponse.header:type_name -> api.Header
+	0, // 5: api.TripListResponse.trip:type_name -> api.Trip
+	6, // [6:6] is the sub-list for method output_type
+	6, // [6:6] is the sub-list for method input_type
+	6, // [6:6] is the sub-list for extension type_name
+	6, // [6:6] is the sub-list for extension extendee
+	0, // [0:6] is the sub-list for field type_name
 }
 
 func init() { file_external_proto_init() }
@@ -650,30 +518,6 @@ func file_external_proto_init() {
 				return nil
 			}
 		}
-		file_external_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*TripGetRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_external_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*TripGetResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -681,7 +525,7 @@ func file_external_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_external_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   7,
+			NumMessages:   5,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
