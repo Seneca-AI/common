@@ -34,6 +34,9 @@ jobs:
 
       - name: Protoc python
         run: protoc ./api/type/*.proto --python_out=./proto_out/python/api/type -I=./api/type
+
+      - name: Protoc JavaScript
+        run: protoc ./api/type/*.proto --js_out=./proto_out/javascript/api/type -I=./api/type
         
         # TODO(lucaloncar): figure out how to protoc python properly
       - name: Hack path with find and replace
