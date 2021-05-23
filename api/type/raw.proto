@@ -50,6 +50,7 @@ message RawLocation {
     string id = 2;
     api.Location location = 3;
     int64 timestamp_ms = 4;
+    api.Source source = 5;
 }
 
 // key(user_id, id)
@@ -58,4 +59,5 @@ message RawMotion {
     string id = 2;
     api.Motion motion = 3;
     int64 timestamp_ms = 4;
+    api.Source source = 5;
 }
