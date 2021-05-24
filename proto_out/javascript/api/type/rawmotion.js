@@ -84,7 +84,7 @@ proto.api.RawMotion.toObject = function(includeInstance, msg) {
     motion: (f = msg.getMotion()) && proto.api.Motion.toObject(includeInstance, f),
     timestampMs: jspb.Message.getFieldWithDefault(msg, 4, 0),
     source: (f = msg.getSource()) && proto.api.Source.toObject(includeInstance, f),
-    algotagList: (f = jspb.Message.getRepeatedField(msg, 6)) == null ? undefined : f
+    algoTagList: (f = jspb.Message.getRepeatedField(msg, 6)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -145,7 +145,7 @@ proto.api.RawMotion.deserializeBinaryFromReader = function(msg, reader) {
       break;
     case 6:
       var value = /** @type {string} */ (reader.readString());
-      msg.addAlgotag(value);
+      msg.addAlgoTag(value);
       break;
     default:
       reader.skipField();
@@ -213,7 +213,7 @@ proto.api.RawMotion.serializeBinaryToWriter = function(message, writer) {
       proto.api.Source.serializeBinaryToWriter
     );
   }
-  f = message.getAlgotagList();
+  f = message.getAlgoTagList();
   if (f.length > 0) {
     writer.writeRepeatedString(
       6,
@@ -352,10 +352,10 @@ proto.api.RawMotion.prototype.hasSource = function() {
 
 
 /**
- * repeated string algoTag = 6;
+ * repeated string algo_tag = 6;
  * @return {!Array<string>}
  */
-proto.api.RawMotion.prototype.getAlgotagList = function() {
+proto.api.RawMotion.prototype.getAlgoTagList = function() {
   return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 6));
 };
 
@@ -364,7 +364,7 @@ proto.api.RawMotion.prototype.getAlgotagList = function() {
  * @param {!Array<string>} value
  * @return {!proto.api.RawMotion} returns this
  */
-proto.api.RawMotion.prototype.setAlgotagList = function(value) {
+proto.api.RawMotion.prototype.setAlgoTagList = function(value) {
   return jspb.Message.setField(this, 6, value || []);
 };
 
@@ -374,7 +374,7 @@ proto.api.RawMotion.prototype.setAlgotagList = function(value) {
  * @param {number=} opt_index
  * @return {!proto.api.RawMotion} returns this
  */
-proto.api.RawMotion.prototype.addAlgotag = function(value, opt_index) {
+proto.api.RawMotion.prototype.addAlgoTag = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 6, value, opt_index);
 };
 
@@ -383,8 +383,8 @@ proto.api.RawMotion.prototype.addAlgotag = function(value, opt_index) {
  * Clears the list making it empty but non-null.
  * @return {!proto.api.RawMotion} returns this
  */
-proto.api.RawMotion.prototype.clearAlgotagList = function() {
-  return this.setAlgotagList([]);
+proto.api.RawMotion.prototype.clearAlgoTagList = function() {
+  return this.setAlgoTagList([]);
 };
 
 

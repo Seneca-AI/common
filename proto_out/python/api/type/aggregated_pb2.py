@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\010api/type',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x10\x61ggregated.proto\x12\x03\x61pi\x1a\x0c\x63ommon.proto\"W\n\x0cTripInternal\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12\x15\n\rstart_time_ms\x18\x03 \x01(\x03\x12\x13\n\x0b\x65nd_time_ms\x18\x04 \x01(\x03\"\xcf\x01\n\x18\x44rivingConditionInternal\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12\x0f\n\x07trip_id\x18\x03 \x01(\t\x12*\n\x0e\x63ondition_type\x18\x04 \x01(\x0e\x32\x12.api.ConditionType\x12\x10\n\x08severity\x18\x05 \x01(\x01\x12\x15\n\rstart_time_ms\x18\x06 \x01(\x03\x12\x13\n\x0b\x65nd_time_ms\x18\x07 \x01(\x03\x12\x1b\n\x06source\x18\x08 \x01(\x0b\x32\x0b.api.Source\"\xb5\x01\n\rEventInternal\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12\x0f\n\x07trip_id\x18\x03 \x01(\t\x12\"\n\nevent_type\x18\x04 \x01(\x0e\x32\x0e.api.EventType\x12\r\n\x05value\x18\x05 \x01(\x01\x12\x10\n\x08severity\x18\x06 \x01(\x01\x12\x14\n\x0ctimestamp_ms\x18\x07 \x01(\x03\x12\x1b\n\x06source\x18\x08 \x01(\x0b\x32\x0b.api.Source\"H\n\x12\x45ventCreateRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12!\n\x05\x65vent\x18\x02 \x01(\x0b\x32\x12.api.EventInternal\"f\n\x13\x45ventCreateResponse\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.api.Header\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12!\n\x05\x65vent\x18\x03 \x01(\x0b\x32\x12.api.EventInternal\"j\n\x1d\x44rivingConditionCreateRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x38\n\x11\x64riving_condition\x18\x02 \x01(\x0b\x32\x1d.api.DrivingConditionInternal\"\x88\x01\n\x1e\x44rivingConditionCreateResponse\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.api.Header\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12\x38\n\x11\x64riving_condition\x18\x03 \x01(\x0b\x32\x1d.api.DrivingConditionInternalB\nZ\x08\x61pi/typeb\x06proto3'
+  serialized_pb=b'\n\x10\x61ggregated.proto\x12\x03\x61pi\x1a\x0c\x63ommon.proto\"W\n\x0cTripInternal\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12\x15\n\rstart_time_ms\x18\x03 \x01(\x03\x12\x13\n\x0b\x65nd_time_ms\x18\x04 \x01(\x03\"\xe1\x01\n\x18\x44rivingConditionInternal\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12\x0f\n\x07trip_id\x18\x03 \x01(\t\x12*\n\x0e\x63ondition_type\x18\x04 \x01(\x0e\x32\x12.api.ConditionType\x12\x10\n\x08severity\x18\x05 \x01(\x01\x12\x15\n\rstart_time_ms\x18\x06 \x01(\x03\x12\x13\n\x0b\x65nd_time_ms\x18\x07 \x01(\x03\x12\x1b\n\x06source\x18\x08 \x01(\x0b\x32\x0b.api.Source\x12\x10\n\x08\x61lgo_tag\x18\t \x01(\t\"\xc7\x01\n\rEventInternal\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12\x0f\n\x07trip_id\x18\x03 \x01(\t\x12\"\n\nevent_type\x18\x04 \x01(\x0e\x32\x0e.api.EventType\x12\r\n\x05value\x18\x05 \x01(\x01\x12\x10\n\x08severity\x18\x06 \x01(\x01\x12\x14\n\x0ctimestamp_ms\x18\x07 \x01(\x03\x12\x1b\n\x06source\x18\x08 \x01(\x0b\x32\x0b.api.Source\x12\x10\n\x08\x61lgo_tag\x18\t \x01(\t\"H\n\x12\x45ventCreateRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12!\n\x05\x65vent\x18\x02 \x01(\x0b\x32\x12.api.EventInternal\"f\n\x13\x45ventCreateResponse\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.api.Header\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12!\n\x05\x65vent\x18\x03 \x01(\x0b\x32\x12.api.EventInternal\"j\n\x1d\x44rivingConditionCreateRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x38\n\x11\x64riving_condition\x18\x02 \x01(\x0b\x32\x1d.api.DrivingConditionInternal\"\x88\x01\n\x1e\x44rivingConditionCreateResponse\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.api.Header\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12\x38\n\x11\x64riving_condition\x18\x03 \x01(\x0b\x32\x1d.api.DrivingConditionInternalB\nZ\x08\x61pi/typeb\x06proto3'
   ,
   dependencies=[common__pb2.DESCRIPTOR,])
 
@@ -144,6 +144,13 @@ _DRIVINGCONDITIONINTERNAL = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='algo_tag', full_name='api.DrivingConditionInternal.algo_tag', index=8,
+      number=9, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -157,7 +164,7 @@ _DRIVINGCONDITIONINTERNAL = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=129,
-  serialized_end=336,
+  serialized_end=354,
 )
 
 
@@ -225,6 +232,13 @@ _EVENTINTERNAL = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='algo_tag', full_name='api.EventInternal.algo_tag', index=8,
+      number=9, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -237,8 +251,8 @@ _EVENTINTERNAL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=339,
-  serialized_end=520,
+  serialized_start=357,
+  serialized_end=556,
 )
 
 
@@ -276,8 +290,8 @@ _EVENTCREATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=522,
-  serialized_end=594,
+  serialized_start=558,
+  serialized_end=630,
 )
 
 
@@ -322,8 +336,8 @@ _EVENTCREATERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=596,
-  serialized_end=698,
+  serialized_start=632,
+  serialized_end=734,
 )
 
 
@@ -361,8 +375,8 @@ _DRIVINGCONDITIONCREATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=700,
-  serialized_end=806,
+  serialized_start=736,
+  serialized_end=842,
 )
 
 
@@ -407,8 +421,8 @@ _DRIVINGCONDITIONCREATERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=809,
-  serialized_end=945,
+  serialized_start=845,
+  serialized_end=981,
 )
 
 _DRIVINGCONDITIONINTERNAL.fields_by_name['condition_type'].enum_type = common__pb2._CONDITIONTYPE

@@ -79,7 +79,8 @@ proto.api.DrivingConditionInternal.toObject = function(includeInstance, msg) {
     severity: jspb.Message.getFloatingPointFieldWithDefault(msg, 5, 0.0),
     startTimeMs: jspb.Message.getFieldWithDefault(msg, 6, 0),
     endTimeMs: jspb.Message.getFieldWithDefault(msg, 7, 0),
-    source: (f = msg.getSource()) && proto.api.Source.toObject(includeInstance, f)
+    source: (f = msg.getSource()) && proto.api.Source.toObject(includeInstance, f),
+    algoTag: jspb.Message.getFieldWithDefault(msg, 9, "")
   };
 
   if (includeInstance) {
@@ -148,6 +149,10 @@ proto.api.DrivingConditionInternal.deserializeBinaryFromReader = function(msg, r
       var value = new proto.api.Source;
       reader.readMessage(value,proto.api.Source.deserializeBinaryFromReader);
       msg.setSource(value);
+      break;
+    case 9:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setAlgoTag(value);
       break;
     default:
       reader.skipField();
@@ -233,6 +238,13 @@ proto.api.DrivingConditionInternal.serializeBinaryToWriter = function(message, w
       8,
       f,
       proto.api.Source.serializeBinaryToWriter
+    );
+  }
+  f = message.getAlgoTag();
+  if (f.length > 0) {
+    writer.writeString(
+      9,
+      f
     );
   }
 };
@@ -398,6 +410,24 @@ proto.api.DrivingConditionInternal.prototype.clearSource = function() {
  */
 proto.api.DrivingConditionInternal.prototype.hasSource = function() {
   return jspb.Message.getField(this, 8) != null;
+};
+
+
+/**
+ * optional string algo_tag = 9;
+ * @return {string}
+ */
+proto.api.DrivingConditionInternal.prototype.getAlgoTag = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 9, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.api.DrivingConditionInternal} returns this
+ */
+proto.api.DrivingConditionInternal.prototype.setAlgoTag = function(value) {
+  return jspb.Message.setProto3StringField(this, 9, value);
 };
 
 
