@@ -62,5 +62,5 @@ message RawMotion {
     api.Source source = 5;
      // The algorithms this rawMotion has gone through.
      repeated string algo_tag = 6;
-     algos_version string = 7;
+     float64 algos_version = 7;
 }
