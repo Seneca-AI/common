@@ -21,8 +21,8 @@ message DrivingConditionInternal {
     int64 start_time_ms = 6;
     int64 end_time_ms = 7; 
     api.Source source = 8;
-    // The algo tag this driving condition is a result of.
-    algo_tag string = 9;
+    // The algo this driving condition is a result of.
+    string algo_tag = 9;
 }
 
 message EventInternal {
@@ -35,8 +35,8 @@ message EventInternal {
     double severity = 6;
     int64 timestamp_ms = 7;
     api.Source source = 8;
-     // The algo tag this event is a result of.
-     algo_tag string = 9;
+     // The algo this event is a result of.
+     string algo_tag = 9;
 }
 
 message EventCreateRequest {
