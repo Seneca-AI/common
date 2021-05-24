@@ -84,7 +84,8 @@ proto.api.RawMotion.toObject = function(includeInstance, msg) {
     motion: (f = msg.getMotion()) && proto.api.Motion.toObject(includeInstance, f),
     timestampMs: jspb.Message.getFieldWithDefault(msg, 4, 0),
     source: (f = msg.getSource()) && proto.api.Source.toObject(includeInstance, f),
-    algoTagList: (f = jspb.Message.getRepeatedField(msg, 6)) == null ? undefined : f
+    algoTagList: (f = jspb.Message.getRepeatedField(msg, 6)) == null ? undefined : f,
+    algosVersion: jspb.Message.getFloatingPointFieldWithDefault(msg, 7, 0.0)
   };
 
   if (includeInstance) {
@@ -146,6 +147,10 @@ proto.api.RawMotion.deserializeBinaryFromReader = function(msg, reader) {
     case 6:
       var value = /** @type {string} */ (reader.readString());
       msg.addAlgoTag(value);
+      break;
+    case 7:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setAlgosVersion(value);
       break;
     default:
       reader.skipField();
@@ -217,6 +222,13 @@ proto.api.RawMotion.serializeBinaryToWriter = function(message, writer) {
   if (f.length > 0) {
     writer.writeRepeatedString(
       6,
+      f
+    );
+  }
+  f = message.getAlgosVersion();
+  if (f !== 0.0) {
+    writer.writeDouble(
+      7,
       f
     );
   }
@@ -385,6 +397,24 @@ proto.api.RawMotion.prototype.addAlgoTag = function(value, opt_index) {
  */
 proto.api.RawMotion.prototype.clearAlgoTagList = function() {
   return this.setAlgoTagList([]);
+};
+
+
+/**
+ * optional double algos_version = 7;
+ * @return {number}
+ */
+proto.api.RawMotion.prototype.getAlgosVersion = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 7, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.api.RawMotion} returns this
+ */
+proto.api.RawMotion.prototype.setAlgosVersion = function(value) {
+  return jspb.Message.setProto3FloatField(this, 7, value);
 };
 
 
