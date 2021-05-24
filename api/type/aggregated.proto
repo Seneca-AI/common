@@ -21,6 +21,8 @@ message DrivingConditionInternal {
     int64 start_time_ms = 6;
     int64 end_time_ms = 7; 
     api.Source source = 8;
+    // The algorithms this drivingCondition has gone through.
+    repeated string algoTag = 9;
 }
 
 message EventInternal {
@@ -33,6 +35,8 @@ message EventInternal {
     double severity = 6;
     int64 timestamp_ms = 7;
     api.Source source = 8;
+    // The algorithms this drivingCondition has gone through.
+    repeated string algoTag = 9;
 }
 
 message EventCreateRequest {
