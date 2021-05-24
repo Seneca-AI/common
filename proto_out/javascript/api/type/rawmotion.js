@@ -30,7 +30,7 @@ goog.require('proto.api.Source');
  * @constructor
  */
 proto.api.RawMotion = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.api.RawMotion.repeatedFields_, null);
 };
 goog.inherits(proto.api.RawMotion, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -40,6 +40,13 @@ if (goog.DEBUG && !COMPILED) {
    */
   proto.api.RawMotion.displayName = 'proto.api.RawMotion';
 }
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.api.RawMotion.repeatedFields_ = [6];
 
 
 
@@ -76,7 +83,8 @@ proto.api.RawMotion.toObject = function(includeInstance, msg) {
     id: jspb.Message.getFieldWithDefault(msg, 2, ""),
     motion: (f = msg.getMotion()) && proto.api.Motion.toObject(includeInstance, f),
     timestampMs: jspb.Message.getFieldWithDefault(msg, 4, 0),
-    source: (f = msg.getSource()) && proto.api.Source.toObject(includeInstance, f)
+    source: (f = msg.getSource()) && proto.api.Source.toObject(includeInstance, f),
+    algotagList: (f = jspb.Message.getRepeatedField(msg, 6)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -134,6 +142,10 @@ proto.api.RawMotion.deserializeBinaryFromReader = function(msg, reader) {
       var value = new proto.api.Source;
       reader.readMessage(value,proto.api.Source.deserializeBinaryFromReader);
       msg.setSource(value);
+      break;
+    case 6:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addAlgotag(value);
       break;
     default:
       reader.skipField();
@@ -199,6 +211,13 @@ proto.api.RawMotion.serializeBinaryToWriter = function(message, writer) {
       5,
       f,
       proto.api.Source.serializeBinaryToWriter
+    );
+  }
+  f = message.getAlgotagList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      6,
+      f
     );
   }
 };
@@ -329,6 +348,43 @@ proto.api.RawMotion.prototype.clearSource = function() {
  */
 proto.api.RawMotion.prototype.hasSource = function() {
   return jspb.Message.getField(this, 5) != null;
+};
+
+
+/**
+ * repeated string algoTag = 6;
+ * @return {!Array<string>}
+ */
+proto.api.RawMotion.prototype.getAlgotagList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 6));
+};
+
+
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.api.RawMotion} returns this
+ */
+proto.api.RawMotion.prototype.setAlgotagList = function(value) {
+  return jspb.Message.setField(this, 6, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ * @return {!proto.api.RawMotion} returns this
+ */
+proto.api.RawMotion.prototype.addAlgotag = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 6, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.api.RawMotion} returns this
+ */
+proto.api.RawMotion.prototype.clearAlgotagList = function() {
+  return this.setAlgotagList([]);
 };
 
 
