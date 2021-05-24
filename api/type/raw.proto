@@ -60,7 +60,7 @@ message RawMotion {
     api.Motion motion = 3;
     int64 timestamp_ms = 4;
     api.Source source = 5;
-     // The algorithms this rawMotion has gone through.
-     repeated string algo_tag = 6;
-     float64 algos_version = 7;
+    // The algorithms this rawMotion has gone through.
+    repeated string algo_tag = 6;
+    double algos_version = 7;
 }
