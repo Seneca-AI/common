@@ -30,7 +30,7 @@ goog.forwardDeclare('proto.api.ConditionType');
  * @constructor
  */
 proto.api.DrivingConditionInternal = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.api.DrivingConditionInternal.repeatedFields_, null);
 };
 goog.inherits(proto.api.DrivingConditionInternal, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -40,6 +40,13 @@ if (goog.DEBUG && !COMPILED) {
    */
   proto.api.DrivingConditionInternal.displayName = 'proto.api.DrivingConditionInternal';
 }
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.api.DrivingConditionInternal.repeatedFields_ = [9];
 
 
 
@@ -79,7 +86,8 @@ proto.api.DrivingConditionInternal.toObject = function(includeInstance, msg) {
     severity: jspb.Message.getFloatingPointFieldWithDefault(msg, 5, 0.0),
     startTimeMs: jspb.Message.getFieldWithDefault(msg, 6, 0),
     endTimeMs: jspb.Message.getFieldWithDefault(msg, 7, 0),
-    source: (f = msg.getSource()) && proto.api.Source.toObject(includeInstance, f)
+    source: (f = msg.getSource()) && proto.api.Source.toObject(includeInstance, f),
+    algotagList: (f = jspb.Message.getRepeatedField(msg, 9)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -148,6 +156,10 @@ proto.api.DrivingConditionInternal.deserializeBinaryFromReader = function(msg, r
       var value = new proto.api.Source;
       reader.readMessage(value,proto.api.Source.deserializeBinaryFromReader);
       msg.setSource(value);
+      break;
+    case 9:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addAlgotag(value);
       break;
     default:
       reader.skipField();
@@ -233,6 +245,13 @@ proto.api.DrivingConditionInternal.serializeBinaryToWriter = function(message, w
       8,
       f,
       proto.api.Source.serializeBinaryToWriter
+    );
+  }
+  f = message.getAlgotagList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      9,
+      f
     );
   }
 };
@@ -398,6 +417,43 @@ proto.api.DrivingConditionInternal.prototype.clearSource = function() {
  */
 proto.api.DrivingConditionInternal.prototype.hasSource = function() {
   return jspb.Message.getField(this, 8) != null;
+};
+
+
+/**
+ * repeated string algoTag = 9;
+ * @return {!Array<string>}
+ */
+proto.api.DrivingConditionInternal.prototype.getAlgotagList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 9));
+};
+
+
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.api.DrivingConditionInternal} returns this
+ */
+proto.api.DrivingConditionInternal.prototype.setAlgotagList = function(value) {
+  return jspb.Message.setField(this, 9, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ * @return {!proto.api.DrivingConditionInternal} returns this
+ */
+proto.api.DrivingConditionInternal.prototype.addAlgotag = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 9, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.api.DrivingConditionInternal} returns this
+ */
+proto.api.DrivingConditionInternal.prototype.clearAlgotagList = function() {
+  return this.setAlgotagList([]);
 };
 
 
