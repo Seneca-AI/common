@@ -4,6 +4,11 @@ indexes:
   properties:
   - name: UserId
   - name: CreateTimeMs
+
+- kind: RawVideo
+  properties:
+  - name: UserId
+  - name: AlgosVersion
   
 - kind: CutVideo
   properties:
