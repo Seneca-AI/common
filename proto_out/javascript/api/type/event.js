@@ -16,6 +16,7 @@ goog.provide('proto.api.Event');
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
 goog.require('jspb.Message');
+goog.require('proto.api.ExternalSource');
 
 goog.forwardDeclare('proto.api.EventType');
 /**
@@ -74,7 +75,8 @@ proto.api.Event.toObject = function(includeInstance, msg) {
     eventType: jspb.Message.getFieldWithDefault(msg, 3, 0),
     value: jspb.Message.getFloatingPointFieldWithDefault(msg, 4, 0.0),
     severity: jspb.Message.getFloatingPointFieldWithDefault(msg, 5, 0.0),
-    timestampMs: jspb.Message.getFieldWithDefault(msg, 6, 0)
+    timestampMs: jspb.Message.getFieldWithDefault(msg, 6, 0),
+    externalSource: (f = msg.getExternalSource()) && proto.api.ExternalSource.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -126,6 +128,11 @@ proto.api.Event.deserializeBinaryFromReader = function(msg, reader) {
     case 6:
       var value = /** @type {number} */ (reader.readInt64());
       msg.setTimestampMs(value);
+      break;
+    case 7:
+      var value = new proto.api.ExternalSource;
+      reader.readMessage(value,proto.api.ExternalSource.deserializeBinaryFromReader);
+      msg.setExternalSource(value);
       break;
     default:
       reader.skipField();
@@ -182,6 +189,14 @@ proto.api.Event.serializeBinaryToWriter = function(message, writer) {
     writer.writeInt64(
       6,
       f
+    );
+  }
+  f = message.getExternalSource();
+  if (f != null) {
+    writer.writeMessage(
+      7,
+      f,
+      proto.api.ExternalSource.serializeBinaryToWriter
     );
   }
 };
@@ -256,6 +271,43 @@ proto.api.Event.prototype.getTimestampMs = function() {
  */
 proto.api.Event.prototype.setTimestampMs = function(value) {
   return jspb.Message.setProto3IntField(this, 6, value);
+};
+
+
+/**
+ * optional ExternalSource external_source = 7;
+ * @return {?proto.api.ExternalSource}
+ */
+proto.api.Event.prototype.getExternalSource = function() {
+  return /** @type{?proto.api.ExternalSource} */ (
+    jspb.Message.getWrapperField(this, proto.api.ExternalSource, 7));
+};
+
+
+/**
+ * @param {?proto.api.ExternalSource|undefined} value
+ * @return {!proto.api.Event} returns this
+*/
+proto.api.Event.prototype.setExternalSource = function(value) {
+  return jspb.Message.setWrapperField(this, 7, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.api.Event} returns this
+ */
+proto.api.Event.prototype.clearExternalSource = function() {
+  return this.setExternalSource(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.api.Event.prototype.hasExternalSource = function() {
+  return jspb.Message.getField(this, 7) != null;
 };
 
 

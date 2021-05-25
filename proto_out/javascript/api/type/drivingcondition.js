@@ -16,6 +16,7 @@ goog.provide('proto.api.DrivingCondition');
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
 goog.require('jspb.Message');
+goog.require('proto.api.ExternalSource');
 
 goog.forwardDeclare('proto.api.ConditionType');
 /**
@@ -81,7 +82,8 @@ proto.api.DrivingCondition.toObject = function(includeInstance, msg) {
     conditionTypeList: (f = jspb.Message.getRepeatedField(msg, 2)) == null ? undefined : f,
     severityList: (f = jspb.Message.getRepeatedFloatingPointField(msg, 5)) == null ? undefined : f,
     startTimeMs: jspb.Message.getFieldWithDefault(msg, 6, 0),
-    endTimeMs: jspb.Message.getFieldWithDefault(msg, 7, 0)
+    endTimeMs: jspb.Message.getFieldWithDefault(msg, 7, 0),
+    externalSource: (f = msg.getExternalSource()) && proto.api.ExternalSource.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -138,6 +140,11 @@ proto.api.DrivingCondition.deserializeBinaryFromReader = function(msg, reader) {
       var value = /** @type {number} */ (reader.readInt64());
       msg.setEndTimeMs(value);
       break;
+    case 8:
+      var value = new proto.api.ExternalSource;
+      reader.readMessage(value,proto.api.ExternalSource.deserializeBinaryFromReader);
+      msg.setExternalSource(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -193,6 +200,14 @@ proto.api.DrivingCondition.serializeBinaryToWriter = function(message, writer) {
     writer.writeInt64(
       7,
       f
+    );
+  }
+  f = message.getExternalSource();
+  if (f != null) {
+    writer.writeMessage(
+      8,
+      f,
+      proto.api.ExternalSource.serializeBinaryToWriter
     );
   }
 };
@@ -305,6 +320,43 @@ proto.api.DrivingCondition.prototype.getEndTimeMs = function() {
  */
 proto.api.DrivingCondition.prototype.setEndTimeMs = function(value) {
   return jspb.Message.setProto3IntField(this, 7, value);
+};
+
+
+/**
+ * optional ExternalSource external_source = 8;
+ * @return {?proto.api.ExternalSource}
+ */
+proto.api.DrivingCondition.prototype.getExternalSource = function() {
+  return /** @type{?proto.api.ExternalSource} */ (
+    jspb.Message.getWrapperField(this, proto.api.ExternalSource, 8));
+};
+
+
+/**
+ * @param {?proto.api.ExternalSource|undefined} value
+ * @return {!proto.api.DrivingCondition} returns this
+*/
+proto.api.DrivingCondition.prototype.setExternalSource = function(value) {
+  return jspb.Message.setWrapperField(this, 8, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.api.DrivingCondition} returns this
+ */
+proto.api.DrivingCondition.prototype.clearExternalSource = function() {
+  return this.setExternalSource(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.api.DrivingCondition.prototype.hasExternalSource = function() {
+  return jspb.Message.getField(this, 8) != null;
 };
 
 

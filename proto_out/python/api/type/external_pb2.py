@@ -20,11 +20,36 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\010api/type',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0e\x65xternal.proto\x12\x03\x61pi\x1a\x0c\x63ommon.proto\"\x7f\n\x04Trip\x12\x15\n\rstart_time_ms\x18\x01 \x01(\x03\x12\x13\n\x0b\x65nd_time_ms\x18\x02 \x01(\x03\x12\x19\n\x05\x65vent\x18\x03 \x03(\x0b\x32\n.api.Event\x12\x30\n\x11\x64riving_condition\x18\x04 \x03(\x0b\x32\x15.api.DrivingCondition\"|\n\x10\x44rivingCondition\x12*\n\x0e\x63ondition_type\x18\x02 \x03(\x0e\x32\x12.api.ConditionType\x12\x10\n\x08severity\x18\x05 \x03(\x01\x12\x15\n\rstart_time_ms\x18\x06 \x01(\x03\x12\x13\n\x0b\x65nd_time_ms\x18\x07 \x01(\x03\"b\n\x05\x45vent\x12\"\n\nevent_type\x18\x03 \x01(\x0e\x32\x0e.api.EventType\x12\r\n\x05value\x18\x04 \x01(\x01\x12\x10\n\x08severity\x18\x05 \x01(\x01\x12\x14\n\x0ctimestamp_ms\x18\x06 \x01(\x03\"N\n\x0fTripListRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x15\n\rstart_time_ms\x18\x02 \x01(\x03\x12\x13\n\x0b\x65nd_time_ms\x18\x03 \x01(\x03\"Y\n\x10TripListResponse\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.api.Header\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12\x17\n\x04trip\x18\x03 \x03(\x0b\x32\t.api.TripB\nZ\x08\x61pi/typeb\x06proto3'
+  serialized_pb=b'\n\x0e\x65xternal.proto\x12\x03\x61pi\x1a\x0c\x63ommon.proto\"\x7f\n\x04Trip\x12\x15\n\rstart_time_ms\x18\x01 \x01(\x03\x12\x13\n\x0b\x65nd_time_ms\x18\x02 \x01(\x03\x12\x19\n\x05\x65vent\x18\x03 \x03(\x0b\x32\n.api.Event\x12\x30\n\x11\x64riving_condition\x18\x04 \x03(\x0b\x32\x15.api.DrivingCondition\"\x96\x01\n\x0e\x45xternalSource\x12;\n\x0bsource_type\x18\x01 \x01(\x0e\x32&.api.ExternalSource.ExternalSourceType\x12\x11\n\tvideo_url\x18\x02 \x01(\t\"4\n\x12\x45xternalSourceType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x11\n\rDASHCAM_VIDEO\x10\x01\"\xaa\x01\n\x10\x44rivingCondition\x12*\n\x0e\x63ondition_type\x18\x02 \x03(\x0e\x32\x12.api.ConditionType\x12\x10\n\x08severity\x18\x05 \x03(\x01\x12\x15\n\rstart_time_ms\x18\x06 \x01(\x03\x12\x13\n\x0b\x65nd_time_ms\x18\x07 \x01(\x03\x12,\n\x0f\x65xternal_source\x18\x08 \x01(\x0b\x32\x13.api.ExternalSource\"\x90\x01\n\x05\x45vent\x12\"\n\nevent_type\x18\x03 \x01(\x0e\x32\x0e.api.EventType\x12\r\n\x05value\x18\x04 \x01(\x01\x12\x10\n\x08severity\x18\x05 \x01(\x01\x12\x14\n\x0ctimestamp_ms\x18\x06 \x01(\x03\x12,\n\x0f\x65xternal_source\x18\x07 \x01(\x0b\x32\x13.api.ExternalSource\"N\n\x0fTripListRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x15\n\rstart_time_ms\x18\x02 \x01(\x03\x12\x13\n\x0b\x65nd_time_ms\x18\x03 \x01(\x03\"Y\n\x10TripListResponse\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.api.Header\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12\x17\n\x04trip\x18\x03 \x03(\x0b\x32\t.api.TripB\nZ\x08\x61pi/typeb\x06proto3'
   ,
   dependencies=[common__pb2.DESCRIPTOR,])
 
 
+
+_EXTERNALSOURCE_EXTERNALSOURCETYPE = _descriptor.EnumDescriptor(
+  name='ExternalSourceType',
+  full_name='api.ExternalSource.ExternalSourceType',
+  filename=None,
+  file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNKNOWN', index=0, number=0,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='DASHCAM_VIDEO', index=1, number=1,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=265,
+  serialized_end=317,
+)
+_sym_db.RegisterEnumDescriptor(_EXTERNALSOURCE_EXTERNALSOURCETYPE)
 
 
 _TRIP = _descriptor.Descriptor(
@@ -80,6 +105,46 @@ _TRIP = _descriptor.Descriptor(
 )
 
 
+_EXTERNALSOURCE = _descriptor.Descriptor(
+  name='ExternalSource',
+  full_name='api.ExternalSource',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='source_type', full_name='api.ExternalSource.source_type', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='video_url', full_name='api.ExternalSource.video_url', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _EXTERNALSOURCE_EXTERNALSOURCETYPE,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=167,
+  serialized_end=317,
+)
+
+
 _DRIVINGCONDITION = _descriptor.Descriptor(
   name='DrivingCondition',
   full_name='api.DrivingCondition',
@@ -116,6 +181,13 @@ _DRIVINGCONDITION = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='external_source', full_name='api.DrivingCondition.external_source', index=4,
+      number=8, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -128,8 +200,8 @@ _DRIVINGCONDITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=166,
-  serialized_end=290,
+  serialized_start=320,
+  serialized_end=490,
 )
 
 
@@ -169,6 +241,13 @@ _EVENT = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='external_source', full_name='api.Event.external_source', index=4,
+      number=7, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -181,8 +260,8 @@ _EVENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=292,
-  serialized_end=390,
+  serialized_start=493,
+  serialized_end=637,
 )
 
 
@@ -227,8 +306,8 @@ _TRIPLISTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=392,
-  serialized_end=470,
+  serialized_start=639,
+  serialized_end=717,
 )
 
 
@@ -273,17 +352,22 @@ _TRIPLISTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=472,
-  serialized_end=561,
+  serialized_start=719,
+  serialized_end=808,
 )
 
 _TRIP.fields_by_name['event'].message_type = _EVENT
 _TRIP.fields_by_name['driving_condition'].message_type = _DRIVINGCONDITION
+_EXTERNALSOURCE.fields_by_name['source_type'].enum_type = _EXTERNALSOURCE_EXTERNALSOURCETYPE
+_EXTERNALSOURCE_EXTERNALSOURCETYPE.containing_type = _EXTERNALSOURCE
 _DRIVINGCONDITION.fields_by_name['condition_type'].enum_type = common__pb2._CONDITIONTYPE
+_DRIVINGCONDITION.fields_by_name['external_source'].message_type = _EXTERNALSOURCE
 _EVENT.fields_by_name['event_type'].enum_type = common__pb2._EVENTTYPE
+_EVENT.fields_by_name['external_source'].message_type = _EXTERNALSOURCE
 _TRIPLISTRESPONSE.fields_by_name['header'].message_type = common__pb2._HEADER
 _TRIPLISTRESPONSE.fields_by_name['trip'].message_type = _TRIP
 DESCRIPTOR.message_types_by_name['Trip'] = _TRIP
+DESCRIPTOR.message_types_by_name['ExternalSource'] = _EXTERNALSOURCE
 DESCRIPTOR.message_types_by_name['DrivingCondition'] = _DRIVINGCONDITION
 DESCRIPTOR.message_types_by_name['Event'] = _EVENT
 DESCRIPTOR.message_types_by_name['TripListRequest'] = _TRIPLISTREQUEST
@@ -296,6 +380,13 @@ Trip = _reflection.GeneratedProtocolMessageType('Trip', (_message.Message,), {
   # @@protoc_insertion_point(class_scope:api.Trip)
   })
 _sym_db.RegisterMessage(Trip)
+
+ExternalSource = _reflection.GeneratedProtocolMessageType('ExternalSource', (_message.Message,), {
+  'DESCRIPTOR' : _EXTERNALSOURCE,
+  '__module__' : 'external_pb2'
+  # @@protoc_insertion_point(class_scope:api.ExternalSource)
+  })
+_sym_db.RegisterMessage(ExternalSource)
 
 DrivingCondition = _reflection.GeneratedProtocolMessageType('DrivingCondition', (_message.Message,), {
   'DESCRIPTOR' : _DRIVINGCONDITION,
