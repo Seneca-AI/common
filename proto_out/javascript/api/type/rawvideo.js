@@ -85,7 +85,8 @@ proto.api.RawVideo.toObject = function(includeInstance, msg) {
     durationMs: jspb.Message.getFieldWithDefault(msg, 6, 0),
     originalFileName: jspb.Message.getFieldWithDefault(msg, 7, ""),
     failureReason: jspb.Message.getFieldWithDefault(msg, 8, ""),
-    originalFileId: jspb.Message.getFieldWithDefault(msg, 9, "")
+    originalFileId: jspb.Message.getFieldWithDefault(msg, 9, ""),
+    algosVersion: jspb.Message.getFloatingPointFieldWithDefault(msg, 10, 0.0)
   };
 
   if (includeInstance) {
@@ -157,6 +158,10 @@ proto.api.RawVideo.deserializeBinaryFromReader = function(msg, reader) {
     case 9:
       var value = /** @type {string} */ (reader.readString());
       msg.setOriginalFileId(value);
+      break;
+    case 10:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setAlgosVersion(value);
       break;
     default:
       reader.skipField();
@@ -247,6 +252,13 @@ proto.api.RawVideo.serializeBinaryToWriter = function(message, writer) {
   if (f.length > 0) {
     writer.writeString(
       9,
+      f
+    );
+  }
+  f = message.getAlgosVersion();
+  if (f !== 0.0) {
+    writer.writeDouble(
+      10,
       f
     );
   }
@@ -431,6 +443,24 @@ proto.api.RawVideo.prototype.getOriginalFileId = function() {
  */
 proto.api.RawVideo.prototype.setOriginalFileId = function(value) {
   return jspb.Message.setProto3StringField(this, 9, value);
+};
+
+
+/**
+ * optional double algos_version = 10;
+ * @return {number}
+ */
+proto.api.RawVideo.prototype.getAlgosVersion = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 10, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.api.RawVideo} returns this
+ */
+proto.api.RawVideo.prototype.setAlgosVersion = function(value) {
+  return jspb.Message.setProto3FloatField(this, 10, value);
 };
 
 
