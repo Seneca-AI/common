@@ -19,6 +19,7 @@ message RawVideo {
     string original_file_name = 7;
     string failure_reason = 8;
     string original_file_id = 9;
+    double algos_version = 10;
 }
 
 message RawVideoProcessRequest {
