@@ -27,7 +27,7 @@ message DrivingCondition {
     repeated double severity = 5;
     int64 start_time_ms = 6;
     int64 end_time_ms = 7;
-    ExternalSource external_source = 8;
+    repeated ExternalSource external_source = 8;
 }
 
 message Event {
