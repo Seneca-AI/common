@@ -12,11 +12,22 @@ message Trip {
     repeated DrivingCondition driving_condition = 4;
 }
 
+message ExternalSource {
+    enum ExternalSourceType {
+        UNKNOWN = 0;
+        DASHCAM_VIDEO = 1;
+    }
+
+    ExternalSourceType source_type = 1;
+    string video_url = 2;
+}
+
 message DrivingCondition {
     repeated api.ConditionType condition_type = 2;
     repeated double severity = 5;
     int64 start_time_ms = 6;
-    int64 end_time_ms = 7; 
+    int64 end_time_ms = 7;
+    ExternalSource external_source = 8;
 }
 
 message Event {
@@ -25,6 +36,7 @@ message Event {
     double value = 4;
     double severity = 5;
     int64 timestamp_ms = 6;
+    ExternalSource external_source = 7;
 }
 
 message TripListRequest {
