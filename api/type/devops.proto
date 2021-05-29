@@ -12,5 +12,6 @@ message SenecaServer {
 	string server_path_to_google_application_credentials = 6; 
 	string server_path_to_google_oauth_credentials = 7;
     // Whether the server should be updated when main gets pushed to.
-	bool receive_main_pushes = 8;                        
+	bool receive_main_pushes = 8;       
+	int64 datastore_id = 9;                 
 }
