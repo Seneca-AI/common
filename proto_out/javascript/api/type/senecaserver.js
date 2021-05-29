@@ -71,7 +71,7 @@ proto.api.SenecaServer.prototype.toObject = function(opt_includeInstance) {
 proto.api.SenecaServer.toObject = function(includeInstance, msg) {
   var f, obj = {
     projectId: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    serverInternalIp: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    serverExternalIp: jspb.Message.getFieldWithDefault(msg, 2, ""),
     serverPort: jspb.Message.getFieldWithDefault(msg, 3, ""),
     serverVmName: jspb.Message.getFieldWithDefault(msg, 4, ""),
     serverVmZone: jspb.Message.getFieldWithDefault(msg, 5, ""),
@@ -120,7 +120,7 @@ proto.api.SenecaServer.deserializeBinaryFromReader = function(msg, reader) {
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
-      msg.setServerInternalIp(value);
+      msg.setServerExternalIp(value);
       break;
     case 3:
       var value = /** @type {string} */ (reader.readString());
@@ -182,7 +182,7 @@ proto.api.SenecaServer.serializeBinaryToWriter = function(message, writer) {
       f
     );
   }
-  f = message.getServerInternalIp();
+  f = message.getServerExternalIp();
   if (f.length > 0) {
     writer.writeString(
       2,
@@ -253,10 +253,10 @@ proto.api.SenecaServer.prototype.setProjectId = function(value) {
 
 
 /**
- * optional string server_internal_ip = 2;
+ * optional string server_external_ip = 2;
  * @return {string}
  */
-proto.api.SenecaServer.prototype.getServerInternalIp = function() {
+proto.api.SenecaServer.prototype.getServerExternalIp = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
@@ -265,7 +265,7 @@ proto.api.SenecaServer.prototype.getServerInternalIp = function() {
  * @param {string} value
  * @return {!proto.api.SenecaServer} returns this
  */
-proto.api.SenecaServer.prototype.setServerInternalIp = function(value) {
+proto.api.SenecaServer.prototype.setServerExternalIp = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 

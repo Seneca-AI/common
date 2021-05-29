@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\010api/type',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0c\x64\x65vops.proto\x12\x03\x61pi\"\x88\x02\n\x0cSenecaServer\x12\x12\n\nproject_id\x18\x01 \x01(\t\x12\x1a\n\x12server_internal_ip\x18\x02 \x01(\t\x12\x13\n\x0bserver_port\x18\x03 \x01(\t\x12\x16\n\x0eserver_vm_name\x18\x04 \x01(\t\x12\x16\n\x0eserver_vm_zone\x18\x05 \x01(\t\x12\x35\n-server_path_to_google_application_credentials\x18\x06 \x01(\t\x12/\n\'server_path_to_google_oauth_credentials\x18\x07 \x01(\t\x12\x1b\n\x13receive_main_pushes\x18\x08 \x01(\x08\x42\nZ\x08\x61pi/typeb\x06proto3'
+  serialized_pb=b'\n\x0c\x64\x65vops.proto\x12\x03\x61pi\"\x88\x02\n\x0cSenecaServer\x12\x12\n\nproject_id\x18\x01 \x01(\t\x12\x1a\n\x12server_external_ip\x18\x02 \x01(\t\x12\x13\n\x0bserver_port\x18\x03 \x01(\t\x12\x16\n\x0eserver_vm_name\x18\x04 \x01(\t\x12\x16\n\x0eserver_vm_zone\x18\x05 \x01(\t\x12\x35\n-server_path_to_google_application_credentials\x18\x06 \x01(\t\x12/\n\'server_path_to_google_oauth_credentials\x18\x07 \x01(\t\x12\x1b\n\x13receive_main_pushes\x18\x08 \x01(\x08\x42\nZ\x08\x61pi/typeb\x06proto3'
 )
 
 
@@ -41,7 +41,7 @@ _SENECASERVER = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='server_internal_ip', full_name='api.SenecaServer.server_internal_ip', index=1,
+      name='server_external_ip', full_name='api.SenecaServer.server_external_ip', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
