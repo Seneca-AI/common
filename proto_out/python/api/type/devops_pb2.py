@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\010api/type',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0c\x64\x65vops.proto\x12\x03\x61pi\"\x88\x02\n\x0cSenecaServer\x12\x12\n\nproject_id\x18\x01 \x01(\t\x12\x1a\n\x12server_external_ip\x18\x02 \x01(\t\x12\x13\n\x0bserver_port\x18\x03 \x01(\t\x12\x16\n\x0eserver_vm_name\x18\x04 \x01(\t\x12\x16\n\x0eserver_vm_zone\x18\x05 \x01(\t\x12\x35\n-server_path_to_google_application_credentials\x18\x06 \x01(\t\x12/\n\'server_path_to_google_oauth_credentials\x18\x07 \x01(\t\x12\x1b\n\x13receive_main_pushes\x18\x08 \x01(\x08\x42\nZ\x08\x61pi/typeb\x06proto3'
+  serialized_pb=b'\n\x0c\x64\x65vops.proto\x12\x03\x61pi\"\x9e\x02\n\x0cSenecaServer\x12\x12\n\nproject_id\x18\x01 \x01(\t\x12\x1a\n\x12server_external_ip\x18\x02 \x01(\t\x12\x13\n\x0bserver_port\x18\x03 \x01(\t\x12\x16\n\x0eserver_vm_name\x18\x04 \x01(\t\x12\x16\n\x0eserver_vm_zone\x18\x05 \x01(\t\x12\x35\n-server_path_to_google_application_credentials\x18\x06 \x01(\t\x12/\n\'server_path_to_google_oauth_credentials\x18\x07 \x01(\t\x12\x1b\n\x13receive_main_pushes\x18\x08 \x01(\x08\x12\x14\n\x0c\x64\x61tastore_id\x18\t \x01(\x03\x42\nZ\x08\x61pi/typeb\x06proto3'
 )
 
 
@@ -89,6 +89,13 @@ _SENECASERVER = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='datastore_id', full_name='api.SenecaServer.datastore_id', index=8,
+      number=9, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -102,7 +109,7 @@ _SENECASERVER = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=22,
-  serialized_end=286,
+  serialized_end=308,
 )
 
 DESCRIPTOR.message_types_by_name['SenecaServer'] = _SENECASERVER

@@ -77,7 +77,8 @@ proto.api.SenecaServer.toObject = function(includeInstance, msg) {
     serverVmZone: jspb.Message.getFieldWithDefault(msg, 5, ""),
     serverPathToGoogleApplicationCredentials: jspb.Message.getFieldWithDefault(msg, 6, ""),
     serverPathToGoogleOauthCredentials: jspb.Message.getFieldWithDefault(msg, 7, ""),
-    receiveMainPushes: jspb.Message.getBooleanFieldWithDefault(msg, 8, false)
+    receiveMainPushes: jspb.Message.getBooleanFieldWithDefault(msg, 8, false),
+    datastoreId: jspb.Message.getFieldWithDefault(msg, 9, 0)
   };
 
   if (includeInstance) {
@@ -145,6 +146,10 @@ proto.api.SenecaServer.deserializeBinaryFromReader = function(msg, reader) {
     case 8:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setReceiveMainPushes(value);
+      break;
+    case 9:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setDatastoreId(value);
       break;
     default:
       reader.skipField();
@@ -228,6 +233,13 @@ proto.api.SenecaServer.serializeBinaryToWriter = function(message, writer) {
   if (f) {
     writer.writeBool(
       8,
+      f
+    );
+  }
+  f = message.getDatastoreId();
+  if (f !== 0) {
+    writer.writeInt64(
+      9,
       f
     );
   }
@@ -375,6 +387,24 @@ proto.api.SenecaServer.prototype.getReceiveMainPushes = function() {
  */
 proto.api.SenecaServer.prototype.setReceiveMainPushes = function(value) {
   return jspb.Message.setProto3BooleanField(this, 8, value);
+};
+
+
+/**
+ * optional int64 datastore_id = 9;
+ * @return {number}
+ */
+proto.api.SenecaServer.prototype.getDatastoreId = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 9, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.api.SenecaServer} returns this
+ */
+proto.api.SenecaServer.prototype.setDatastoreId = function(value) {
+  return jspb.Message.setProto3IntField(this, 9, value);
 };
 
 
