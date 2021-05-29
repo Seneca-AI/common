@@ -5,7 +5,7 @@ option go_package ="api/type";
 
 message SenecaServer {
     string project_id = 1;                                
-	string server_internal_ip = 2;                 
+	string server_external_ip = 2;                 
 	string server_port = 3;                
 	string server_vm_name = 4;                        
 	string server_vm_zone = 5;                          
