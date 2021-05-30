@@ -20,6 +20,11 @@ indexes:
   - name: UserId
   - name: TimestampMs
 
+- kind: RawLocation
+  properties:
+  - name: UserId
+  - name: AlgosVersion
+
 - kind: RawMotion
   properties:
   - name: UserId

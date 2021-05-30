@@ -52,6 +52,9 @@ message RawLocation {
     api.Location location = 3;
     int64 timestamp_ms = 4;
     api.Source source = 5;
+    // The algorithms this rawLocation has gone through.
+    repeated string algo_tag = 6;
+    double algos_version = 7;
 }
 
 // key(user_id, id)
