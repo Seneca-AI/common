@@ -70,6 +70,9 @@ enum ConditionType {
     RAIN = 2;
     SNOW = 3;
     ICE = 4;
+    HAIL = 9;
+    SLEET = 10;
+    FOG = 11;
 
     URBAN = 5;
     HIGHWAY = 6;
