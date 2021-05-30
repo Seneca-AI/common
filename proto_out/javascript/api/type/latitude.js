@@ -71,8 +71,8 @@ proto.api.Latitude.prototype.toObject = function(opt_includeInstance) {
  */
 proto.api.Latitude.toObject = function(includeInstance, msg) {
   var f, obj = {
-    degrees: jspb.Message.getFloatingPointFieldWithDefault(msg, 1, 0.0),
-    degreeMinutes: jspb.Message.getFloatingPointFieldWithDefault(msg, 2, 0.0),
+    degrees: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    degreeMinutes: jspb.Message.getFieldWithDefault(msg, 2, 0),
     degreeSeconds: jspb.Message.getFloatingPointFieldWithDefault(msg, 3, 0.0),
     latDirection: jspb.Message.getFieldWithDefault(msg, 4, 0)
   };
@@ -112,11 +112,11 @@ proto.api.Latitude.deserializeBinaryFromReader = function(msg, reader) {
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {number} */ (reader.readDouble());
+      var value = /** @type {number} */ (reader.readInt32());
       msg.setDegrees(value);
       break;
     case 2:
-      var value = /** @type {number} */ (reader.readDouble());
+      var value = /** @type {number} */ (reader.readInt32());
       msg.setDegreeMinutes(value);
       break;
     case 3:
@@ -157,15 +157,15 @@ proto.api.Latitude.prototype.serializeBinary = function() {
 proto.api.Latitude.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getDegrees();
-  if (f !== 0.0) {
-    writer.writeDouble(
+  if (f !== 0) {
+    writer.writeInt32(
       1,
       f
     );
   }
   f = message.getDegreeMinutes();
-  if (f !== 0.0) {
-    writer.writeDouble(
+  if (f !== 0) {
+    writer.writeInt32(
       2,
       f
     );
@@ -197,11 +197,11 @@ proto.api.Latitude.LatDirection = {
 };
 
 /**
- * optional double degrees = 1;
+ * optional int32 degrees = 1;
  * @return {number}
  */
 proto.api.Latitude.prototype.getDegrees = function() {
-  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 1, 0.0));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
@@ -210,16 +210,16 @@ proto.api.Latitude.prototype.getDegrees = function() {
  * @return {!proto.api.Latitude} returns this
  */
 proto.api.Latitude.prototype.setDegrees = function(value) {
-  return jspb.Message.setProto3FloatField(this, 1, value);
+  return jspb.Message.setProto3IntField(this, 1, value);
 };
 
 
 /**
- * optional double degree_minutes = 2;
+ * optional int32 degree_minutes = 2;
  * @return {number}
  */
 proto.api.Latitude.prototype.getDegreeMinutes = function() {
-  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 2, 0.0));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
@@ -228,7 +228,7 @@ proto.api.Latitude.prototype.getDegreeMinutes = function() {
  * @return {!proto.api.Latitude} returns this
  */
 proto.api.Latitude.prototype.setDegreeMinutes = function(value) {
-  return jspb.Message.setProto3FloatField(this, 2, value);
+  return jspb.Message.setProto3IntField(this, 2, value);
 };
 
 
