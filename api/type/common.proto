@@ -14,8 +14,8 @@ message TimePeriod {
 }
 
 message Latitude {
-    int degrees = 1;
-    int degree_minutes = 2;
+    int32 degrees = 1;
+    int32 degree_minutes = 2;
     double degree_seconds = 3;
 
     enum LatDirection {
@@ -28,8 +28,8 @@ message Latitude {
 }
 
 message Longitude {
-    int degrees = 1;
-    int degree_minutes = 2;
+    int32 degrees = 1;
+    int32 degree_minutes = 2;
     double degree_seconds = 3;
 
     enum LongDirection {
