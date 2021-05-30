@@ -25,6 +25,7 @@ proto.api.ConditionType = {
   HAIL: 9,
   SLEET: 10,
   FOG: 11,
+  FREEZING_RAIN: 12,
   URBAN: 5,
   HIGHWAY: 6,
   RURAL: 7,
