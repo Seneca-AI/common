@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\010api/type',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0c\x63ommon.proto\x12\x03\x61pi\"\'\n\x06Header\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x03\x12\x0f\n\x07message\x18\x02 \x01(\t\"8\n\nTimePeriod\x12\x15\n\rstart_time_ms\x18\x01 \x01(\x03\x12\x13\n\x0b\x65nd_time_ms\x18\x02 \x01(\x03\"\xb1\x01\n\x08Latitude\x12\x0f\n\x07\x64\x65grees\x18\x01 \x01(\x05\x12\x16\n\x0e\x64\x65gree_minutes\x18\x02 \x01(\x05\x12\x16\n\x0e\x64\x65gree_seconds\x18\x03 \x01(\x01\x12\x31\n\rlat_direction\x18\x04 \x01(\x0e\x32\x1a.api.Latitude.LatDirection\"1\n\x0cLatDirection\x12\x0b\n\x07UNKNOWN\x10\x00\x12\t\n\x05NORTH\x10\x01\x12\t\n\x05SOUTH\x10\x02\"\xb4\x01\n\tLongitude\x12\x0f\n\x07\x64\x65grees\x18\x01 \x01(\x05\x12\x16\n\x0e\x64\x65gree_minutes\x18\x02 \x01(\x05\x12\x16\n\x0e\x64\x65gree_seconds\x18\x03 \x01(\x01\x12\x34\n\x0elong_direction\x18\x04 \x01(\x0e\x32\x1c.api.Longitude.LongDirection\"0\n\rLongDirection\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x08\n\x04\x45\x41ST\x10\x01\x12\x08\n\x04WEST\x10\x02\"D\n\x08Location\x12\x1a\n\x03lat\x18\x01 \x01(\x0b\x32\r.api.Latitude\x12\x1c\n\x04long\x18\x02 \x01(\x0b\x32\x0e.api.Longitude\":\n\x06Motion\x12\x14\n\x0cvelocity_mph\x18\x01 \x01(\x01\x12\x1a\n\x12\x61\x63\x63\x65leration_mph_s\x18\x02 \x01(\x01\"\x88\x01\n\x06Source\x12\x11\n\tsource_id\x18\x01 \x01(\t\x12%\n\x0bsource_type\x18\x02 \x01(\x0e\x32\x10.api.Source.Type\"D\n\x04Type\x12\x0b\n\x07UNKNOWN\x10\x00\x12\r\n\tRAW_VIDEO\x10\x01\x12\x10\n\x0cRAW_LOCATION\x10\x02\x12\x0e\n\nRAW_MOTION\x10\x03*\x80\x01\n\rConditionType\x12\x17\n\x13NONE_CONDITION_TYPE\x10\x00\x12\t\n\x05NIGHT\x10\x01\x12\x08\n\x04RAIN\x10\x02\x12\x08\n\x04SNOW\x10\x03\x12\x07\n\x03ICE\x10\x04\x12\t\n\x05URBAN\x10\x05\x12\x0b\n\x07HIGHWAY\x10\x06\x12\t\n\x05RURAL\x10\x07\x12\x0b\n\x07TRAFFIC\x10\x08*b\n\tEventType\x12\x16\n\x12UNKNOWN_EVENT_TYPE\x10\x00\x12\x0f\n\x0bLANE_CHANGE\x10\x01\x12\x15\n\x11\x46\x41ST_ACCELERATION\x10\x02\x12\x15\n\x11\x46\x41ST_DECELERATION\x10\x03\x42\nZ\x08\x61pi/typeb\x06proto3'
+  serialized_pb=b'\n\x0c\x63ommon.proto\x12\x03\x61pi\"\'\n\x06Header\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x03\x12\x0f\n\x07message\x18\x02 \x01(\t\"8\n\nTimePeriod\x12\x15\n\rstart_time_ms\x18\x01 \x01(\x03\x12\x13\n\x0b\x65nd_time_ms\x18\x02 \x01(\x03\"\xb1\x01\n\x08Latitude\x12\x0f\n\x07\x64\x65grees\x18\x01 \x01(\x05\x12\x16\n\x0e\x64\x65gree_minutes\x18\x02 \x01(\x05\x12\x16\n\x0e\x64\x65gree_seconds\x18\x03 \x01(\x01\x12\x31\n\rlat_direction\x18\x04 \x01(\x0e\x32\x1a.api.Latitude.LatDirection\"1\n\x0cLatDirection\x12\x0b\n\x07UNKNOWN\x10\x00\x12\t\n\x05NORTH\x10\x01\x12\t\n\x05SOUTH\x10\x02\"\xb4\x01\n\tLongitude\x12\x0f\n\x07\x64\x65grees\x18\x01 \x01(\x05\x12\x16\n\x0e\x64\x65gree_minutes\x18\x02 \x01(\x05\x12\x16\n\x0e\x64\x65gree_seconds\x18\x03 \x01(\x01\x12\x34\n\x0elong_direction\x18\x04 \x01(\x0e\x32\x1c.api.Longitude.LongDirection\"0\n\rLongDirection\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x08\n\x04\x45\x41ST\x10\x01\x12\x08\n\x04WEST\x10\x02\"D\n\x08Location\x12\x1a\n\x03lat\x18\x01 \x01(\x0b\x32\r.api.Latitude\x12\x1c\n\x04long\x18\x02 \x01(\x0b\x32\x0e.api.Longitude\":\n\x06Motion\x12\x14\n\x0cvelocity_mph\x18\x01 \x01(\x01\x12\x1a\n\x12\x61\x63\x63\x65leration_mph_s\x18\x02 \x01(\x01\"\x88\x01\n\x06Source\x12\x11\n\tsource_id\x18\x01 \x01(\t\x12%\n\x0bsource_type\x18\x02 \x01(\x0e\x32\x10.api.Source.Type\"D\n\x04Type\x12\x0b\n\x07UNKNOWN\x10\x00\x12\r\n\tRAW_VIDEO\x10\x01\x12\x10\n\x0cRAW_LOCATION\x10\x02\x12\x0e\n\nRAW_MOTION\x10\x03*\x9e\x01\n\rConditionType\x12\x17\n\x13NONE_CONDITION_TYPE\x10\x00\x12\t\n\x05NIGHT\x10\x01\x12\x08\n\x04RAIN\x10\x02\x12\x08\n\x04SNOW\x10\x03\x12\x07\n\x03ICE\x10\x04\x12\x08\n\x04HAIL\x10\t\x12\t\n\x05SLEET\x10\n\x12\x07\n\x03\x46OG\x10\x0b\x12\t\n\x05URBAN\x10\x05\x12\x0b\n\x07HIGHWAY\x10\x06\x12\t\n\x05RURAL\x10\x07\x12\x0b\n\x07TRAFFIC\x10\x08*b\n\tEventType\x12\x16\n\x12UNKNOWN_EVENT_TYPE\x10\x00\x12\x0f\n\x0bLANE_CHANGE\x10\x01\x12\x15\n\x11\x46\x41ST_ACCELERATION\x10\x02\x12\x15\n\x11\x46\x41ST_DECELERATION\x10\x03\x42\nZ\x08\x61pi/typeb\x06proto3'
 )
 
 _CONDITIONTYPE = _descriptor.EnumDescriptor(
@@ -56,22 +56,37 @@ _CONDITIONTYPE = _descriptor.EnumDescriptor(
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='URBAN', index=5, number=5,
+      name='HAIL', index=5, number=9,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='HIGHWAY', index=6, number=6,
+      name='SLEET', index=6, number=10,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='RURAL', index=7, number=7,
+      name='FOG', index=7, number=11,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='TRAFFIC', index=8, number=8,
+      name='URBAN', index=8, number=5,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='HIGHWAY', index=9, number=6,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='RURAL', index=10, number=7,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='TRAFFIC', index=11, number=8,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
@@ -79,7 +94,7 @@ _CONDITIONTYPE = _descriptor.EnumDescriptor(
   containing_type=None,
   serialized_options=None,
   serialized_start=753,
-  serialized_end=881,
+  serialized_end=911,
 )
 _sym_db.RegisterEnumDescriptor(_CONDITIONTYPE)
 
@@ -114,8 +129,8 @@ _EVENTTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=883,
-  serialized_end=981,
+  serialized_start=913,
+  serialized_end=1011,
 )
 _sym_db.RegisterEnumDescriptor(_EVENTTYPE)
 
@@ -125,6 +140,9 @@ NIGHT = 1
 RAIN = 2
 SNOW = 3
 ICE = 4
+HAIL = 9
+SLEET = 10
+FOG = 11
 URBAN = 5
 HIGHWAY = 6
 RURAL = 7
