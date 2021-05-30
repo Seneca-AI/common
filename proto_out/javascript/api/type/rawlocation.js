@@ -30,7 +30,7 @@ goog.require('proto.api.Source');
  * @constructor
  */
 proto.api.RawLocation = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.api.RawLocation.repeatedFields_, null);
 };
 goog.inherits(proto.api.RawLocation, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -40,6 +40,13 @@ if (goog.DEBUG && !COMPILED) {
    */
   proto.api.RawLocation.displayName = 'proto.api.RawLocation';
 }
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.api.RawLocation.repeatedFields_ = [6];
 
 
 
@@ -76,7 +83,9 @@ proto.api.RawLocation.toObject = function(includeInstance, msg) {
     id: jspb.Message.getFieldWithDefault(msg, 2, ""),
     location: (f = msg.getLocation()) && proto.api.Location.toObject(includeInstance, f),
     timestampMs: jspb.Message.getFieldWithDefault(msg, 4, 0),
-    source: (f = msg.getSource()) && proto.api.Source.toObject(includeInstance, f)
+    source: (f = msg.getSource()) && proto.api.Source.toObject(includeInstance, f),
+    algoTagList: (f = jspb.Message.getRepeatedField(msg, 6)) == null ? undefined : f,
+    algosVersion: jspb.Message.getFloatingPointFieldWithDefault(msg, 7, 0.0)
   };
 
   if (includeInstance) {
@@ -134,6 +143,14 @@ proto.api.RawLocation.deserializeBinaryFromReader = function(msg, reader) {
       var value = new proto.api.Source;
       reader.readMessage(value,proto.api.Source.deserializeBinaryFromReader);
       msg.setSource(value);
+      break;
+    case 6:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addAlgoTag(value);
+      break;
+    case 7:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setAlgosVersion(value);
       break;
     default:
       reader.skipField();
@@ -199,6 +216,20 @@ proto.api.RawLocation.serializeBinaryToWriter = function(message, writer) {
       5,
       f,
       proto.api.Source.serializeBinaryToWriter
+    );
+  }
+  f = message.getAlgoTagList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      6,
+      f
+    );
+  }
+  f = message.getAlgosVersion();
+  if (f !== 0.0) {
+    writer.writeDouble(
+      7,
+      f
     );
   }
 };
@@ -329,6 +360,61 @@ proto.api.RawLocation.prototype.clearSource = function() {
  */
 proto.api.RawLocation.prototype.hasSource = function() {
   return jspb.Message.getField(this, 5) != null;
+};
+
+
+/**
+ * repeated string algo_tag = 6;
+ * @return {!Array<string>}
+ */
+proto.api.RawLocation.prototype.getAlgoTagList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 6));
+};
+
+
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.api.RawLocation} returns this
+ */
+proto.api.RawLocation.prototype.setAlgoTagList = function(value) {
+  return jspb.Message.setField(this, 6, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ * @return {!proto.api.RawLocation} returns this
+ */
+proto.api.RawLocation.prototype.addAlgoTag = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 6, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.api.RawLocation} returns this
+ */
+proto.api.RawLocation.prototype.clearAlgoTagList = function() {
+  return this.setAlgoTagList([]);
+};
+
+
+/**
+ * optional double algos_version = 7;
+ * @return {number}
+ */
+proto.api.RawLocation.prototype.getAlgosVersion = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 7, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.api.RawLocation} returns this
+ */
+proto.api.RawLocation.prototype.setAlgosVersion = function(value) {
+  return jspb.Message.setProto3FloatField(this, 7, value);
 };
 
 
