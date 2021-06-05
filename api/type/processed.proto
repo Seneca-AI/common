@@ -49,3 +49,37 @@ message FollowingDistanceForVideoResponse {
     string request_id = 1;
     FollowingDistanceForVideo following_distance_for_video = 2;
 }
+
+message ObjectInFrame {
+    double x_lower = 1;
+    double y_lower = 2;
+    double x_upper = 3;
+    double y_upper = 4;
+
+    enum ObjectLabel {
+        UNKNOWN = 0;
+        CAR = 1;
+        TRUCK = 2;
+    }
+
+    ObjectLabel object_label = 5;
+
+    double confidence = 6;
+}
+
+message ObjectsInVideoRequest {
+    string request_id = 1;
+    string simple_storage_video_url = 2;
+}
+
+message ObjectsInVideoResponse {
+    // The request this response is for.
+    string request_id = 1;
+
+    message ObjectInFrameNumbered {
+        ObjectInFrame object_in_frame = 1;
+        int32 frame_index = 2;
+    }
+
+    repeated ObjectInFrameNumbered object_in_frame_numbered = 2;
+}
