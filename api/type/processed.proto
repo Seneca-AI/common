@@ -50,7 +50,7 @@ message FollowingDistanceForVideoResponse {
     FollowingDistanceForVideo following_distance_for_video = 2;
 }
 
-message ObjectInFrame {
+message ObjectBox {
     double x_lower = 1;
     double y_lower = 2;
     double x_upper = 3;
@@ -67,6 +67,10 @@ message ObjectInFrame {
     double confidence = 6;
 }
 
+message ObjectsInFrame {
+    repeated ObjectBox object_box = 1;
+}
+
 message ObjectsInVideoRequest {
     string request_id = 1;
     string simple_storage_video_url = 2;
@@ -76,10 +80,10 @@ message ObjectsInVideoResponse {
     // The request this response is for.
     string request_id = 1;
 
-    message ObjectInFrameNumbered {
-        ObjectInFrame object_in_frame = 1;
+    message ObjectsInFrameNumbered {
+        ObjectsInFrame object_in_frame = 1;
         int32 frame_index = 2;
     }
 
-    repeated ObjectInFrameNumbered object_in_frame_numbered = 2;
+    repeated ObjectsInFrameNumbered objects_in_frame_numbered = 2;
 }
