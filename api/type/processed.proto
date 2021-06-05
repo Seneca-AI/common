@@ -71,19 +71,11 @@ message ObjectsInFrame {
     repeated ObjectBox object_box = 1;
 }
 
-message ObjectsInVideoRequest {
-    string request_id = 1;
-    string simple_storage_video_url = 2;
+message ObjectsInFrameRequest {
+    api.RawFrame raw_frame = 1;
 }
 
-message ObjectsInVideoResponse {
-    // The request this response is for.
-    string request_id = 1;
-
-    message ObjectsInFrameNumbered {
-        ObjectsInFrame object_in_frame = 1;
-        int32 frame_index = 2;
-    }
-
-    repeated ObjectsInFrameNumbered objects_in_frame_numbered = 2;
+message ObjectsInFrameResponse {
+    string raw_frame_id = 1;
+    ObjectsInFrame object_in_frame = 2;
 }
