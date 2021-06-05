@@ -11,22 +11,24 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+from . import raw_pb2 as raw__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='processed.proto',
-  package='',
+  package='api',
   syntax='proto3',
   serialized_options=b'Z\010api/type',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0fprocessed.proto\"\xb1\x01\n\x13LaneChangesForVideo\x12\x12\n\nnum_frames\x18\x01 \x01(\x03\x12\x46\n\x15lane_change_for_frame\x18\x02 \x03(\x0b\x32\'.LaneChangesForVideo.LaneChangeForFrame\x1a>\n\x12LaneChangeForFrame\x12\x13\n\x0b\x66rame_index\x18\x01 \x01(\x03\x12\x13\n\x0blane_change\x18\x65 \x01(\x08\"R\n\x1aLaneChangesForVideoRequest\x12\x12\n\nrequest_id\x18\x01 \x01(\t\x12 \n\x18simple_storage_video_url\x18\x02 \x01(\t\"g\n\x1bLaneChangesForVideoResponse\x12\x12\n\nrequest_id\x18\x01 \x01(\t\x12\x34\n\x16lane_changes_for_video\x18\x02 \x01(\x0b\x32\x14.LaneChangesForVideo\"\xd3\x01\n\x19\x46ollowingDistanceForVideo\x12\x12\n\nnum_frames\x18\x01 \x01(\x03\x12Z\n\x1c\x66ollowing_distance_for_frame\x18\x02 \x03(\x0b\x32\x34.FollowingDistanceForVideo.FollowingDistanceForFrame\x1a\x46\n\x19\x46ollowingDistanceForFrame\x12\x13\n\x0b\x66rame_index\x18\x01 \x01(\x03\x12\x14\n\x0cis_too_close\x18\x65 \x01(\x08\"X\n FollowingDistanceForVideoRequest\x12\x12\n\nrequest_id\x18\x01 \x01(\t\x12 \n\x18simple_storage_video_url\x18\x02 \x01(\t\"y\n!FollowingDistanceForVideoResponse\x12\x12\n\nrequest_id\x18\x01 \x01(\t\x12@\n\x1c\x66ollowing_distance_for_video\x18\x02 \x01(\x0b\x32\x1a.FollowingDistanceForVideo\"\xc1\x01\n\tObjectBox\x12\x0f\n\x07x_lower\x18\x01 \x01(\x01\x12\x0f\n\x07y_lower\x18\x02 \x01(\x01\x12\x0f\n\x07x_upper\x18\x03 \x01(\x01\x12\x0f\n\x07y_upper\x18\x04 \x01(\x01\x12,\n\x0cobject_label\x18\x05 \x01(\x0e\x32\x16.ObjectBox.ObjectLabel\x12\x12\n\nconfidence\x18\x06 \x01(\x01\".\n\x0bObjectLabel\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x07\n\x03\x43\x41R\x10\x01\x12\t\n\x05TRUCK\x10\x02\"0\n\x0eObjectsInFrame\x12\x1e\n\nobject_box\x18\x01 \x03(\x0b\x32\n.ObjectBox\"M\n\x15ObjectsInVideoRequest\x12\x12\n\nrequest_id\x18\x01 \x01(\t\x12 \n\x18simple_storage_video_url\x18\x02 \x01(\t\"\xd8\x01\n\x16ObjectsInVideoResponse\x12\x12\n\nrequest_id\x18\x01 \x01(\t\x12Q\n\x19objects_in_frame_numbered\x18\x02 \x03(\x0b\x32..ObjectsInVideoResponse.ObjectsInFrameNumbered\x1aW\n\x16ObjectsInFrameNumbered\x12(\n\x0fobject_in_frame\x18\x01 \x01(\x0b\x32\x0f.ObjectsInFrame\x12\x13\n\x0b\x66rame_index\x18\x02 \x01(\x05\x42\nZ\x08\x61pi/typeb\x06proto3'
-)
+  serialized_pb=b'\n\x0fprocessed.proto\x12\x03\x61pi\x1a\traw.proto\"\xb5\x01\n\x13LaneChangesForVideo\x12\x12\n\nnum_frames\x18\x01 \x01(\x03\x12J\n\x15lane_change_for_frame\x18\x02 \x03(\x0b\x32+.api.LaneChangesForVideo.LaneChangeForFrame\x1a>\n\x12LaneChangeForFrame\x12\x13\n\x0b\x66rame_index\x18\x01 \x01(\x03\x12\x13\n\x0blane_change\x18\x65 \x01(\x08\"R\n\x1aLaneChangesForVideoRequest\x12\x12\n\nrequest_id\x18\x01 \x01(\t\x12 \n\x18simple_storage_video_url\x18\x02 \x01(\t\"k\n\x1bLaneChangesForVideoResponse\x12\x12\n\nrequest_id\x18\x01 \x01(\t\x12\x38\n\x16lane_changes_for_video\x18\x02 \x01(\x0b\x32\x18.api.LaneChangesForVideo\"\xd7\x01\n\x19\x46ollowingDistanceForVideo\x12\x12\n\nnum_frames\x18\x01 \x01(\x03\x12^\n\x1c\x66ollowing_distance_for_frame\x18\x02 \x03(\x0b\x32\x38.api.FollowingDistanceForVideo.FollowingDistanceForFrame\x1a\x46\n\x19\x46ollowingDistanceForFrame\x12\x13\n\x0b\x66rame_index\x18\x01 \x01(\x03\x12\x14\n\x0cis_too_close\x18\x65 \x01(\x08\"X\n FollowingDistanceForVideoRequest\x12\x12\n\nrequest_id\x18\x01 \x01(\t\x12 \n\x18simple_storage_video_url\x18\x02 \x01(\t\"}\n!FollowingDistanceForVideoResponse\x12\x12\n\nrequest_id\x18\x01 \x01(\t\x12\x44\n\x1c\x66ollowing_distance_for_video\x18\x02 \x01(\x0b\x32\x1e.api.FollowingDistanceForVideo\"\xc5\x01\n\tObjectBox\x12\x0f\n\x07x_lower\x18\x01 \x01(\x01\x12\x0f\n\x07y_lower\x18\x02 \x01(\x01\x12\x0f\n\x07x_upper\x18\x03 \x01(\x01\x12\x0f\n\x07y_upper\x18\x04 \x01(\x01\x12\x30\n\x0cobject_label\x18\x05 \x01(\x0e\x32\x1a.api.ObjectBox.ObjectLabel\x12\x12\n\nconfidence\x18\x06 \x01(\x01\".\n\x0bObjectLabel\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x07\n\x03\x43\x41R\x10\x01\x12\t\n\x05TRUCK\x10\x02\"4\n\x0eObjectsInFrame\x12\"\n\nobject_box\x18\x01 \x03(\x0b\x32\x0e.api.ObjectBox\"9\n\x15ObjectsInFrameRequest\x12 \n\traw_frame\x18\x01 \x01(\x0b\x32\r.api.RawFrame\"\\\n\x16ObjectsInFrameResponse\x12\x14\n\x0craw_frame_id\x18\x01 \x01(\t\x12,\n\x0fobject_in_frame\x18\x02 \x01(\x0b\x32\x13.api.ObjectsInFrameB\nZ\x08\x61pi/typeb\x06proto3'
+  ,
+  dependencies=[raw__pb2.DESCRIPTOR,])
 
 
 
 _OBJECTBOX_OBJECTLABEL = _descriptor.EnumDescriptor(
   name='ObjectLabel',
-  full_name='ObjectBox.ObjectLabel',
+  full_name='api.ObjectBox.ObjectLabel',
   filename=None,
   file=DESCRIPTOR,
   create_key=_descriptor._internal_create_key,
@@ -49,29 +51,29 @@ _OBJECTBOX_OBJECTLABEL = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=963,
-  serialized_end=1009,
+  serialized_start=999,
+  serialized_end=1045,
 )
 _sym_db.RegisterEnumDescriptor(_OBJECTBOX_OBJECTLABEL)
 
 
 _LANECHANGESFORVIDEO_LANECHANGEFORFRAME = _descriptor.Descriptor(
   name='LaneChangeForFrame',
-  full_name='LaneChangesForVideo.LaneChangeForFrame',
+  full_name='api.LaneChangesForVideo.LaneChangeForFrame',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='frame_index', full_name='LaneChangesForVideo.LaneChangeForFrame.frame_index', index=0,
+      name='frame_index', full_name='api.LaneChangesForVideo.LaneChangeForFrame.frame_index', index=0,
       number=1, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='lane_change', full_name='LaneChangesForVideo.LaneChangeForFrame.lane_change', index=1,
+      name='lane_change', full_name='api.LaneChangesForVideo.LaneChangeForFrame.lane_change', index=1,
       number=101, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -89,27 +91,27 @@ _LANECHANGESFORVIDEO_LANECHANGEFORFRAME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=135,
-  serialized_end=197,
+  serialized_start=155,
+  serialized_end=217,
 )
 
 _LANECHANGESFORVIDEO = _descriptor.Descriptor(
   name='LaneChangesForVideo',
-  full_name='LaneChangesForVideo',
+  full_name='api.LaneChangesForVideo',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='num_frames', full_name='LaneChangesForVideo.num_frames', index=0,
+      name='num_frames', full_name='api.LaneChangesForVideo.num_frames', index=0,
       number=1, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='lane_change_for_frame', full_name='LaneChangesForVideo.lane_change_for_frame', index=1,
+      name='lane_change_for_frame', full_name='api.LaneChangesForVideo.lane_change_for_frame', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -127,28 +129,28 @@ _LANECHANGESFORVIDEO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20,
-  serialized_end=197,
+  serialized_start=36,
+  serialized_end=217,
 )
 
 
 _LANECHANGESFORVIDEOREQUEST = _descriptor.Descriptor(
   name='LaneChangesForVideoRequest',
-  full_name='LaneChangesForVideoRequest',
+  full_name='api.LaneChangesForVideoRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='request_id', full_name='LaneChangesForVideoRequest.request_id', index=0,
+      name='request_id', full_name='api.LaneChangesForVideoRequest.request_id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='simple_storage_video_url', full_name='LaneChangesForVideoRequest.simple_storage_video_url', index=1,
+      name='simple_storage_video_url', full_name='api.LaneChangesForVideoRequest.simple_storage_video_url', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -166,28 +168,28 @@ _LANECHANGESFORVIDEOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=199,
-  serialized_end=281,
+  serialized_start=219,
+  serialized_end=301,
 )
 
 
 _LANECHANGESFORVIDEORESPONSE = _descriptor.Descriptor(
   name='LaneChangesForVideoResponse',
-  full_name='LaneChangesForVideoResponse',
+  full_name='api.LaneChangesForVideoResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='request_id', full_name='LaneChangesForVideoResponse.request_id', index=0,
+      name='request_id', full_name='api.LaneChangesForVideoResponse.request_id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='lane_changes_for_video', full_name='LaneChangesForVideoResponse.lane_changes_for_video', index=1,
+      name='lane_changes_for_video', full_name='api.LaneChangesForVideoResponse.lane_changes_for_video', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -205,28 +207,28 @@ _LANECHANGESFORVIDEORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=283,
-  serialized_end=386,
+  serialized_start=303,
+  serialized_end=410,
 )
 
 
 _FOLLOWINGDISTANCEFORVIDEO_FOLLOWINGDISTANCEFORFRAME = _descriptor.Descriptor(
   name='FollowingDistanceForFrame',
-  full_name='FollowingDistanceForVideo.FollowingDistanceForFrame',
+  full_name='api.FollowingDistanceForVideo.FollowingDistanceForFrame',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='frame_index', full_name='FollowingDistanceForVideo.FollowingDistanceForFrame.frame_index', index=0,
+      name='frame_index', full_name='api.FollowingDistanceForVideo.FollowingDistanceForFrame.frame_index', index=0,
       number=1, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='is_too_close', full_name='FollowingDistanceForVideo.FollowingDistanceForFrame.is_too_close', index=1,
+      name='is_too_close', full_name='api.FollowingDistanceForVideo.FollowingDistanceForFrame.is_too_close', index=1,
       number=101, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -244,27 +246,27 @@ _FOLLOWINGDISTANCEFORVIDEO_FOLLOWINGDISTANCEFORFRAME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=530,
-  serialized_end=600,
+  serialized_start=558,
+  serialized_end=628,
 )
 
 _FOLLOWINGDISTANCEFORVIDEO = _descriptor.Descriptor(
   name='FollowingDistanceForVideo',
-  full_name='FollowingDistanceForVideo',
+  full_name='api.FollowingDistanceForVideo',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='num_frames', full_name='FollowingDistanceForVideo.num_frames', index=0,
+      name='num_frames', full_name='api.FollowingDistanceForVideo.num_frames', index=0,
       number=1, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='following_distance_for_frame', full_name='FollowingDistanceForVideo.following_distance_for_frame', index=1,
+      name='following_distance_for_frame', full_name='api.FollowingDistanceForVideo.following_distance_for_frame', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -282,28 +284,28 @@ _FOLLOWINGDISTANCEFORVIDEO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=389,
-  serialized_end=600,
+  serialized_start=413,
+  serialized_end=628,
 )
 
 
 _FOLLOWINGDISTANCEFORVIDEOREQUEST = _descriptor.Descriptor(
   name='FollowingDistanceForVideoRequest',
-  full_name='FollowingDistanceForVideoRequest',
+  full_name='api.FollowingDistanceForVideoRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='request_id', full_name='FollowingDistanceForVideoRequest.request_id', index=0,
+      name='request_id', full_name='api.FollowingDistanceForVideoRequest.request_id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='simple_storage_video_url', full_name='FollowingDistanceForVideoRequest.simple_storage_video_url', index=1,
+      name='simple_storage_video_url', full_name='api.FollowingDistanceForVideoRequest.simple_storage_video_url', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -321,28 +323,28 @@ _FOLLOWINGDISTANCEFORVIDEOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=602,
-  serialized_end=690,
+  serialized_start=630,
+  serialized_end=718,
 )
 
 
 _FOLLOWINGDISTANCEFORVIDEORESPONSE = _descriptor.Descriptor(
   name='FollowingDistanceForVideoResponse',
-  full_name='FollowingDistanceForVideoResponse',
+  full_name='api.FollowingDistanceForVideoResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='request_id', full_name='FollowingDistanceForVideoResponse.request_id', index=0,
+      name='request_id', full_name='api.FollowingDistanceForVideoResponse.request_id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='following_distance_for_video', full_name='FollowingDistanceForVideoResponse.following_distance_for_video', index=1,
+      name='following_distance_for_video', full_name='api.FollowingDistanceForVideoResponse.following_distance_for_video', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -360,56 +362,56 @@ _FOLLOWINGDISTANCEFORVIDEORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=692,
-  serialized_end=813,
+  serialized_start=720,
+  serialized_end=845,
 )
 
 
 _OBJECTBOX = _descriptor.Descriptor(
   name='ObjectBox',
-  full_name='ObjectBox',
+  full_name='api.ObjectBox',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='x_lower', full_name='ObjectBox.x_lower', index=0,
+      name='x_lower', full_name='api.ObjectBox.x_lower', index=0,
       number=1, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='y_lower', full_name='ObjectBox.y_lower', index=1,
+      name='y_lower', full_name='api.ObjectBox.y_lower', index=1,
       number=2, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='x_upper', full_name='ObjectBox.x_upper', index=2,
+      name='x_upper', full_name='api.ObjectBox.x_upper', index=2,
       number=3, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='y_upper', full_name='ObjectBox.y_upper', index=3,
+      name='y_upper', full_name='api.ObjectBox.y_upper', index=3,
       number=4, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='object_label', full_name='ObjectBox.object_label', index=4,
+      name='object_label', full_name='api.ObjectBox.object_label', index=4,
       number=5, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='confidence', full_name='ObjectBox.confidence', index=5,
+      name='confidence', full_name='api.ObjectBox.confidence', index=5,
       number=6, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -428,21 +430,21 @@ _OBJECTBOX = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=816,
-  serialized_end=1009,
+  serialized_start=848,
+  serialized_end=1045,
 )
 
 
 _OBJECTSINFRAME = _descriptor.Descriptor(
   name='ObjectsInFrame',
-  full_name='ObjectsInFrame',
+  full_name='api.ObjectsInFrame',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='object_box', full_name='ObjectsInFrame.object_box', index=0,
+      name='object_box', full_name='api.ObjectsInFrame.object_box', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -460,69 +462,62 @@ _OBJECTSINFRAME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1011,
-  serialized_end=1059,
+  serialized_start=1047,
+  serialized_end=1099,
 )
 
 
-_OBJECTSINVIDEOREQUEST = _descriptor.Descriptor(
-  name='ObjectsInVideoRequest',
-  full_name='ObjectsInVideoRequest',
+_OBJECTSINFRAMEREQUEST = _descriptor.Descriptor(
+  name='ObjectsInFrameRequest',
+  full_name='api.ObjectsInFrameRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='request_id', full_name='ObjectsInVideoRequest.request_id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='simple_storage_video_url', full_name='ObjectsInVideoRequest.simple_storage_video_url', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1061,
-  serialized_end=1138,
-)
-
-
-_OBJECTSINVIDEORESPONSE_OBJECTSINFRAMENUMBERED = _descriptor.Descriptor(
-  name='ObjectsInFrameNumbered',
-  full_name='ObjectsInVideoResponse.ObjectsInFrameNumbered',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='object_in_frame', full_name='ObjectsInVideoResponse.ObjectsInFrameNumbered.object_in_frame', index=0,
+      name='raw_frame', full_name='api.ObjectsInFrameRequest.raw_frame', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1101,
+  serialized_end=1158,
+)
+
+
+_OBJECTSINFRAMERESPONSE = _descriptor.Descriptor(
+  name='ObjectsInFrameResponse',
+  full_name='api.ObjectsInFrameResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
     _descriptor.FieldDescriptor(
-      name='frame_index', full_name='ObjectsInVideoResponse.ObjectsInFrameNumbered.frame_index', index=1,
-      number=2, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
+      name='raw_frame_id', full_name='api.ObjectsInFrameResponse.raw_frame_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='object_in_frame', full_name='api.ObjectsInFrameResponse.object_in_frame', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
@@ -538,46 +533,8 @@ _OBJECTSINVIDEORESPONSE_OBJECTSINFRAMENUMBERED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1270,
-  serialized_end=1357,
-)
-
-_OBJECTSINVIDEORESPONSE = _descriptor.Descriptor(
-  name='ObjectsInVideoResponse',
-  full_name='ObjectsInVideoResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='request_id', full_name='ObjectsInVideoResponse.request_id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='objects_in_frame_numbered', full_name='ObjectsInVideoResponse.objects_in_frame_numbered', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[_OBJECTSINVIDEORESPONSE_OBJECTSINFRAMENUMBERED, ],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1141,
-  serialized_end=1357,
+  serialized_start=1160,
+  serialized_end=1252,
 )
 
 _LANECHANGESFORVIDEO_LANECHANGEFORFRAME.containing_type = _LANECHANGESFORVIDEO
@@ -589,9 +546,8 @@ _FOLLOWINGDISTANCEFORVIDEORESPONSE.fields_by_name['following_distance_for_video'
 _OBJECTBOX.fields_by_name['object_label'].enum_type = _OBJECTBOX_OBJECTLABEL
 _OBJECTBOX_OBJECTLABEL.containing_type = _OBJECTBOX
 _OBJECTSINFRAME.fields_by_name['object_box'].message_type = _OBJECTBOX
-_OBJECTSINVIDEORESPONSE_OBJECTSINFRAMENUMBERED.fields_by_name['object_in_frame'].message_type = _OBJECTSINFRAME
-_OBJECTSINVIDEORESPONSE_OBJECTSINFRAMENUMBERED.containing_type = _OBJECTSINVIDEORESPONSE
-_OBJECTSINVIDEORESPONSE.fields_by_name['objects_in_frame_numbered'].message_type = _OBJECTSINVIDEORESPONSE_OBJECTSINFRAMENUMBERED
+_OBJECTSINFRAMEREQUEST.fields_by_name['raw_frame'].message_type = raw__pb2._RAWFRAME
+_OBJECTSINFRAMERESPONSE.fields_by_name['object_in_frame'].message_type = _OBJECTSINFRAME
 DESCRIPTOR.message_types_by_name['LaneChangesForVideo'] = _LANECHANGESFORVIDEO
 DESCRIPTOR.message_types_by_name['LaneChangesForVideoRequest'] = _LANECHANGESFORVIDEOREQUEST
 DESCRIPTOR.message_types_by_name['LaneChangesForVideoResponse'] = _LANECHANGESFORVIDEORESPONSE
@@ -600,8 +556,8 @@ DESCRIPTOR.message_types_by_name['FollowingDistanceForVideoRequest'] = _FOLLOWIN
 DESCRIPTOR.message_types_by_name['FollowingDistanceForVideoResponse'] = _FOLLOWINGDISTANCEFORVIDEORESPONSE
 DESCRIPTOR.message_types_by_name['ObjectBox'] = _OBJECTBOX
 DESCRIPTOR.message_types_by_name['ObjectsInFrame'] = _OBJECTSINFRAME
-DESCRIPTOR.message_types_by_name['ObjectsInVideoRequest'] = _OBJECTSINVIDEOREQUEST
-DESCRIPTOR.message_types_by_name['ObjectsInVideoResponse'] = _OBJECTSINVIDEORESPONSE
+DESCRIPTOR.message_types_by_name['ObjectsInFrameRequest'] = _OBJECTSINFRAMEREQUEST
+DESCRIPTOR.message_types_by_name['ObjectsInFrameResponse'] = _OBJECTSINFRAMERESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 LaneChangesForVideo = _reflection.GeneratedProtocolMessageType('LaneChangesForVideo', (_message.Message,), {
@@ -609,12 +565,12 @@ LaneChangesForVideo = _reflection.GeneratedProtocolMessageType('LaneChangesForVi
   'LaneChangeForFrame' : _reflection.GeneratedProtocolMessageType('LaneChangeForFrame', (_message.Message,), {
     'DESCRIPTOR' : _LANECHANGESFORVIDEO_LANECHANGEFORFRAME,
     '__module__' : 'processed_pb2'
-    # @@protoc_insertion_point(class_scope:LaneChangesForVideo.LaneChangeForFrame)
+    # @@protoc_insertion_point(class_scope:api.LaneChangesForVideo.LaneChangeForFrame)
     })
   ,
   'DESCRIPTOR' : _LANECHANGESFORVIDEO,
   '__module__' : 'processed_pb2'
-  # @@protoc_insertion_point(class_scope:LaneChangesForVideo)
+  # @@protoc_insertion_point(class_scope:api.LaneChangesForVideo)
   })
 _sym_db.RegisterMessage(LaneChangesForVideo)
 _sym_db.RegisterMessage(LaneChangesForVideo.LaneChangeForFrame)
@@ -622,14 +578,14 @@ _sym_db.RegisterMessage(LaneChangesForVideo.LaneChangeForFrame)
 LaneChangesForVideoRequest = _reflection.GeneratedProtocolMessageType('LaneChangesForVideoRequest', (_message.Message,), {
   'DESCRIPTOR' : _LANECHANGESFORVIDEOREQUEST,
   '__module__' : 'processed_pb2'
-  # @@protoc_insertion_point(class_scope:LaneChangesForVideoRequest)
+  # @@protoc_insertion_point(class_scope:api.LaneChangesForVideoRequest)
   })
 _sym_db.RegisterMessage(LaneChangesForVideoRequest)
 
 LaneChangesForVideoResponse = _reflection.GeneratedProtocolMessageType('LaneChangesForVideoResponse', (_message.Message,), {
   'DESCRIPTOR' : _LANECHANGESFORVIDEORESPONSE,
   '__module__' : 'processed_pb2'
-  # @@protoc_insertion_point(class_scope:LaneChangesForVideoResponse)
+  # @@protoc_insertion_point(class_scope:api.LaneChangesForVideoResponse)
   })
 _sym_db.RegisterMessage(LaneChangesForVideoResponse)
 
@@ -638,12 +594,12 @@ FollowingDistanceForVideo = _reflection.GeneratedProtocolMessageType('FollowingD
   'FollowingDistanceForFrame' : _reflection.GeneratedProtocolMessageType('FollowingDistanceForFrame', (_message.Message,), {
     'DESCRIPTOR' : _FOLLOWINGDISTANCEFORVIDEO_FOLLOWINGDISTANCEFORFRAME,
     '__module__' : 'processed_pb2'
-    # @@protoc_insertion_point(class_scope:FollowingDistanceForVideo.FollowingDistanceForFrame)
+    # @@protoc_insertion_point(class_scope:api.FollowingDistanceForVideo.FollowingDistanceForFrame)
     })
   ,
   'DESCRIPTOR' : _FOLLOWINGDISTANCEFORVIDEO,
   '__module__' : 'processed_pb2'
-  # @@protoc_insertion_point(class_scope:FollowingDistanceForVideo)
+  # @@protoc_insertion_point(class_scope:api.FollowingDistanceForVideo)
   })
 _sym_db.RegisterMessage(FollowingDistanceForVideo)
 _sym_db.RegisterMessage(FollowingDistanceForVideo.FollowingDistanceForFrame)
@@ -651,52 +607,44 @@ _sym_db.RegisterMessage(FollowingDistanceForVideo.FollowingDistanceForFrame)
 FollowingDistanceForVideoRequest = _reflection.GeneratedProtocolMessageType('FollowingDistanceForVideoRequest', (_message.Message,), {
   'DESCRIPTOR' : _FOLLOWINGDISTANCEFORVIDEOREQUEST,
   '__module__' : 'processed_pb2'
-  # @@protoc_insertion_point(class_scope:FollowingDistanceForVideoRequest)
+  # @@protoc_insertion_point(class_scope:api.FollowingDistanceForVideoRequest)
   })
 _sym_db.RegisterMessage(FollowingDistanceForVideoRequest)
 
 FollowingDistanceForVideoResponse = _reflection.GeneratedProtocolMessageType('FollowingDistanceForVideoResponse', (_message.Message,), {
   'DESCRIPTOR' : _FOLLOWINGDISTANCEFORVIDEORESPONSE,
   '__module__' : 'processed_pb2'
-  # @@protoc_insertion_point(class_scope:FollowingDistanceForVideoResponse)
+  # @@protoc_insertion_point(class_scope:api.FollowingDistanceForVideoResponse)
   })
 _sym_db.RegisterMessage(FollowingDistanceForVideoResponse)
 
 ObjectBox = _reflection.GeneratedProtocolMessageType('ObjectBox', (_message.Message,), {
   'DESCRIPTOR' : _OBJECTBOX,
   '__module__' : 'processed_pb2'
-  # @@protoc_insertion_point(class_scope:ObjectBox)
+  # @@protoc_insertion_point(class_scope:api.ObjectBox)
   })
 _sym_db.RegisterMessage(ObjectBox)
 
 ObjectsInFrame = _reflection.GeneratedProtocolMessageType('ObjectsInFrame', (_message.Message,), {
   'DESCRIPTOR' : _OBJECTSINFRAME,
   '__module__' : 'processed_pb2'
-  # @@protoc_insertion_point(class_scope:ObjectsInFrame)
+  # @@protoc_insertion_point(class_scope:api.ObjectsInFrame)
   })
 _sym_db.RegisterMessage(ObjectsInFrame)
 
-ObjectsInVideoRequest = _reflection.GeneratedProtocolMessageType('ObjectsInVideoRequest', (_message.Message,), {
-  'DESCRIPTOR' : _OBJECTSINVIDEOREQUEST,
+ObjectsInFrameRequest = _reflection.GeneratedProtocolMessageType('ObjectsInFrameRequest', (_message.Message,), {
+  'DESCRIPTOR' : _OBJECTSINFRAMEREQUEST,
   '__module__' : 'processed_pb2'
-  # @@protoc_insertion_point(class_scope:ObjectsInVideoRequest)
+  # @@protoc_insertion_point(class_scope:api.ObjectsInFrameRequest)
   })
-_sym_db.RegisterMessage(ObjectsInVideoRequest)
+_sym_db.RegisterMessage(ObjectsInFrameRequest)
 
-ObjectsInVideoResponse = _reflection.GeneratedProtocolMessageType('ObjectsInVideoResponse', (_message.Message,), {
-
-  'ObjectsInFrameNumbered' : _reflection.GeneratedProtocolMessageType('ObjectsInFrameNumbered', (_message.Message,), {
-    'DESCRIPTOR' : _OBJECTSINVIDEORESPONSE_OBJECTSINFRAMENUMBERED,
-    '__module__' : 'processed_pb2'
-    # @@protoc_insertion_point(class_scope:ObjectsInVideoResponse.ObjectsInFrameNumbered)
-    })
-  ,
-  'DESCRIPTOR' : _OBJECTSINVIDEORESPONSE,
+ObjectsInFrameResponse = _reflection.GeneratedProtocolMessageType('ObjectsInFrameResponse', (_message.Message,), {
+  'DESCRIPTOR' : _OBJECTSINFRAMERESPONSE,
   '__module__' : 'processed_pb2'
-  # @@protoc_insertion_point(class_scope:ObjectsInVideoResponse)
+  # @@protoc_insertion_point(class_scope:api.ObjectsInFrameResponse)
   })
-_sym_db.RegisterMessage(ObjectsInVideoResponse)
-_sym_db.RegisterMessage(ObjectsInVideoResponse.ObjectsInFrameNumbered)
+_sym_db.RegisterMessage(ObjectsInFrameResponse)
 
 
 DESCRIPTOR._options = None

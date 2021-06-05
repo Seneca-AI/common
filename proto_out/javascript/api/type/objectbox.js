@@ -11,8 +11,8 @@
 /* eslint-disable */
 // @ts-nocheck
 
-goog.provide('proto.ObjectBox');
-goog.provide('proto.ObjectBox.ObjectLabel');
+goog.provide('proto.api.ObjectBox');
+goog.provide('proto.api.ObjectBox.ObjectLabel');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
@@ -28,16 +28,16 @@ goog.require('jspb.Message');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ObjectBox = function(opt_data) {
+proto.api.ObjectBox = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ObjectBox, jspb.Message);
+goog.inherits(proto.api.ObjectBox, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ObjectBox.displayName = 'proto.ObjectBox';
+  proto.api.ObjectBox.displayName = 'proto.api.ObjectBox';
 }
 
 
@@ -55,8 +55,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ObjectBox.prototype.toObject = function(opt_includeInstance) {
-  return proto.ObjectBox.toObject(opt_includeInstance, this);
+proto.api.ObjectBox.prototype.toObject = function(opt_includeInstance) {
+  return proto.api.ObjectBox.toObject(opt_includeInstance, this);
 };
 
 
@@ -65,11 +65,11 @@ proto.ObjectBox.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ObjectBox} msg The msg instance to transform.
+ * @param {!proto.api.ObjectBox} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ObjectBox.toObject = function(includeInstance, msg) {
+proto.api.ObjectBox.toObject = function(includeInstance, msg) {
   var f, obj = {
     xLower: jspb.Message.getFloatingPointFieldWithDefault(msg, 1, 0.0),
     yLower: jspb.Message.getFloatingPointFieldWithDefault(msg, 2, 0.0),
@@ -90,23 +90,23 @@ proto.ObjectBox.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ObjectBox}
+ * @return {!proto.api.ObjectBox}
  */
-proto.ObjectBox.deserializeBinary = function(bytes) {
+proto.api.ObjectBox.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ObjectBox;
-  return proto.ObjectBox.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.api.ObjectBox;
+  return proto.api.ObjectBox.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ObjectBox} msg The message object to deserialize into.
+ * @param {!proto.api.ObjectBox} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ObjectBox}
+ * @return {!proto.api.ObjectBox}
  */
-proto.ObjectBox.deserializeBinaryFromReader = function(msg, reader) {
+proto.api.ObjectBox.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -130,7 +130,7 @@ proto.ObjectBox.deserializeBinaryFromReader = function(msg, reader) {
       msg.setYUpper(value);
       break;
     case 5:
-      var value = /** @type {!proto.ObjectBox.ObjectLabel} */ (reader.readEnum());
+      var value = /** @type {!proto.api.ObjectBox.ObjectLabel} */ (reader.readEnum());
       msg.setObjectLabel(value);
       break;
     case 6:
@@ -150,9 +150,9 @@ proto.ObjectBox.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ObjectBox.prototype.serializeBinary = function() {
+proto.api.ObjectBox.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ObjectBox.serializeBinaryToWriter(this, writer);
+  proto.api.ObjectBox.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -160,11 +160,11 @@ proto.ObjectBox.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ObjectBox} message
+ * @param {!proto.api.ObjectBox} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ObjectBox.serializeBinaryToWriter = function(message, writer) {
+proto.api.ObjectBox.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getXLower();
   if (f !== 0.0) {
@@ -214,7 +214,7 @@ proto.ObjectBox.serializeBinaryToWriter = function(message, writer) {
 /**
  * @enum {number}
  */
-proto.ObjectBox.ObjectLabel = {
+proto.api.ObjectBox.ObjectLabel = {
   UNKNOWN: 0,
   CAR: 1,
   TRUCK: 2
@@ -224,16 +224,16 @@ proto.ObjectBox.ObjectLabel = {
  * optional double x_lower = 1;
  * @return {number}
  */
-proto.ObjectBox.prototype.getXLower = function() {
+proto.api.ObjectBox.prototype.getXLower = function() {
   return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 1, 0.0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.ObjectBox} returns this
+ * @return {!proto.api.ObjectBox} returns this
  */
-proto.ObjectBox.prototype.setXLower = function(value) {
+proto.api.ObjectBox.prototype.setXLower = function(value) {
   return jspb.Message.setProto3FloatField(this, 1, value);
 };
 
@@ -242,16 +242,16 @@ proto.ObjectBox.prototype.setXLower = function(value) {
  * optional double y_lower = 2;
  * @return {number}
  */
-proto.ObjectBox.prototype.getYLower = function() {
+proto.api.ObjectBox.prototype.getYLower = function() {
   return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 2, 0.0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.ObjectBox} returns this
+ * @return {!proto.api.ObjectBox} returns this
  */
-proto.ObjectBox.prototype.setYLower = function(value) {
+proto.api.ObjectBox.prototype.setYLower = function(value) {
   return jspb.Message.setProto3FloatField(this, 2, value);
 };
 
@@ -260,16 +260,16 @@ proto.ObjectBox.prototype.setYLower = function(value) {
  * optional double x_upper = 3;
  * @return {number}
  */
-proto.ObjectBox.prototype.getXUpper = function() {
+proto.api.ObjectBox.prototype.getXUpper = function() {
   return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 3, 0.0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.ObjectBox} returns this
+ * @return {!proto.api.ObjectBox} returns this
  */
-proto.ObjectBox.prototype.setXUpper = function(value) {
+proto.api.ObjectBox.prototype.setXUpper = function(value) {
   return jspb.Message.setProto3FloatField(this, 3, value);
 };
 
@@ -278,34 +278,34 @@ proto.ObjectBox.prototype.setXUpper = function(value) {
  * optional double y_upper = 4;
  * @return {number}
  */
-proto.ObjectBox.prototype.getYUpper = function() {
+proto.api.ObjectBox.prototype.getYUpper = function() {
   return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 4, 0.0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.ObjectBox} returns this
+ * @return {!proto.api.ObjectBox} returns this
  */
-proto.ObjectBox.prototype.setYUpper = function(value) {
+proto.api.ObjectBox.prototype.setYUpper = function(value) {
   return jspb.Message.setProto3FloatField(this, 4, value);
 };
 
 
 /**
  * optional ObjectLabel object_label = 5;
- * @return {!proto.ObjectBox.ObjectLabel}
+ * @return {!proto.api.ObjectBox.ObjectLabel}
  */
-proto.ObjectBox.prototype.getObjectLabel = function() {
-  return /** @type {!proto.ObjectBox.ObjectLabel} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+proto.api.ObjectBox.prototype.getObjectLabel = function() {
+  return /** @type {!proto.api.ObjectBox.ObjectLabel} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
 };
 
 
 /**
- * @param {!proto.ObjectBox.ObjectLabel} value
- * @return {!proto.ObjectBox} returns this
+ * @param {!proto.api.ObjectBox.ObjectLabel} value
+ * @return {!proto.api.ObjectBox} returns this
  */
-proto.ObjectBox.prototype.setObjectLabel = function(value) {
+proto.api.ObjectBox.prototype.setObjectLabel = function(value) {
   return jspb.Message.setProto3EnumField(this, 5, value);
 };
 
@@ -314,16 +314,16 @@ proto.ObjectBox.prototype.setObjectLabel = function(value) {
  * optional double confidence = 6;
  * @return {number}
  */
-proto.ObjectBox.prototype.getConfidence = function() {
+proto.api.ObjectBox.prototype.getConfidence = function() {
   return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 6, 0.0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.ObjectBox} returns this
+ * @return {!proto.api.ObjectBox} returns this
  */
-proto.ObjectBox.prototype.setConfidence = function(value) {
+proto.api.ObjectBox.prototype.setConfidence = function(value) {
   return jspb.Message.setProto3FloatField(this, 6, value);
 };
 

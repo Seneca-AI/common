@@ -11,7 +11,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-goog.provide('proto.LaneChangesForVideoRequest');
+goog.provide('proto.api.LaneChangesForVideoRequest');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
@@ -27,16 +27,16 @@ goog.require('jspb.Message');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.LaneChangesForVideoRequest = function(opt_data) {
+proto.api.LaneChangesForVideoRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.LaneChangesForVideoRequest, jspb.Message);
+goog.inherits(proto.api.LaneChangesForVideoRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.LaneChangesForVideoRequest.displayName = 'proto.LaneChangesForVideoRequest';
+  proto.api.LaneChangesForVideoRequest.displayName = 'proto.api.LaneChangesForVideoRequest';
 }
 
 
@@ -54,8 +54,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.LaneChangesForVideoRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.LaneChangesForVideoRequest.toObject(opt_includeInstance, this);
+proto.api.LaneChangesForVideoRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.api.LaneChangesForVideoRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -64,11 +64,11 @@ proto.LaneChangesForVideoRequest.prototype.toObject = function(opt_includeInstan
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.LaneChangesForVideoRequest} msg The msg instance to transform.
+ * @param {!proto.api.LaneChangesForVideoRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.LaneChangesForVideoRequest.toObject = function(includeInstance, msg) {
+proto.api.LaneChangesForVideoRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     requestId: jspb.Message.getFieldWithDefault(msg, 1, ""),
     simpleStorageVideoUrl: jspb.Message.getFieldWithDefault(msg, 2, "")
@@ -85,23 +85,23 @@ proto.LaneChangesForVideoRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.LaneChangesForVideoRequest}
+ * @return {!proto.api.LaneChangesForVideoRequest}
  */
-proto.LaneChangesForVideoRequest.deserializeBinary = function(bytes) {
+proto.api.LaneChangesForVideoRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.LaneChangesForVideoRequest;
-  return proto.LaneChangesForVideoRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.api.LaneChangesForVideoRequest;
+  return proto.api.LaneChangesForVideoRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.LaneChangesForVideoRequest} msg The message object to deserialize into.
+ * @param {!proto.api.LaneChangesForVideoRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.LaneChangesForVideoRequest}
+ * @return {!proto.api.LaneChangesForVideoRequest}
  */
-proto.LaneChangesForVideoRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.api.LaneChangesForVideoRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -129,9 +129,9 @@ proto.LaneChangesForVideoRequest.deserializeBinaryFromReader = function(msg, rea
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.LaneChangesForVideoRequest.prototype.serializeBinary = function() {
+proto.api.LaneChangesForVideoRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.LaneChangesForVideoRequest.serializeBinaryToWriter(this, writer);
+  proto.api.LaneChangesForVideoRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -139,11 +139,11 @@ proto.LaneChangesForVideoRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.LaneChangesForVideoRequest} message
+ * @param {!proto.api.LaneChangesForVideoRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.LaneChangesForVideoRequest.serializeBinaryToWriter = function(message, writer) {
+proto.api.LaneChangesForVideoRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getRequestId();
   if (f.length > 0) {
@@ -166,16 +166,16 @@ proto.LaneChangesForVideoRequest.serializeBinaryToWriter = function(message, wri
  * optional string request_id = 1;
  * @return {string}
  */
-proto.LaneChangesForVideoRequest.prototype.getRequestId = function() {
+proto.api.LaneChangesForVideoRequest.prototype.getRequestId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.LaneChangesForVideoRequest} returns this
+ * @return {!proto.api.LaneChangesForVideoRequest} returns this
  */
-proto.LaneChangesForVideoRequest.prototype.setRequestId = function(value) {
+proto.api.LaneChangesForVideoRequest.prototype.setRequestId = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -184,16 +184,16 @@ proto.LaneChangesForVideoRequest.prototype.setRequestId = function(value) {
  * optional string simple_storage_video_url = 2;
  * @return {string}
  */
-proto.LaneChangesForVideoRequest.prototype.getSimpleStorageVideoUrl = function() {
+proto.api.LaneChangesForVideoRequest.prototype.getSimpleStorageVideoUrl = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.LaneChangesForVideoRequest} returns this
+ * @return {!proto.api.LaneChangesForVideoRequest} returns this
  */
-proto.LaneChangesForVideoRequest.prototype.setSimpleStorageVideoUrl = function(value) {
+proto.api.LaneChangesForVideoRequest.prototype.setSimpleStorageVideoUrl = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
