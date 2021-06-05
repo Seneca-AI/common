@@ -37,7 +37,6 @@ message RawVideoProcessResponse {
 message CutVideo {
     string user_id = 1;
     string id = 2;
-    // In the form <USER_ID>.<CREATE_TIMESTAMP_MS>.CUT_VIDEO.mp4
     string cloud_storage_file_name = 3;
     // When the video begins.
     int64 create_time_ms = 4;
@@ -67,4 +66,12 @@ message RawMotion {
     // The algorithms this rawMotion has gone through.
     repeated string algo_tag = 6;
     double algos_version = 7;
+}
+
+message RawFrame {
+    string user_id = 1;
+    string id = 2;
+    int64 timestamp_ms = 3;
+    string cloud_storage_file_name = 4;
+    api.Source source = 5;
 }
