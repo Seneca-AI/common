@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\010api/type',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\traw.proto\x12\x03\x61pi\x1a\x0c\x63ommon.proto\"\xf0\x01\n\x08RawVideo\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\n\n\x02id\x18\x02 \x01(\t\x12\x1f\n\x17\x63loud_storage_file_name\x18\x03 \x01(\t\x12\x16\n\x0e\x63reate_time_ms\x18\x04 \x01(\x03\x12\x14\n\x0c\x63ut_video_id\x18\x05 \x03(\t\x12\x13\n\x0b\x64uration_ms\x18\x06 \x01(\x03\x12\x1a\n\x12original_file_name\x18\x07 \x01(\t\x12\x16\n\x0e\x66\x61ilure_reason\x18\x08 \x01(\t\x12\x18\n\x10original_file_id\x18\t \x01(\t\x12\x15\n\ralgos_version\x18\n \x01(\x01\"f\n\x16RawVideoProcessRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x12\n\nvideo_name\x18\x02 \x01(\t\x12\x12\n\nlocal_path\x18\x03 \x01(\t\x12\x13\n\x0bvideo_bytes\x18\x04 \x01(\x0c\"/\n\x17RawVideoProcessResponse\x12\x14\n\x0craw_video_id\x18\x01 \x01(\t\"\x8b\x01\n\x08\x43utVideo\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\n\n\x02id\x18\x02 \x01(\t\x12\x1f\n\x17\x63loud_storage_file_name\x18\x03 \x01(\t\x12\x16\n\x0e\x63reate_time_ms\x18\x04 \x01(\x03\x12\x14\n\x0craw_video_id\x18\x05 \x01(\t\x12\x13\n\x0b\x64uration_ms\x18\x06 \x01(\x03\"\xa7\x01\n\x0bRawLocation\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\n\n\x02id\x18\x02 \x01(\t\x12\x1f\n\x08location\x18\x03 \x01(\x0b\x32\r.api.Location\x12\x14\n\x0ctimestamp_ms\x18\x04 \x01(\x03\x12\x1b\n\x06source\x18\x05 \x01(\x0b\x32\x0b.api.Source\x12\x10\n\x08\x61lgo_tag\x18\x06 \x03(\t\x12\x15\n\ralgos_version\x18\x07 \x01(\x01\"\xa1\x01\n\tRawMotion\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\n\n\x02id\x18\x02 \x01(\t\x12\x1b\n\x06motion\x18\x03 \x01(\x0b\x32\x0b.api.Motion\x12\x14\n\x0ctimestamp_ms\x18\x04 \x01(\x03\x12\x1b\n\x06source\x18\x05 \x01(\x0b\x32\x0b.api.Source\x12\x10\n\x08\x61lgo_tag\x18\x06 \x03(\t\x12\x15\n\ralgos_version\x18\x07 \x01(\x01\x42\nZ\x08\x61pi/typeb\x06proto3'
+  serialized_pb=b'\n\traw.proto\x12\x03\x61pi\x1a\x0c\x63ommon.proto\"\xf0\x01\n\x08RawVideo\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\n\n\x02id\x18\x02 \x01(\t\x12\x1f\n\x17\x63loud_storage_file_name\x18\x03 \x01(\t\x12\x16\n\x0e\x63reate_time_ms\x18\x04 \x01(\x03\x12\x14\n\x0c\x63ut_video_id\x18\x05 \x03(\t\x12\x13\n\x0b\x64uration_ms\x18\x06 \x01(\x03\x12\x1a\n\x12original_file_name\x18\x07 \x01(\t\x12\x16\n\x0e\x66\x61ilure_reason\x18\x08 \x01(\t\x12\x18\n\x10original_file_id\x18\t \x01(\t\x12\x15\n\ralgos_version\x18\n \x01(\x01\"f\n\x16RawVideoProcessRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x12\n\nvideo_name\x18\x02 \x01(\t\x12\x12\n\nlocal_path\x18\x03 \x01(\t\x12\x13\n\x0bvideo_bytes\x18\x04 \x01(\x0c\"/\n\x17RawVideoProcessResponse\x12\x14\n\x0craw_video_id\x18\x01 \x01(\t\"\x8b\x01\n\x08\x43utVideo\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\n\n\x02id\x18\x02 \x01(\t\x12\x1f\n\x17\x63loud_storage_file_name\x18\x03 \x01(\t\x12\x16\n\x0e\x63reate_time_ms\x18\x04 \x01(\x03\x12\x14\n\x0craw_video_id\x18\x05 \x01(\t\x12\x13\n\x0b\x64uration_ms\x18\x06 \x01(\x03\"\xa7\x01\n\x0bRawLocation\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\n\n\x02id\x18\x02 \x01(\t\x12\x1f\n\x08location\x18\x03 \x01(\x0b\x32\r.api.Location\x12\x14\n\x0ctimestamp_ms\x18\x04 \x01(\x03\x12\x1b\n\x06source\x18\x05 \x01(\x0b\x32\x0b.api.Source\x12\x10\n\x08\x61lgo_tag\x18\x06 \x03(\t\x12\x15\n\ralgos_version\x18\x07 \x01(\x01\"\xa1\x01\n\tRawMotion\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\n\n\x02id\x18\x02 \x01(\t\x12\x1b\n\x06motion\x18\x03 \x01(\x0b\x32\x0b.api.Motion\x12\x14\n\x0ctimestamp_ms\x18\x04 \x01(\x03\x12\x1b\n\x06source\x18\x05 \x01(\x0b\x32\x0b.api.Source\x12\x10\n\x08\x61lgo_tag\x18\x06 \x03(\t\x12\x15\n\ralgos_version\x18\x07 \x01(\x01\"{\n\x08RawFrame\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\n\n\x02id\x18\x02 \x01(\t\x12\x14\n\x0ctimestamp_ms\x18\x03 \x01(\x03\x12\x1f\n\x17\x63loud_storage_file_name\x18\x04 \x01(\t\x12\x1b\n\x06source\x18\x05 \x01(\x0b\x32\x0b.api.SourceB\nZ\x08\x61pi/typeb\x06proto3'
   ,
   dependencies=[common__pb2.DESCRIPTOR,])
 
@@ -421,16 +421,78 @@ _RAWMOTION = _descriptor.Descriptor(
   serialized_end=902,
 )
 
+
+_RAWFRAME = _descriptor.Descriptor(
+  name='RawFrame',
+  full_name='api.RawFrame',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='user_id', full_name='api.RawFrame.user_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='id', full_name='api.RawFrame.id', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='timestamp_ms', full_name='api.RawFrame.timestamp_ms', index=2,
+      number=3, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='cloud_storage_file_name', full_name='api.RawFrame.cloud_storage_file_name', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='source', full_name='api.RawFrame.source', index=4,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=904,
+  serialized_end=1027,
+)
+
 _RAWLOCATION.fields_by_name['location'].message_type = common__pb2._LOCATION
 _RAWLOCATION.fields_by_name['source'].message_type = common__pb2._SOURCE
 _RAWMOTION.fields_by_name['motion'].message_type = common__pb2._MOTION
 _RAWMOTION.fields_by_name['source'].message_type = common__pb2._SOURCE
+_RAWFRAME.fields_by_name['source'].message_type = common__pb2._SOURCE
 DESCRIPTOR.message_types_by_name['RawVideo'] = _RAWVIDEO
 DESCRIPTOR.message_types_by_name['RawVideoProcessRequest'] = _RAWVIDEOPROCESSREQUEST
 DESCRIPTOR.message_types_by_name['RawVideoProcessResponse'] = _RAWVIDEOPROCESSRESPONSE
 DESCRIPTOR.message_types_by_name['CutVideo'] = _CUTVIDEO
 DESCRIPTOR.message_types_by_name['RawLocation'] = _RAWLOCATION
 DESCRIPTOR.message_types_by_name['RawMotion'] = _RAWMOTION
+DESCRIPTOR.message_types_by_name['RawFrame'] = _RAWFRAME
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 RawVideo = _reflection.GeneratedProtocolMessageType('RawVideo', (_message.Message,), {
@@ -474,6 +536,13 @@ RawMotion = _reflection.GeneratedProtocolMessageType('RawMotion', (_message.Mess
   # @@protoc_insertion_point(class_scope:api.RawMotion)
   })
 _sym_db.RegisterMessage(RawMotion)
+
+RawFrame = _reflection.GeneratedProtocolMessageType('RawFrame', (_message.Message,), {
+  'DESCRIPTOR' : _RAWFRAME,
+  '__module__' : 'raw_pb2'
+  # @@protoc_insertion_point(class_scope:api.RawFrame)
+  })
+_sym_db.RegisterMessage(RawFrame)
 
 
 DESCRIPTOR._options = None
