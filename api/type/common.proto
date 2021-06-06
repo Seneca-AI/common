@@ -57,6 +57,7 @@ message Source {
         RAW_VIDEO = 1;
         RAW_LOCATION = 2;
         RAW_MOTION = 3;
+        RAW_FRAME = 4;
     }
 
     string source_id = 1;
@@ -80,6 +81,8 @@ enum ConditionType {
     RURAL = 7;
 
     TRAFFIC = 8;
+
+    CLOSE_FOLLOWING_DISTANCE = 13;
 }
 
 enum EventType {

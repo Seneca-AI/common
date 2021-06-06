@@ -51,7 +51,7 @@ message RawLocation {
     api.Location location = 3;
     int64 timestamp_ms = 4;
     api.Source source = 5;
-    // The algorithms this rawLocation has gone through.
+    // [DEPRECATED]: The algorithms this rawLocation has gone through.
     repeated string algo_tag = 6;
     double algos_version = 7;
 }
@@ -63,7 +63,7 @@ message RawMotion {
     api.Motion motion = 3;
     int64 timestamp_ms = 4;
     api.Source source = 5;
-    // The algorithms this rawMotion has gone through.
+    // [DEPRECATED]: The algorithms this rawMotion has gone through.
     repeated string algo_tag = 6;
     double algos_version = 7;
 }
@@ -74,7 +74,7 @@ message RawFrame {
     int64 timestamp_ms = 3;
     string cloud_storage_file_name = 4;
     api.Source source = 5;
-    // The algorithms this rawLocation has gone through.
+    // [DEPRECATED]: The algorithms this rawLocation has gone through.
     repeated string algo_tag = 6;
     double algos_version = 7;
 }
