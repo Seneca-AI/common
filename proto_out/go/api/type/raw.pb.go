@@ -361,7 +361,7 @@ type RawLocation struct {
 	Location    *Location `protobuf:"bytes,3,opt,name=location,proto3" json:"location,omitempty"`
 	TimestampMs int64     `protobuf:"varint,4,opt,name=timestamp_ms,json=timestampMs,proto3" json:"timestamp_ms,omitempty"`
 	Source      *Source   `protobuf:"bytes,5,opt,name=source,proto3" json:"source,omitempty"`
-	// The algorithms this rawLocation has gone through.
+	// [DEPRECATED]: The algorithms this rawLocation has gone through.
 	AlgoTag      []string `protobuf:"bytes,6,rep,name=algo_tag,json=algoTag,proto3" json:"algo_tag,omitempty"`
 	AlgosVersion float64  `protobuf:"fixed64,7,opt,name=algos_version,json=algosVersion,proto3" json:"algos_version,omitempty"`
 }
@@ -458,7 +458,7 @@ type RawMotion struct {
 	Motion      *Motion `protobuf:"bytes,3,opt,name=motion,proto3" json:"motion,omitempty"`
 	TimestampMs int64   `protobuf:"varint,4,opt,name=timestamp_ms,json=timestampMs,proto3" json:"timestamp_ms,omitempty"`
 	Source      *Source `protobuf:"bytes,5,opt,name=source,proto3" json:"source,omitempty"`
-	// The algorithms this rawMotion has gone through.
+	// [DEPRECATED]: The algorithms this rawMotion has gone through.
 	AlgoTag      []string `protobuf:"bytes,6,rep,name=algo_tag,json=algoTag,proto3" json:"algo_tag,omitempty"`
 	AlgosVersion float64  `protobuf:"fixed64,7,opt,name=algos_version,json=algosVersion,proto3" json:"algos_version,omitempty"`
 }
@@ -554,7 +554,7 @@ type RawFrame struct {
 	TimestampMs          int64   `protobuf:"varint,3,opt,name=timestamp_ms,json=timestampMs,proto3" json:"timestamp_ms,omitempty"`
 	CloudStorageFileName string  `protobuf:"bytes,4,opt,name=cloud_storage_file_name,json=cloudStorageFileName,proto3" json:"cloud_storage_file_name,omitempty"`
 	Source               *Source `protobuf:"bytes,5,opt,name=source,proto3" json:"source,omitempty"`
-	// The algorithms this rawLocation has gone through.
+	// [DEPRECATED]: The algorithms this rawLocation has gone through.
 	AlgoTag      []string `protobuf:"bytes,6,rep,name=algo_tag,json=algoTag,proto3" json:"algo_tag,omitempty"`
 	AlgosVersion float64  `protobuf:"fixed64,7,opt,name=algos_version,json=algosVersion,proto3" json:"algos_version,omitempty"`
 }

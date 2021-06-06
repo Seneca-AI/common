@@ -29,6 +29,7 @@ proto.api.ConditionType = {
   URBAN: 5,
   HIGHWAY: 6,
   RURAL: 7,
-  TRAFFIC: 8
+  TRAFFIC: 8,
+  CLOSE_FOLLOWING_DISTANCE: 13
 };
 

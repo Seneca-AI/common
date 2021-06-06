@@ -170,7 +170,8 @@ proto.api.Source.Type = {
   UNKNOWN: 0,
   RAW_VIDEO: 1,
   RAW_LOCATION: 2,
-  RAW_MOTION: 3
+  RAW_MOTION: 3,
+  RAW_FRAME: 4
 };
 
 /**
