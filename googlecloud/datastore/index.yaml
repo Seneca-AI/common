@@ -25,6 +25,11 @@ indexes:
   - name: UserId
   - name: AlgosVersion
 
+- kind: RawFrame
+  properties:
+  - name: UserId
+  - name: AlgosVersion
+
 - kind: RawMotion
   properties:
   - name: UserId

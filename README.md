@@ -15,4 +15,4 @@ It seems that the protobuf compiler does not add "from . import..." in the gener
 ## Notes
 
 * Do not edit any files in proto_out/
-* Do not remove any fields from protos, simple mark them as deprecated.
+* Do not remove any fields from protos, simply mark them as deprecated.
